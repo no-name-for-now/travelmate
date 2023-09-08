@@ -1,17 +1,19 @@
 from datetime import datetime
 from flask import Flask, render_template, request
-from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from helpers.itenerary import get_itenerary, load_config
+from database import db
+from models import SearchHistory
+
 
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@db/mydatabase'  # Use the same values as in your Docker Compose file
-
-db = SQLAlchemy(app)
+db.init_app(app)
+migrate = Migrate(app, db)
 
 config_file = "configs.yaml"
 config = load_config(config_file)
-print(config)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
