@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script src="{{ url_for('static', filename='scripts/links.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/itenerary.css') }}">
+<head>
+  <title>Your Itinerary</title>
+  
+</head>
+<body>
+  <h1>Your Itinerary</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Overnight City</th>
+            <th>Travel Method</th>
+            <th>Travel Time</th>
+            <th>Morning Activity</th>
+            <th>Afternoon Activity</th>
+            <th>Evening Activity</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for index, row in df.iterrows() %}
+            <tr>
+                <td>{{ row['index'] }}</td>
+                <td><a href="#" onclick="searchBooking('{{ row['Overnight City'] }}')">{{ row['Overnight City'] }}</a></td>
+                <td>{{ row['Travel Method'] }}</td>
+                <td>{{ row['Travel Time'] }}</td>
+                <td><a href="#" onclick="searchGoogle('{{ row['Morning Activity'] }}')">{{ row['Morning Activity'] }}</a></td>
+                <td><a href="#" onclick="searchGoogle('{{ row['Afternoon Activity'] }}')">{{ row['Afternoon Activity'] }}</a></td>               
+                <td><a href="#" onclick="searchGoogle('{{ row['Evening Activity'] }}')">{{ row['Evening Activity'] }}</a></td> 
+                <!-- Add more columns here -->
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+

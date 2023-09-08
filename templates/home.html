@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create an Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
+</head>
+<body>
+  <h1>Where do you want an itinerary for?</h1>
+  <form method="post">
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" required /><br /><br />
+
+    <label for="region_string">Specific Places:</label>
+    <input type="text" id="region_string" name="region_string" required /><br /><br />
+
+    <!-- Add "From" Date Picker -->
+    <label for="from">From:</label>
+    <input type="date" id="from" name="from" required />
+
+    <!-- Add "To" Date Picker -->
+    <label for="to">To:</label>
+    <input type="date" id="to" name="to" required />
+
+    <br /><br />
+    
+    <button type="submit" onclick="loadResult()">Submit</button>
+  </form>
+</body>
+</html>
