@@ -8,6 +8,7 @@ from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
 from sqlalchemy.exc import IntegrityError
 import pandas as pd
 from psycopg2.errors import UniqueViolation
+from sqlalchemy import select
 
 
 app = Flask(__name__)
@@ -75,6 +76,10 @@ def home():
                 db.session.rollback() 
                 unique_search_history_id = query_search_history(num_days=days, country=country, specific_places=region_string)
                 results = Itenerary.query.filter_by(unique_search_history_id=unique_search_history_id).all()
+                test = select(UniqueSearchHistory, Itenerary).join(Itenerary, UniqueSearchHistory.id == Itenerary.unique_search_history_id).where(UniqueSearchHistory.id == unique_search_history_id)
+                test_result = db.session.execute(test)
+                test_result_df = pd.DataFrame(test_result.fetchall(), columns=test_result.keys())
+                print(test_result_df)
                 df = pd.DataFrame([result.__dict__ for result in results])
                 df = df.drop('_sa_instance_state', axis=1, errors='ignore')
                 print(df)
@@ -104,6 +109,7 @@ def home():
                         print(itenerary_data.id)
                     except IntegrityError as e:
                         print("Data already in the DB, lets fetch it from the table")
+
 
             print("stored to itenerary")
             return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
