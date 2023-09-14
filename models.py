@@ -1,11 +1,12 @@
 from database import db 
 from sqlalchemy import PrimaryKeyConstraint
+from sqlalchemy.schema import UniqueConstraint
 
-class SearchHistory(db.Model):
+class Itenerary(db.Model):
+    __tablename__ = 'iteneraries'
+
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    num_days = db.Column(db.Integer)
-    country = db.Column(db.String(50), nullable=False)
-    specific_places = db.Column(db.String(100), nullable=False)
+    unique_search_history_id = db.Column(db.Integer, db.ForeignKey('unique_search_history.id', ondelete='CASCADE'), nullable=False)
     day = db.Column(db.String(50))
     travel_method = db.Column(db.String(50))
     travel_time = db.Column(db.String(50))
@@ -13,6 +14,16 @@ class SearchHistory(db.Model):
     afternoon_activity = db.Column(db.String(100))
     evening_activity = db.Column(db.String(100))
 
+
+
+class UniqueSearchHistory(db.Model):
+    __tablename__ = 'unique_search_history'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    num_days = db.Column(db.Integer)
+    country = db.Column(db.String(50), nullable=False)
+    specific_places = db.Column(db.String(100), nullable=False)
+
     __table_args__ = (
-        PrimaryKeyConstraint('country', 'specific_places', 'num_days'),
+        UniqueConstraint('country', 'specific_places', 'num_days'),
     )

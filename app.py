@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 from flask_migrate import Migrate
 from helpers.itenerary import get_itenerary, load_config
 from database import db
-from models import SearchHistory
+from models import Itenerary, UniqueSearchHistory
 
 
 
