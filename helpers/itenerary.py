@@ -24,7 +24,10 @@ def get_itenerary(country, region_string, n_days, config):
     
     message = response.choices[0]['message']
     object = json.loads(message['content'])
-    return pd.DataFrame.from_dict(object).T.reset_index()
+    df = pd.DataFrame.from_dict(object).T.reset_index()
+    df['country'] = country
+    df['specific_places'] = region_string
+    return df
 
 def load_config(config_file):
     with open(config_file, 'r') as stream:

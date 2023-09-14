@@ -1,14 +1,5 @@
 version: '3'
 services:
-  web:
-    build: .  # Replace with your Flask app directory path
-    ports:
-      - "5000:5000"
-    depends_on:
-      - db
-    volumes:
-      - ./migrations:/app/migrations  # Mount your migrations directory
-
   db:
     build: ./postgresql-directory  # Replace with your PostgreSQL directory path
     environment:
