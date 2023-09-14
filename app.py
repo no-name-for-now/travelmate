@@ -6,7 +6,8 @@ from database import db
 from models import Itenerary, UniqueSearchHistory
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
 from sqlalchemy.exc import IntegrityError
-
+import pandas as pd
+from psycopg2.errors import UniqueViolation
 
 
 app = Flask(__name__)
@@ -23,6 +24,19 @@ def list_tables():
     table_names = inspector.get_table_names()
     
     return table_names
+
+def query_search_history(country, specific_places, num_days):
+    # Use the SQLAlchemy filter method to specify your filter criteria
+    data = UniqueSearchHistory.query.filter(
+        UniqueSearchHistory.country == country,
+        UniqueSearchHistory.specific_places == specific_places,
+        UniqueSearchHistory.num_days == num_days
+    ).all()
+    
+    # Process the filtered data (for example, print it)
+    for item in data:
+        return item.id
+
 
 @app.route("/query_ush")
 def query_ush():
@@ -57,10 +71,16 @@ def home():
             try: 
                 db.session.add(unique_search_history_data)
                 db.session.commit()
-                print(unique_search_history_data.id)
             except IntegrityError as e:
-                print("Data already in the DB, lets fetch it from the table")
-                return "You need to pull the data from the DB dude"
+                db.session.rollback() 
+                unique_search_history_id = query_search_history(num_days=days, country=country, specific_places=region_string)
+                results = Itenerary.query.filter_by(unique_search_history_id=unique_search_history_id).all()
+                df = pd.DataFrame([result.__dict__ for result in results])
+                df = df.drop('_sa_instance_state', axis=1, errors='ignore')
+                print(df)
+                print("Unique Search History")
+                return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
+
             df = get_itenerary(country, region_string, days, config)  #need to change this to not use a data frame and just keep the json
             columns = ['index','Travel Method','Travel Time', 'Morning Activity','Afternoon Activity','Evening Activity']
             itenerary_store = df[columns].copy()
