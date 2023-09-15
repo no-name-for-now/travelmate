@@ -2,6 +2,7 @@ from datetime import datetime
 from flask import Flask, render_template, request
 from flask_migrate import Migrate
 from helpers.itenerary import get_itenerary, load_config
+from helpers.string_operators import sort_csv
 from database import db
 from models import Itenerary, UniqueSearchHistory
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
@@ -9,6 +10,7 @@ from sqlalchemy.exc import IntegrityError
 import pandas as pd
 from psycopg2.errors import UniqueViolation
 from sqlalchemy import select
+from crud.read import list_tables, query_search_history
 
 
 app = Flask(__name__)
@@ -19,38 +21,19 @@ migrate = Migrate(app, db)
 config_file = "configs.yaml"
 config = load_config(config_file)
 
-def list_tables():
-    # Get a list of all tables in the database
-    inspector = db.inspect(db.engine)
-    table_names = inspector.get_table_names()
-    
-    return table_names
-
-def query_search_history(country, specific_places, num_days):
-    # Use the SQLAlchemy filter method to specify your filter criteria
-    data = UniqueSearchHistory.query.filter(
-        UniqueSearchHistory.country == country,
-        UniqueSearchHistory.specific_places == specific_places,
-        UniqueSearchHistory.num_days == num_days
-    ).all()
-    
-    # Process the filtered data (for example, print it)
-    for item in data:
-        return item.id
-
 
 @app.route("/query_ush")
 def query_ush():
     data = db.session.query(UniqueSearchHistory).all()
     for item in data:
-        print(item.id, " ", item.num_days, " ",item.country ," ", item.specific_places)
+        print(item.id, " ", item.num_days, " ",item.country ," ", item.specific_places," ", item.created_at, " ",item.updated_at)
     return "done"
 
 @app.route("/query_i")
 def query_i():
     data = db.session.query(Itenerary).all()
     for item in data:
-        print(item.id, " ", item.unique_search_history_id, " ",item.day ," ", item.morning_activity)
+        print(item.id, " ", item.unique_search_history_id, " ",item.day ," ", item.morning_activity," ", item.created_at, " ",item.updated_at)
     return "done"
 
 
@@ -59,22 +42,22 @@ def home():
     if request.method == "POST":
         country = request.form["country"]
         region_string = request.form["region_string"].replace(" ", "")
-        region_list = region_string.split(",")
-        region_list.sort()
-        region_string = ','.join(region_list)
+        region_string = sort_csv(region_string)
         from_date_obj = datetime.strptime(request.form["from"], '%Y-%m-%d')
         to_date_obj = datetime.strptime(request.form["to"], '%Y-%m-%d')
         days = (to_date_obj - from_date_obj).days 
+
         unique_search_history_schema = UniqueSearchHistorySchema(num_days=days, country=country, specific_places=region_string)
         if unique_search_history_schema.validate_data:  # Custom validation function
             data_dict = unique_search_history_schema.to_dict()
             unique_search_history_data = UniqueSearchHistory(**data_dict)
+
             try: 
                 db.session.add(unique_search_history_data)
                 db.session.commit()
             except IntegrityError as e:
                 db.session.rollback() 
-                unique_search_history_id = query_search_history(num_days=days, country=country, specific_places=region_string)
+                unique_search_history_id = query_search_history(model = UniqueSearchHistory, num_days=days, country=country, specific_places=region_string)
                 results = Itenerary.query.filter_by(unique_search_history_id=unique_search_history_id).all()
                 test = select(UniqueSearchHistory, Itenerary).join(Itenerary, UniqueSearchHistory.id == Itenerary.unique_search_history_id).where(UniqueSearchHistory.id == unique_search_history_id)
                 test_result = db.session.execute(test)
@@ -118,7 +101,7 @@ def home():
 
 
 
-    tables = list_tables()
+    tables = list_tables(db)
     print("Tables in the database:", tables)
     return render_template("home.html")
 

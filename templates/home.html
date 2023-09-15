@@ -2,28 +2,53 @@
 <html>
 <head>
   <title>Create an Itinerary</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add Bootstrap CSS CDN link here -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <style>
+    /* Additional CSS to set a minimum height for the page */
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Where do you want an itinerary for?</h1>
-  <form method="post">
-    <label for="country">Country:</label>
-    <input type="text" id="country" name="country" required /><br /><br />
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div>
+        <h1>Where do you want an itinerary for?</h1>
+        <form method="post" class="mt-4">
+          <div class="mb-3">
+            <label for="country" class="form-label">Country:</label>
+            <input type="text" class="form-control" id="country" name="country" required />
+          </div>
 
-    <label for="region_string">Specific Places:</label>
-    <input type="text" id="region_string" name="region_string" required /><br /><br />
+          <div class="mb-3">
+            <label for="region_string" class="form-label">Specific Places:</label>
+            <input type="text" class="form-control" id="region_string" name="region_string" required />
+          </div>
 
-    <!-- Add "From" Date Picker -->
-    <label for="from">From:</label>
-    <input type="date" id="from" name="from" required />
+          <div class="mb-3">
+            <!-- Add "From" Date Picker -->
+            <label for="from" class="form-label">From:</label>
+            <input type="date" class="form-control" id="from" name="from" required />
+          </div>
 
-    <!-- Add "To" Date Picker -->
-    <label for="to">To:</label>
-    <input type="date" id="to" name="to" required />
+          <div class="mb-3">
+            <!-- Add "To" Date Picker -->
+            <label for="to" class="form-label">To:</label>
+            <input type="date" class="form-control" id="to" name="to" required />
+          </div>
 
-    <br /><br />
-    
-    <button type="submit" onclick="loadResult()">Submit</button>
-  </form>
+          <button type="submit" class="btn btn-primary" onclick="loadResult()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Include Bootstrap JavaScript and jQuery CDN links here if needed -->
 </body>
 </html>
