@@ -5,51 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Add Bootstrap CSS CDN link here -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="{{ url_for('static', filename='scripts/post.js') }}"></script>
   <style>
-    /* Additional CSS to set a minimum height for the page */
-    body {
+    /* Set a minimum height for the container to fit within the viewport height */
+    .container {
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="d-flex justify-content-center align-items-center vh-100">
-      <div>
-        <h1>Where do you want an itinerary for?</h1>
-        <form method="post" class="mt-4">
-    <div class="mb-3">
+    <h1>Where do you want an itinerary for?</h1>
+    <form method="post" class="mt-4">
+      <div class="mb-3">
         <label for="country" class="form-label">Country:</label>
         <input type="text" class="form-control" id="country" name="country"/>
-    </div>
+      </div>
 
-    <div class="mb-3">
+      <div class="mb-3">
         <label for="region_string" class="form-label">Specific Places:</label>
         <input type="text" class="form-control" id="region_string" name="region_string"/>
-    </div>
+      </div>
 
-    <div class="mb-3">
+      <div class="mb-3">
         <!-- Add "From" Date Picker -->
         <label for="from" class="form-label">From:</label>
         <input type="date" class="form-control" id="from" name="from" required value="{{ default_from_date }}" />
-    </div>
+      </div>
 
-    <div class="mb-3">
+      <div class="mb-3">
         <!-- Add "To" Date Picker -->
         <label for="to" class="form-label">To:</label>
         <input type="date" class="form-control" id="to" name="to" required value="{{ default_to_date }}" />
-    </div>
-
-    <button type="submit" class="btn btn-primary" onclick="loadResult()">Submit</button>
-</form>
-
       </div>
-    </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
-  <!-- Include Bootstrap JavaScript and jQuery CDN links here if needed -->
+
+  <div class="container">
+    <h1 class="mt-5">Most Searched For Itineraries</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Places</th>
+          <th>Itenerary Length (Days)</th>
+          <th>Number of Searches</th>
+        </tr>
+      </thead>
+        <tbody>
+            {% for item in top10_most_searched %}
+            <tr class="clickable-row" data-id="{{ item[0] }}">
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <form action="/" method="post" style="display: none;">
+                    <input type="hidden" name="country" value="{{ item[0] }}">
+                    <input type="hidden" name="region_string" value="{{ item[1] }}">
+                    <input type="hidden" name="itinerary_length" value="{{ item[2] }}">
+                    <input type="hidden" name="from" value="{{ default_from_date }}">
+                    <input type="hidden" name="to" value="{{ default_to_date }}">
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
 </body>
 </html>

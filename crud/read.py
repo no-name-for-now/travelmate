@@ -1,3 +1,5 @@
+from sqlalchemy import func
+
 def list_tables(db):
     # Get a list of all tables in the database
     inspector = db.inspect(db.engine)
@@ -21,3 +23,33 @@ def query_search(model, **kwargs):
     else: 
         return data
 
+def most_searched(db, SearchHistory, UniqueSearchHistory):
+    # Create a subquery to count the rows for each unique_search_history_id
+    subquery = (
+        db.session.query(
+            SearchHistory.unique_search_history_id,
+            func.count(SearchHistory.id).label("row_count")
+        )
+        .group_by(SearchHistory.unique_search_history_id)
+        .subquery()
+    )
+    
+    # Query to retrieve the country, specific places, number of days, and row count
+    result = (
+        db.session.query(
+            UniqueSearchHistory.country,
+            UniqueSearchHistory.specific_places,
+            UniqueSearchHistory.num_days,
+            subquery.c.row_count
+        )
+        .join(subquery, UniqueSearchHistory.id == subquery.c.unique_search_history_id)
+        .order_by(subquery.c.row_count.desc())
+        .limit(10)  # Limit to the top 10 entries
+        .all()
+    )
+    
+    # Check if there is a result
+    if result:
+        return result
+    else:
+        print("No data found")

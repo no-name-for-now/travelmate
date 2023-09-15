@@ -9,7 +9,7 @@ from sqlalchemy.exc import IntegrityError
 import pandas as pd
 from psycopg2.errors import UniqueViolation
 from sqlalchemy import select
-from crud.read import list_tables, query_search
+from crud.read import list_tables, query_search, most_searched
 
 
 app = Flask(__name__)
@@ -20,6 +20,13 @@ migrate = Migrate(app, db)
 config_file = "configs.yaml"
 config = load_config(config_file)
 
+
+@app.route("/query_sh")
+def query_sh():
+    data = db.session.query(SearchHistory).all()
+    for item in data:
+        print(item.id, " ", item.unique_search_history_id, item.created_at, " ",item.updated_at)
+    return "done"
 
 @app.route("/query_ush")
 def query_ush():
@@ -35,6 +42,10 @@ def query_i():
         print(item.id, " ", item.unique_search_history_id, " ",item.day ," ", item.morning_activity," ", item.created_at, " ",item.updated_at)
     return "done"
 
+def insert_data(model,db,dict):
+    data = model(**dict)
+    db.session.add(data)
+    db.session.commit()
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -58,7 +69,10 @@ def home():
                 df = pd.DataFrame([result.__dict__ for result in results])
                 df = df.drop('_sa_instance_state', axis=1, errors='ignore')
 
+                insert_data(SearchHistory, db, {'unique_search_history_id':unique_search_history_id})
                 return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
+
+
 
             df = get_itenerary(home_request['country'], home_request['region_string'], home_request['days'], config)  #need to change this to not use a data frame and just keep the json
             df['unique_search_history_id'] = unique_search_history_data.id
@@ -75,17 +89,14 @@ def home():
                     evening_activity = row['evening_activity'])
                 if itenerary_schema.validate_data:  # Custom validation function
                     data_dict = itenerary_schema.to_dict()
-                    itenerary_data = Itenerary(**data_dict)
+                    itenerary_data = Itenerary(**data_dict)                   
                     try: 
                         db.session.add(itenerary_data)
                         db.session.commit()
                         print(itenerary_data.id)
                     except IntegrityError as e:
                         print("Data already in the DB, lets fetch it from the table")
-
-
-            print("stored to itenerary")
-            print(df)
+            insert_data(SearchHistory, db, {'unique_search_history_id': unique_search_history_data.id})
             return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
 
         else:
@@ -95,7 +106,8 @@ def home():
     from_date = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
     to_date = (datetime.now() + timedelta(days=10)).strftime('%Y-%m-%d')
     tables = list_tables(db)
-    return render_template("home.html", default_from_date=from_date, default_to_date=to_date)
+    top10_most_searched = most_searched(db,SearchHistory,UniqueSearchHistory)
+    return render_template("home.html", default_from_date=from_date, default_to_date=to_date, top10_most_searched = top10_most_searched)
 
 
 if __name__ == "__main__":

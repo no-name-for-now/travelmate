@@ -35,7 +35,7 @@ def get_itenerary(country, region_string, n_days, config):
 
 
 def home_vars(request):
-    country = request.form["country"]
+    country = request.form["country"].replace(" ", "")
     region_string = request.form["region_string"].replace(" ", "")
     region_string = sort_csv(region_string)
     from_date_obj = datetime.strptime(request.form["from"], '%Y-%m-%d')
