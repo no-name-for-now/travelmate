@@ -2,6 +2,8 @@ import openai
 import json
 import pandas as pd
 import yaml
+from datetime import datetime
+from .string_operators import sort_csv
 
 def get_itenerary(country, region_string, n_days, config):
     openai.api_key = config["api_key"]
@@ -28,8 +30,22 @@ def get_itenerary(country, region_string, n_days, config):
     df['country'] = country
     df['specific_places'] = region_string
     df.columns = ['day','city','travel_method','travel_time','morning_activity','afternoon_activity','evening_activity','country','specific_places']
-    
+
     return df
+
+
+def home_vars(request):
+    country = request.form["country"]
+    region_string = request.form["region_string"].replace(" ", "")
+    region_string = sort_csv(region_string)
+    from_date_obj = datetime.strptime(request.form["from"], '%Y-%m-%d')
+    to_date_obj = datetime.strptime(request.form["to"], '%Y-%m-%d')
+    days = (to_date_obj - from_date_obj).days 
+
+    var_dict = {'country' : country, 'region_string' : region_string, 'from_date_obj':from_date_obj , 'to_date_obj':to_date_obj, 'days':days }
+
+    return var_dict
+
 
 def load_config(config_file):
     with open(config_file, 'r') as stream:

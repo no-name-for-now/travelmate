@@ -1,8 +1,7 @@
 from datetime import datetime, timedelta
 from flask import Flask, render_template, request
 from flask_migrate import Migrate
-from helpers.itenerary import get_itenerary, load_config
-from helpers.string_operators import sort_csv
+from helpers.itenerary import get_itenerary, load_config, home_vars
 from database import db
 from models import Itenerary, UniqueSearchHistory, SearchHistory
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
@@ -40,14 +39,9 @@ def query_i():
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        country = request.form["country"]
-        region_string = request.form["region_string"].replace(" ", "")
-        region_string = sort_csv(region_string)
-        from_date_obj = datetime.strptime(request.form["from"], '%Y-%m-%d')
-        to_date_obj = datetime.strptime(request.form["to"], '%Y-%m-%d')
-        days = (to_date_obj - from_date_obj).days 
+        home_request = home_vars(request)
 
-        unique_search_history_schema = UniqueSearchHistorySchema(num_days=days, country=country, specific_places=region_string)
+        unique_search_history_schema = UniqueSearchHistorySchema(num_days=home_request['days'], country=home_request['country'], specific_places=home_request['region_string'])
         if unique_search_history_schema.validate_data:  # Custom validation function
             data_dict = unique_search_history_schema.to_dict()
             unique_search_history_data = UniqueSearchHistory(**data_dict)
@@ -58,20 +52,15 @@ def home():
             except IntegrityError as e:
                 db.session.rollback() 
 
-                unique_search_history_id = query_search(model = UniqueSearchHistory, num_days=days, country=country, specific_places=region_string)
+                unique_search_history_id = query_search(model = UniqueSearchHistory, num_days=home_request['days'], country=home_request['country'], specific_places=home_request['region_string'])
                 results = query_search(model = Itenerary, unique_search_history_id=unique_search_history_id)
 
-                test = select(UniqueSearchHistory, Itenerary).join(Itenerary, UniqueSearchHistory.id == Itenerary.unique_search_history_id).where(UniqueSearchHistory.id == unique_search_history_id)
-                test_result = db.session.execute(test)
-                test_result_df = pd.DataFrame(test_result.fetchall(), columns=test_result.keys())
-                print(test_result_df)
                 df = pd.DataFrame([result.__dict__ for result in results])
                 df = df.drop('_sa_instance_state', axis=1, errors='ignore')
-                print(df)
-                print("Unique Search History")
+
                 return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
 
-            df = get_itenerary(country, region_string, days, config)  #need to change this to not use a data frame and just keep the json
+            df = get_itenerary(home_request['country'], home_request['region_string'], home_request['days'], config)  #need to change this to not use a data frame and just keep the json
             df['unique_search_history_id'] = unique_search_history_data.id
 
             for index, row in df.iterrows():
