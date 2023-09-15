@@ -22,30 +22,31 @@
       <div>
         <h1>Where do you want an itinerary for?</h1>
         <form method="post" class="mt-4">
-          <div class="mb-3">
-            <label for="country" class="form-label">Country:</label>
-            <input type="text" class="form-control" id="country" name="country" required />
-          </div>
+    <div class="mb-3">
+        <label for="country" class="form-label">Country:</label>
+        <input type="text" class="form-control" id="country" name="country"/>
+    </div>
 
-          <div class="mb-3">
-            <label for="region_string" class="form-label">Specific Places:</label>
-            <input type="text" class="form-control" id="region_string" name="region_string" required />
-          </div>
+    <div class="mb-3">
+        <label for="region_string" class="form-label">Specific Places:</label>
+        <input type="text" class="form-control" id="region_string" name="region_string"/>
+    </div>
 
-          <div class="mb-3">
-            <!-- Add "From" Date Picker -->
-            <label for="from" class="form-label">From:</label>
-            <input type="date" class="form-control" id="from" name="from" required />
-          </div>
+    <div class="mb-3">
+        <!-- Add "From" Date Picker -->
+        <label for="from" class="form-label">From:</label>
+        <input type="date" class="form-control" id="from" name="from" required value="{{ default_from_date }}" />
+    </div>
 
-          <div class="mb-3">
-            <!-- Add "To" Date Picker -->
-            <label for="to" class="form-label">To:</label>
-            <input type="date" class="form-control" id="to" name="to" required />
-          </div>
+    <div class="mb-3">
+        <!-- Add "To" Date Picker -->
+        <label for="to" class="form-label">To:</label>
+        <input type="date" class="form-control" id="to" name="to" required value="{{ default_to_date }}" />
+    </div>
 
-          <button type="submit" class="btn btn-primary" onclick="loadResult()">Submit</button>
-        </form>
+    <button type="submit" class="btn btn-primary" onclick="loadResult()">Submit</button>
+</form>
+
       </div>
     </div>
   </div>

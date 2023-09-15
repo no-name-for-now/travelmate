@@ -1,16 +1,16 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask, render_template, request
 from flask_migrate import Migrate
 from helpers.itenerary import get_itenerary, load_config
 from helpers.string_operators import sort_csv
 from database import db
-from models import Itenerary, UniqueSearchHistory
+from models import Itenerary, UniqueSearchHistory, SearchHistory
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
 from sqlalchemy.exc import IntegrityError
 import pandas as pd
 from psycopg2.errors import UniqueViolation
 from sqlalchemy import select
-from crud.read import list_tables, query_search_history
+from crud.read import list_tables, query_search
 
 
 app = Flask(__name__)
@@ -57,8 +57,10 @@ def home():
                 db.session.commit()
             except IntegrityError as e:
                 db.session.rollback() 
-                unique_search_history_id = query_search_history(model = UniqueSearchHistory, num_days=days, country=country, specific_places=region_string)
-                results = Itenerary.query.filter_by(unique_search_history_id=unique_search_history_id).all()
+
+                unique_search_history_id = query_search(model = UniqueSearchHistory, num_days=days, country=country, specific_places=region_string)
+                results = query_search(model = Itenerary, unique_search_history_id=unique_search_history_id)
+
                 test = select(UniqueSearchHistory, Itenerary).join(Itenerary, UniqueSearchHistory.id == Itenerary.unique_search_history_id).where(UniqueSearchHistory.id == unique_search_history_id)
                 test_result = db.session.execute(test)
                 test_result_df = pd.DataFrame(test_result.fetchall(), columns=test_result.keys())
@@ -71,6 +73,7 @@ def home():
 
             df = get_itenerary(country, region_string, days, config)  #need to change this to not use a data frame and just keep the json
             df['unique_search_history_id'] = unique_search_history_data.id
+
             for index, row in df.iterrows():
                 itenerary_schema = ItenerarySchema(
                     unique_search_history_id = row['unique_search_history_id'],
@@ -100,10 +103,10 @@ def home():
             print("data not valid")
 
 
-
+    from_date = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
+    to_date = (datetime.now() + timedelta(days=10)).strftime('%Y-%m-%d')
     tables = list_tables(db)
-    print("Tables in the database:", tables)
-    return render_template("home.html")
+    return render_template("home.html", default_from_date=from_date, default_to_date=to_date)
 
 
 if __name__ == "__main__":

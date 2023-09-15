@@ -5,14 +5,19 @@ def list_tables(db):
     
     return table_names
 
-def query_search_history(model, country, specific_places, num_days):
-    # Use the SQLAlchemy filter method to specify your filter criteria
-    data = model.query.filter(
-        model.country == country,
-        model.specific_places == specific_places,
-        model.num_days == num_days
-    ).all()
-    
-    # Process the filtered data (for example, print it)
-    for item in data:
-        return item.id
+
+
+def query_search(model, **kwargs):
+    query = model.query
+
+    for column, value in kwargs.items():
+        query = query.filter(getattr(model, column) == value)
+
+    data = query.all()
+
+    if len(data) == 1:
+        for item in data:
+            return item.id 
+    else: 
+        return data
+
