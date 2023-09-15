@@ -87,14 +87,12 @@ def home():
                 return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
 
             df = get_itenerary(country, region_string, days, config)  #need to change this to not use a data frame and just keep the json
-            columns = ['index','Travel Method','Travel Time', 'Morning Activity','Afternoon Activity','Evening Activity']
-            itenerary_store = df[columns].copy()
-            itenerary_store['unique_search_history_id'] = unique_search_history_data.id
-            itenerary_store.columns = ['day','travel_method','travel_time','morning_activity','afternoon_activity','evening_activity','unique_search_history_id']
-            for index, row in itenerary_store.iterrows():
+            df['unique_search_history_id'] = unique_search_history_data.id
+            for index, row in df.iterrows():
                 itenerary_schema = ItenerarySchema(
                     unique_search_history_id = row['unique_search_history_id'],
                     day = row['day'],
+                    city = row['city'],
                     travel_method = row['travel_method'],
                     travel_time = row['travel_time'],
                     morning_activity = row['morning_activity'],
@@ -112,6 +110,7 @@ def home():
 
 
             print("stored to itenerary")
+            print(df)
             return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
 
         else:

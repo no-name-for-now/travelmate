@@ -27,6 +27,8 @@ def get_itenerary(country, region_string, n_days, config):
     df = pd.DataFrame.from_dict(object).T.reset_index()
     df['country'] = country
     df['specific_places'] = region_string
+    df.columns = ['day','city','travel_method','travel_time','morning_activity','afternoon_activity','evening_activity','country','specific_places']
+    
     return df
 
 def load_config(config_file):

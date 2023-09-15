@@ -8,11 +8,12 @@ class Itenerary(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     unique_search_history_id = db.Column(db.Integer, db.ForeignKey('unique_search_history.id', ondelete='CASCADE'), nullable=False)
     day = db.Column(db.String(50))
+    city = db.Column(db.String(50))
     travel_method = db.Column(db.String(50))
     travel_time = db.Column(db.String(50))
-    morning_activity = db.Column(db.String(100))
-    afternoon_activity = db.Column(db.String(100))
-    evening_activity = db.Column(db.String(100))
+    morning_activity = db.Column(db.String(150))
+    afternoon_activity = db.Column(db.String(150))
+    evening_activity = db.Column(db.String(150))
 
 
 

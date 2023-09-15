@@ -22,6 +22,7 @@ class UniqueSearchHistorySchema:
 class ItenerarySchema:
     unique_search_history_id: int
     day: str
+    city: str
     travel_method: str
     travel_time: str
     morning_activity: str
@@ -32,6 +33,7 @@ class ItenerarySchema:
         return {
             'unique_search_history_id': self.unique_search_history_id,
             'day': self.day,
+            'city': self.city,
             'travel_method': self.travel_method,
             'travel_time': self.travel_time,
             'morning_activity': self.morning_activity,
