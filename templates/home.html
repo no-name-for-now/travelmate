@@ -21,6 +21,9 @@
   </style>
 </head>
 <body>
+  {% extends "navbar.html" %}
+  {% block title %}Home - My Travel Itenerary{% endblock %}
+  {% block content %}
   <div class="container">
     <h1>Where do you want an itinerary for?</h1>
     <form method="post" class="mt-4">
@@ -98,7 +101,9 @@
             });
         });
     </script>
+    {% endblock %}
 </body>
+
 </html>
 
 

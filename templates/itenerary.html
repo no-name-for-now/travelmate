@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Your Itinerary</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add Bootstrap CSS CDN link here -->
@@ -23,6 +23,9 @@
 </head>
 
 <body>
+      {% extends "navbar.html" %}
+  {% block title %}Your Itinerary{% endblock %}
+  {% block content %}
     <div class="container">
         <h1 class="mt-5">Your Itinerary</h1>
         <table class="table table-striped mt-3">
@@ -55,7 +58,7 @@
     </div>
     <!-- Include Bootstrap JavaScript and jQuery CDN links here if needed -->
 </body>
-
+{% endblock %}
 </html>
 
 
