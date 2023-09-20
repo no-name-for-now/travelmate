@@ -115,10 +115,17 @@ def home():
             print("data not valid")
 
 
+    unique_countries = db.session.query(WorldCities.country).distinct().order_by(WorldCities.country).all()
+    countries = [country[0] for country in unique_countries]
+    country_cities = {}
+    for country in countries:
+        cities = WorldCities.query.filter_by(country=country).all()
+        country_cities[country] = [city.city for city in cities]
+
     from_date = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
     to_date = (datetime.now() + timedelta(days=10)).strftime('%Y-%m-%d')
     top10_most_searched = most_searched(db,SearchHistory,UniqueSearchHistory)
-    return render_template("home.html", default_from_date=from_date, default_to_date=to_date, top10_most_searched = top10_most_searched)
+    return render_template("home.html", default_from_date=from_date, default_to_date=to_date, top10_most_searched = top10_most_searched, countries=countries, country_cities=country_cities)
 
 
 if __name__ == "__main__":
