@@ -41,3 +41,18 @@ class SearchHistory(db.Model):
     unique_search_history_id = db.Column(db.Integer, db.ForeignKey('unique_search_history.id', ondelete='CASCADE'), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+#source https://simplemaps.com/data/world-cities
+class WorldCities(db.Model):
+    __tablename__ = 'world_cities'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    city = db.Column(db.String(50))
+    city_ascii = db.Column(db.String(50))
+    country = db.Column(db.String(50))
+    iso2 = db.Column(db.String(2))
+    iso3 = db.Column(db.String(3))
+    lat = db.Column(db.Float)
+    lng = db.Column(db.Float)
+    population = db.Column(db.Integer)
+

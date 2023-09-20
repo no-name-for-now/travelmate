@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_migrate import Migrate
 from helpers.itenerary import get_itenerary, load_config, home_vars
 from database import db
-from models import Itenerary, UniqueSearchHistory, SearchHistory
+from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
 from sqlalchemy.exc import IntegrityError
 import pandas as pd
@@ -20,12 +20,18 @@ migrate = Migrate(app, db)
 config_file = "configs.yaml"
 config = load_config(config_file)
 
-
 @app.route("/query_sh")
 def query_sh():
     data = db.session.query(SearchHistory).all()
     for item in data:
         print(item.id, " ", item.unique_search_history_id, item.created_at, " ",item.updated_at)
+    return "done"
+
+@app.route("/query_wc")
+def query_wc():
+    data = db.session.query(WorldCities).all()
+    for item in data:
+        print(item.city)
     return "done"
 
 @app.route("/query_ush")
@@ -40,6 +46,12 @@ def query_i():
     data = db.session.query(Itenerary).all()
     for item in data:
         print(item.id, " ", item.unique_search_history_id, " ",item.day ," ", item.morning_activity," ", item.created_at, " ",item.updated_at)
+    return "done"
+
+@app.route("/query_tables")
+def query_tables():
+    tables = list_tables(db)
+    print(tables)
     return "done"
 
 def insert_data(model,db,dict):
@@ -105,7 +117,6 @@ def home():
 
     from_date = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
     to_date = (datetime.now() + timedelta(days=10)).strftime('%Y-%m-%d')
-    tables = list_tables(db)
     top10_most_searched = most_searched(db,SearchHistory,UniqueSearchHistory)
     return render_template("home.html", default_from_date=from_date, default_to_date=to_date, top10_most_searched = top10_most_searched)
 
