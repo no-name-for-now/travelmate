@@ -56,6 +56,23 @@
             </tbody>
         </table>
     </div>
+        <div class="container">
+        <h1 class="mt-5">Your Itinerary</h1>
+        <ul class="list-group mt-3">
+            {% for index, row in df.iterrows() %}
+            <li class="list-group-item">
+                <h5 class="mb-1">Day: {{ row['day'] }}</h5>
+                <p class="mb-1"><a href="#" onclick="searchBooking('{{ row['city'] }}')">{{ row['city'] }}</a></p>           
+                <p class="mb-1">Travel Method: {{ row['travel_method'] }}</p>
+                <p class="mb-1">Travel Time: {{ row['travel_time'] }}</p>
+                <p class="mb-1"><a href="#" onclick="searchGoogle('{{ row['morning_activity'] }}')">Morning Activity : {{ row['morning_activity'] }}</a></p>
+                <p class="mb-1"><a href="#" onclick="searchGoogle('{{ row['afternoon_activity'] }}')">Afternoon Activity : {{ row['afternoon_activity'] }}</a></p>
+                <p class="mb-1"><a href="#" onclick="searchGoogle('{{ row['evening_activity'] }}')">Evening Activity : {{ row['evening_activity'] }}</a></p>
+                <!-- Add more details if needed -->
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
     <!-- Include Bootstrap JavaScript and jQuery CDN links here if needed -->
 </body>
 {% endblock %}

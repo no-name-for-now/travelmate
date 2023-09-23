@@ -18,6 +18,21 @@ class Itenerary(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'unique_search_history_id': self.unique_search_history_id,
+            'day': self.day,
+            'city': self.city,
+            'travel_method': self.travel_method,
+            'travel_time': self.travel_time,
+            'morning_activity': self.morning_activity,
+            'afternoon_activity': self.afternoon_activity,
+            'evening_activity': self.evening_activity,
+            'created_at': self.created_at.isoformat() if self.created_at else None,
+            'updated_at': self.updated_at.isoformat() if self.updated_at else None,
+        }
+
 
 
 class UniqueSearchHistory(db.Model):

@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS #DEV ONLY
 from flask_migrate import Migrate
-from helpers.itenerary import get_itenerary, load_config, home_vars
+from helpers.itenerary import get_itenerary, load_config, home_vars, home_vars_locust, itinerary_vars
 from database import db
 from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
@@ -9,16 +10,25 @@ from sqlalchemy.exc import IntegrityError
 import pandas as pd
 from psycopg2.errors import UniqueViolation
 from sqlalchemy import select
-from crud.read import list_tables, query_search, most_searched
+from crud.read import list_tables, query_search, most_searched, query_search_fe
 
 
 app = Flask(__name__)
+CORS(app) #DEV ONLY
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost/mydatabase'  # Use the same values as in your Docker Compose file
 db.init_app(app)
 migrate = Migrate(app, db)
 
 config_file = "configs.yaml"
 config = load_config(config_file)
+
+with app.app_context():
+    unique_countries = db.session.query(WorldCities.country).distinct().order_by(WorldCities.country).all()
+    countries = [country[0] for country in unique_countries]
+    country_cities = {}
+    for country in countries:
+        cities = WorldCities.query.filter_by(country=country).all()
+        country_cities[country] = [city.city for city in cities]
 
 @app.route("/query_sh")
 def query_sh():
@@ -59,10 +69,34 @@ def insert_data(model,db,dict):
     db.session.add(data)
     db.session.commit()
 
+
+@app.route("/first_backend", methods = ["POST"])
+def first_backend():
+    itenerary_dict = itinerary_vars(request)
+    print(itenerary_dict)
+    unique_search_history_schema = UniqueSearchHistorySchema(num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
+    if unique_search_history_schema.validate_data:  # Custom validation function
+        data_dict = unique_search_history_schema.to_dict()
+        unique_search_history_data = UniqueSearchHistory(**data_dict)
+
+    try: 
+        db.session.add(unique_search_history_data)
+        db.session.commit()
+    except IntegrityError as e:
+        db.session.rollback() 
+        unique_search_history_id = query_search_fe(model = UniqueSearchHistory, num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
+        print(unique_search_history_id)
+        results = query_search_fe(model = Itenerary, unique_search_history_id=unique_search_history_id)
+        print(results)
+
+
+    return results
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
         home_request = home_vars(request)
+        #home_request = home_vars_locust(request) #use this line to stress test
 
         unique_search_history_schema = UniqueSearchHistorySchema(num_days=home_request['days'], country=home_request['country'], specific_places=home_request['region_string'])
         if unique_search_history_schema.validate_data:  # Custom validation function
@@ -115,13 +149,6 @@ def home():
             print("data not valid")
 
 
-    unique_countries = db.session.query(WorldCities.country).distinct().order_by(WorldCities.country).all()
-    countries = [country[0] for country in unique_countries]
-    country_cities = {}
-    for country in countries:
-        cities = WorldCities.query.filter_by(country=country).all()
-        country_cities[country] = [city.city for city in cities]
-
     from_date = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
     to_date = (datetime.now() + timedelta(days=10)).strftime('%Y-%m-%d')
     top10_most_searched = most_searched(db,SearchHistory,UniqueSearchHistory)
@@ -129,4 +156,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0', port=5000)

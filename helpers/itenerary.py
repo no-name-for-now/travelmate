@@ -34,12 +34,38 @@ def get_itenerary(country, region_string, n_days, config):
     return df
 
 
+def itinerary_vars(request):
+    data = request.json
+    country = data.get("country").replace(" ", "")
+    cities = data.get("cities").replace(" ", "").replace(" ", "")
+    cities = sort_csv(cities)
+    from_date_obj = datetime.strptime(data.get("from"), '%Y-%m-%d')
+    to_date_obj = datetime.strptime(data.get("to"), '%Y-%m-%d')
+    days = (to_date_obj - from_date_obj).days 
+
+    var_dict = {'country' : country, 'cities' : cities, 'from_date_obj':from_date_obj , 'to_date_obj':to_date_obj, 'days':days }
+
+    return var_dict
+
 def home_vars(request):
     country = request.form["country"].replace(" ", "")
     region_string = request.form["region_string"].replace(" ", "")
     region_string = sort_csv(region_string)
     from_date_obj = datetime.strptime(request.form["from"], '%Y-%m-%d')
     to_date_obj = datetime.strptime(request.form["to"], '%Y-%m-%d')
+    days = (to_date_obj - from_date_obj).days 
+
+    var_dict = {'country' : country, 'region_string' : region_string, 'from_date_obj':from_date_obj , 'to_date_obj':to_date_obj, 'days':days }
+
+    return var_dict
+
+def home_vars_locust(request):
+    data = request.json
+    country = data.get("country").replace(" ", "")
+    region_string = data.get("region_string").replace(" ", "").replace(" ", "")
+    region_string = sort_csv(region_string)
+    from_date_obj = datetime.strptime(data.get("from"), '%Y-%m-%d')
+    to_date_obj = datetime.strptime(data.get("to"), '%Y-%m-%d')
     days = (to_date_obj - from_date_obj).days 
 
     var_dict = {'country' : country, 'region_string' : region_string, 'from_date_obj':from_date_obj , 'to_date_obj':to_date_obj, 'days':days }

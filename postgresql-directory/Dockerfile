@@ -1,5 +1,5 @@
 # Use the official PostgreSQL image as a parent image
-FROM postgres:latest
+FROM postgres:15
 
 # Set environment variables
 ENV POSTGRES_DB=mydatabase
