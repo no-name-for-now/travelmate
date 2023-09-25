@@ -70,103 +70,70 @@ def insert_data(model,db,dict):
     db.session.add(data)
     db.session.commit()
 
+@app.route("/top10", methods = ["GET"])
+def top10():
+    results = most_searched(db,SearchHistory,UniqueSearchHistory)
+    result_list = [{'country': country, 'city': city, 'itenerary_length': x, 'number_of_searches': y} for country, city, x, y in results]
+    result_json = json.dumps(result_list)
+
+    return result_list
+
 
 @app.route("/first_backend", methods = ["POST"])
 def first_backend():
     itenerary_dict = itinerary_vars(request)
-    print(itenerary_dict)
     unique_search_history_schema = UniqueSearchHistorySchema(num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
     if unique_search_history_schema.validate_data:  # Custom validation function
         data_dict = unique_search_history_schema.to_dict()
         unique_search_history_data = UniqueSearchHistory(**data_dict)
 
     try: 
+        print("trying")
         db.session.add(unique_search_history_data)
         db.session.commit()
     except IntegrityError as e:
+        print("excepting")
         db.session.rollback() 
         unique_search_history_id = query_search_fe(model = UniqueSearchHistory, num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
         print(unique_search_history_id)
         results = query_search_fe(model = Itenerary, unique_search_history_id=unique_search_history_id)
-        print(results)
+        insert_data(SearchHistory, db, {'unique_search_history_id':unique_search_history_id})
 
+        return results
+
+    print("already there getting from gpt")
+    df = get_itenerary(itenerary_dict['country'], itenerary_dict['cities'], itenerary_dict['days'], config)  #need to change this to not use a data frame and just keep the json
+    df['unique_search_history_id'] = unique_search_history_data.id
+    print(df['unique_search_history_id'])
+
+    for index, row in df.iterrows():
+        itenerary_schema = ItenerarySchema(
+            unique_search_history_id = row['unique_search_history_id'],
+            day = row['day'],
+            city = row['city'],
+            travel_method = row['travel_method'],
+            travel_time = row['travel_time'],
+            morning_activity = row['morning_activity'],
+            afternoon_activity = row['afternoon_activity'],
+            evening_activity = row['evening_activity'])
+        if itenerary_schema.validate_data:  # Custom validation function
+            data_dict = itenerary_schema.to_dict()
+            itenerary_data = Itenerary(**data_dict)                   
+            try: 
+                db.session.add(itenerary_data)
+                db.session.commit()
+                print(itenerary_data.id)
+            except IntegrityError as e:
+                print("Data already in the DB, lets fetch it from the table")
+    results = query_search_fe(model = Itenerary, unique_search_history_id=unique_search_history_data.id)
+    insert_data(SearchHistory, db, {'unique_search_history_id': unique_search_history_data.id})
 
     return results
 
 
-@app.route("/top10", methods = ["GET"])
-def top10():
-    results = most_searched(db,SearchHistory,UniqueSearchHistory)
-    rsult_list = [{'country': country, 'city': city, 'itenerary_length': x, 'number_of_searches': y} for country, city, x, y in results]
-    result_json = json.dumps(rsult_list)
-
-
-    print(rsult_list)
-
-    return rsult_list
-
-
 @app.route("/", methods=["GET", "POST"])
 def home():
-    if request.method == "POST":
-        home_request = home_vars(request)
-        #home_request = home_vars_locust(request) #use this line to stress test
-
-        unique_search_history_schema = UniqueSearchHistorySchema(num_days=home_request['days'], country=home_request['country'], specific_places=home_request['region_string'])
-        if unique_search_history_schema.validate_data:  # Custom validation function
-            data_dict = unique_search_history_schema.to_dict()
-            unique_search_history_data = UniqueSearchHistory(**data_dict)
-
-            try: 
-                db.session.add(unique_search_history_data)
-                db.session.commit()
-            except IntegrityError as e:
-                db.session.rollback() 
-
-                unique_search_history_id = query_search(model = UniqueSearchHistory, num_days=home_request['days'], country=home_request['country'], specific_places=home_request['region_string'])
-                results = query_search(model = Itenerary, unique_search_history_id=unique_search_history_id)
-
-                df = pd.DataFrame([result.__dict__ for result in results])
-                df = df.drop('_sa_instance_state', axis=1, errors='ignore')
-
-                insert_data(SearchHistory, db, {'unique_search_history_id':unique_search_history_id})
-                return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
-
-
-
-            df = get_itenerary(home_request['country'], home_request['region_string'], home_request['days'], config)  #need to change this to not use a data frame and just keep the json
-            df['unique_search_history_id'] = unique_search_history_data.id
-
-            for index, row in df.iterrows():
-                itenerary_schema = ItenerarySchema(
-                    unique_search_history_id = row['unique_search_history_id'],
-                    day = row['day'],
-                    city = row['city'],
-                    travel_method = row['travel_method'],
-                    travel_time = row['travel_time'],
-                    morning_activity = row['morning_activity'],
-                    afternoon_activity = row['afternoon_activity'],
-                    evening_activity = row['evening_activity'])
-                if itenerary_schema.validate_data:  # Custom validation function
-                    data_dict = itenerary_schema.to_dict()
-                    itenerary_data = Itenerary(**data_dict)                   
-                    try: 
-                        db.session.add(itenerary_data)
-                        db.session.commit()
-                        print(itenerary_data.id)
-                    except IntegrityError as e:
-                        print("Data already in the DB, lets fetch it from the table")
-            insert_data(SearchHistory, db, {'unique_search_history_id': unique_search_history_data.id})
-            return render_template("itenerary.html",  tables=[df.to_html(classes='data', header="true")], df=df)
-
-        else:
-            print("data not valid")
-
-
-    from_date = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
-    to_date = (datetime.now() + timedelta(days=10)).strftime('%Y-%m-%d')
-    top10_most_searched = most_searched(db,SearchHistory,UniqueSearchHistory)
-    return render_template("home.html", default_from_date=from_date, default_to_date=to_date, top10_most_searched = top10_most_searched, countries=countries, country_cities=country_cities)
+    return "Healthy"
 
 
 if __name__ == "__main__":
