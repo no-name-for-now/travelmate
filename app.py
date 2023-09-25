@@ -11,6 +11,7 @@ import pandas as pd
 from psycopg2.errors import UniqueViolation
 from sqlalchemy import select
 from crud.read import list_tables, query_search, most_searched, query_search_fe
+import json
 
 
 app = Flask(__name__)
@@ -91,6 +92,19 @@ def first_backend():
 
 
     return results
+
+
+@app.route("/top10", methods = ["GET"])
+def top10():
+    results = most_searched(db,SearchHistory,UniqueSearchHistory)
+    rsult_list = [{'country': country, 'city': city, 'itenerary_length': x, 'number_of_searches': y} for country, city, x, y in results]
+    result_json = json.dumps(rsult_list)
+
+
+    print(rsult_list)
+
+    return rsult_list
+
 
 @app.route("/", methods=["GET", "POST"])
 def home():
