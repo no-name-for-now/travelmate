@@ -88,23 +88,18 @@ def first_backend():
         unique_search_history_data = UniqueSearchHistory(**data_dict)
 
     try: 
-        print("trying")
         db.session.add(unique_search_history_data)
         db.session.commit()
     except IntegrityError as e:
-        print("excepting")
         db.session.rollback() 
         unique_search_history_id = query_search_fe(model = UniqueSearchHistory, num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
-        print(unique_search_history_id)
         results = query_search_fe(model = Itenerary, unique_search_history_id=unique_search_history_id)
         insert_data(SearchHistory, db, {'unique_search_history_id':unique_search_history_id})
 
         return results
 
-    print("already there getting from gpt")
     df = get_itenerary(itenerary_dict['country'], itenerary_dict['cities'], itenerary_dict['days'], config)  #need to change this to not use a data frame and just keep the json
     df['unique_search_history_id'] = unique_search_history_data.id
-    print(df['unique_search_history_id'])
 
     for index, row in df.iterrows():
         itenerary_schema = ItenerarySchema(
@@ -122,9 +117,8 @@ def first_backend():
             try: 
                 db.session.add(itenerary_data)
                 db.session.commit()
-                print(itenerary_data.id)
             except IntegrityError as e:
-                print("Data already in the DB, lets fetch it from the table")
+                pass
     results = query_search_fe(model = Itenerary, unique_search_history_id=unique_search_history_data.id)
     insert_data(SearchHistory, db, {'unique_search_history_id': unique_search_history_data.id})
 
