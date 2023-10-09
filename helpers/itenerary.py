@@ -34,6 +34,25 @@ def get_itenerary(country, region_string, n_days, config):
     return df
 
 
+def get_city_description_chatgpt(country, region_string, config):
+    openai.api_key = config["api_key"]
+    model_engine = config['model_engine']
+    message_first_part = "Create a create a 100 word description of {0}, {1} for a tourist".format(country, region_string)
+    
+    response = openai.ChatCompletion.create(
+        model='gpt-3.5-turbo',
+        messages=[
+            {"role": "system", "content": "You are a travel assistant."},
+            {"role": "user", "content": message_first_part + 'Respond in the following format: {"city": ,"description":}}'},
+        ])
+    
+    message = response.choices[0]['message']
+    object = json.loads(message['content'])
+    df = pd.DataFrame([object])
+
+    return df
+
+
 def itinerary_vars(request):
     data = request.json
     country = data.get("country").replace(" ", "")

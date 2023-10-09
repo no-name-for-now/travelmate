@@ -33,7 +33,14 @@ class Itenerary(db.Model):
             'updated_at': self.updated_at.isoformat() if self.updated_at else None,
         }
 
+class CityDescriptors(db.Model):
+    __tablename__ = 'city_descriptor'
 
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    city_id = db.Column(db.Integer, db.ForeignKey('world_cities.id', ondelete='CASCADE'), nullable=False)
+    city_description = db.Column(db.String(2000), nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 class UniqueSearchHistory(db.Model):
     __tablename__ = 'unique_search_history'

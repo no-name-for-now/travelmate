@@ -2,9 +2,9 @@ from datetime import datetime, timedelta
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS #DEV ONLY
 from flask_migrate import Migrate
-from helpers.itenerary import get_itenerary, load_config, home_vars, home_vars_locust, itinerary_vars
+from helpers.itenerary import get_itenerary, load_config, home_vars, home_vars_locust, itinerary_vars, get_city_description_chatgpt
 from database import db
-from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities
+from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities, CityDescriptors
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
 from sqlalchemy.exc import IntegrityError
 import pandas as pd
@@ -31,40 +31,6 @@ with app.app_context():
         cities = WorldCities.query.filter_by(country=country).all()
         country_cities[country] = [city.city for city in cities]
 
-@app.route("/query_sh")
-def query_sh():
-    data = db.session.query(SearchHistory).all()
-    for item in data:
-        print(item.id, " ", item.unique_search_history_id, item.created_at, " ",item.updated_at)
-    return "done"
-
-@app.route("/query_wc")
-def query_wc():
-    data = db.session.query(WorldCities).all()
-    for item in data:
-        print(item.city)
-    return "done"
-
-@app.route("/query_ush")
-def query_ush():
-    data = db.session.query(UniqueSearchHistory).all()
-    for item in data:
-        print(item.id, " ", item.num_days, " ",item.country ," ", item.specific_places," ", item.created_at, " ",item.updated_at)
-    return "done"
-
-@app.route("/query_i")
-def query_i():
-    data = db.session.query(Itenerary).all()
-    for item in data:
-        print(item.id, " ", item.unique_search_history_id, " ",item.day ," ", item.morning_activity," ", item.created_at, " ",item.updated_at)
-    return "done"
-
-@app.route("/query_tables")
-def query_tables():
-    tables = list_tables(db)
-    print(tables)
-    return "done"
-
 def insert_data(model,db,dict):
     data = model(**dict)
     db.session.add(data)
@@ -77,6 +43,18 @@ def top10():
     result_json = json.dumps(result_list)
 
     return result_list
+
+
+@app.route("/get_city_description", methods = ["POST"])
+def get_city_description():
+    data = request.json
+    country = data.get("country").replace(" ", "")
+    city = data.get("city").replace(" ", "")
+    city_id = results = query_search_fe(model = WorldCities, city=city)
+    print(city_id)
+    df = get_city_description_chatgpt(country = country, region_string=city, config = config)
+
+    return df['description'][0]
 
 
 @app.route("/first_backend", methods = ["POST"])
