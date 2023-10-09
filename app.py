@@ -62,25 +62,10 @@ def get_city_description():
             city_descriptor_data = CityDescriptors(**data_dict)
         db.session.add(city_descriptor_data)
         db.session.commit()
-        print("inserted into db")
-        return df['description'][0]   
+        city_description = query_search_fe(model = CityDescriptors,only_id = 0, city_id=city_id)
+        return city_description
     else:
-        print(city_description)
-        return "Hello WOrld"
-
-    #if unique_search_history_schema.validate_data:
-    #    data_dict = unique_search_history_schema.to_dict()
-    #    unique_search_history_data = CityDescriptors(**data_dict)
-#
-    #try: 
-    #    db.session.add(unique_search_history_data)
-    #    db.session.commit()
-    #except:
-    #    pass
-#
-    #df = get_city_description_chatgpt(country = country, region_string=city, config = config)
-
-    return df['description'][0]
+        return city_description
 
 
 @app.route("/first_backend", methods = ["POST"])
@@ -99,7 +84,6 @@ def first_backend():
         unique_search_history_id = query_search_fe(model = UniqueSearchHistory,only_id = 1, num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
         results = query_search_fe(model = Itenerary, only_id = 0, unique_search_history_id=unique_search_history_id)
         insert_data(SearchHistory, db, {'unique_search_history_id':unique_search_history_id})
-
         return results
 
     df = get_itenerary(itenerary_dict['country'], itenerary_dict['cities'], itenerary_dict['days'], config)  #need to change this to not use a data frame and just keep the json
