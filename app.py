@@ -47,9 +47,10 @@ def top10():
 
 @app.route("/get_city_description", methods = ["POST"])
 def get_city_description():
+    print("posted to me")
     data = request.json
     country = data.get("country").replace(" ", "")
-    city = data.get("city").replace(" ", "")
+    city = data.get("cities").replace(" ", "")
     city_id = query_search_fe(model = WorldCities,only_id = 1, city=city)
 
     city_description = query_search_fe(model = CityDescriptors,only_id = 0, city_id=city_id)
