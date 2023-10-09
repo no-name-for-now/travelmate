@@ -19,6 +19,21 @@ class UniqueSearchHistorySchema:
         return True
 
 @dataclass
+class CityDescriptorSchema:
+    city_id: int
+    city_description: str
+
+    def to_dict(self):
+        return {
+            'city_id': self.city_id,
+            'city_description': self.city_description
+        }
+
+    def validate_data(data):
+        return True
+
+
+@dataclass
 class ItenerarySchema:
     unique_search_history_id: int
     day: str

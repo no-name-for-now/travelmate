@@ -42,6 +42,19 @@ class CityDescriptors(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+    __table_args__ = (
+        UniqueConstraint('city_id'),
+    )
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'city_id': self.city_id,
+            'city_description': self.city_description,
+            'created_at': self.created_at.isoformat() if self.created_at else None,
+            'updated_at': self.updated_at.isoformat() if self.updated_at else None,
+        }
+
 class UniqueSearchHistory(db.Model):
     __tablename__ = 'unique_search_history'
 
