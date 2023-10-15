@@ -16,12 +16,11 @@ import json
 
 app = Flask(__name__)
 CORS(app) #DEV ONLY
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost/mydatabase'  # Use the same values as in your Docker Compose file
-db.init_app(app)
-migrate = Migrate(app, db)
-
 config_file = "configs.yaml"
 config = load_config(config_file)
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{config["db_user"]}:{config["db_password"]}@{config["db_host"]}/postgres'  
+db.init_app(app)
+migrate = Migrate(app, db)
 
 with app.app_context():
     unique_countries = db.session.query(WorldCities.country).distinct().order_by(WorldCities.country).all()
