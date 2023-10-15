@@ -7,7 +7,6 @@ from .string_operators import sort_csv
 
 def get_itenerary(country, region_string, n_days, config):
     openai.api_key = config["api_key"]
-    model_engine = config['model_engine']
     message_first_part = "Create a travel itenarary in json for {0} days in {1}, add these specific regions or cities: {2}.".format(n_days, country, region_string)
     
     response = openai.ChatCompletion.create(
@@ -36,7 +35,6 @@ def get_itenerary(country, region_string, n_days, config):
 
 def get_city_description_chatgpt(country, region_string, config):
     openai.api_key = config["api_key"]
-    model_engine = config['model_engine']
     message_first_part = "Create a create a 100 word description of {0}, {1} for a tourist".format(country, region_string)
     
     response = openai.ChatCompletion.create(

@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS #DEV ONLY
 from flask_migrate import Migrate
 from helpers.itenerary import get_itenerary, load_config, home_vars, home_vars_locust, itinerary_vars, get_city_description_chatgpt
+from helpers.get_secret import get_secret
 from database import db
 from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities, CityDescriptors
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema, CityDescriptorSchema
@@ -16,8 +17,11 @@ import json
 
 app = Flask(__name__)
 CORS(app) #DEV ONLY
-config_file = "configs.yaml"
-config = load_config(config_file)
+config = {}
+config["api_key"] = get_secret("resolute-tracer-402011", "api_key")
+config["db_host"] = get_secret("resolute-tracer-402011", "db_host")
+config["db_password"] = get_secret("resolute-tracer-402011", "db_password")
+config["db_user"] = get_secret("resolute-tracer-402011", "db_user")
 app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{config["db_user"]}:{config["db_password"]}@{config["db_host"]}/postgres'  
 db.init_app(app)
 migrate = Migrate(app, db)
@@ -51,6 +55,7 @@ def get_city_description():
     country = data.get("country").replace(" ", "")
     city = data.get("cities").replace(" ", "")
     city_id = query_search_fe(model = WorldCities,only_id = 1, city=city)
+    print(city_id)
 
     city_description = query_search_fe(model = CityDescriptors,only_id = 0, city_id=city_id)
     if city_description == "[]":
