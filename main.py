@@ -26,14 +26,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{config["db_user"]}:{conf
 db.init_app(app)
 migrate = Migrate(app, db)
 
-with app.app_context():
-    unique_countries = db.session.query(WorldCities.country).distinct().order_by(WorldCities.country).all()
-    countries = [country[0] for country in unique_countries]
-    country_cities = {}
-    for country in countries:
-        cities = WorldCities.query.filter_by(country=country).all()
-        country_cities[country] = [city.city for city in cities]
-
 def insert_data(model,db,dict):
     data = model(**dict)
     db.session.add(data)
@@ -55,7 +47,7 @@ def get_city_description():
     country = data.get("country").replace(" ", "")
     city = data.get("cities").replace(" ", "")
     city_id = query_search_fe(model = WorldCities,only_id = 1, city=city)
-    print(city_id)
+    print(city_id) 
 
     city_description = query_search_fe(model = CityDescriptors,only_id = 0, city_id=city_id)
     if city_description == "[]":
@@ -124,4 +116,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug=True,host='0.0.0.0', port=5000)
+    app.run()
