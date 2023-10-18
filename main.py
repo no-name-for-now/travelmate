@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from google.cloud.sql.connector import Connector, IPTypes
@@ -30,6 +31,7 @@ def getconn():
 
 
 app = Flask(__name__)
+CORS(app)
 
 # configure Flask-SQLAlchemy to use Python Connector
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+pg8000://"
