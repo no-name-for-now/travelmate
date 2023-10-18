@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -8,28 +8,37 @@ from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema
 from crud.read import list_tables, query_search, most_searched, query_search_fe
 from crud.write import insert_data
 from helpers.itenerary import itinerary_vars, get_itenerary
+from helpers.get_secret import get_secret
 from sqlalchemy.exc import IntegrityError, DatabaseError
 from database import db
 import pg8000
 import json
+import os
 
 
 # initialize Python Connector object
 connector = Connector()
+
+config = {}
+config["api_key"] = get_secret("resolute-tracer-402011", "api_key")
+config["db_host"] = get_secret("resolute-tracer-402011", "db_host")
+config["db_password"] = get_secret("resolute-tracer-402011", "db_password")
+config["db_user"] = get_secret("resolute-tracer-402011", "db_user")
 
 # Python Connector database connection function
 def getconn():
     conn = connector.connect(
         "resolute-tracer-402011:europe-west1:travelmate-backend-gpt", # Cloud SQL Instance Connection Name
         "pg8000",
-        user="Karel",
-        password="fghjk56789$$!!",
+        user=f'{config["db_user"]}',
+        password=f'{config["db_password"]}',
         db="postgres",
         ip_type= IPTypes.PUBLIC  # IPTypes.PRIVATE for private IP
     )
     return conn
 
 
+#app = Flask(__name__, static_folder='../travelmate-fe/build')
 app = Flask(__name__)
 CORS(app)
 
@@ -43,10 +52,15 @@ app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
 db.init_app(app)
 migrate = Migrate(app, db)
 
+# Serve React App
+#@app.route('/', defaults={'path': ''})
+#@app.route('/<path:path>')
+#def serve(path):
+#    if path != "" and os.path.exists(app.static_folder + '/' + path):
+#        return send_from_directory(app.static_folder, path)
+#    else:
+#        return send_from_directory(app.static_folder, 'index.html')
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    return "Healthy" 
 
 @app.route("/db_health", methods=["GET"])
 def db_health():

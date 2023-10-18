@@ -3,10 +3,7 @@ from sqlalchemy import create_engine
 
 # Path to your CSV file
 
-def insert_data(model,db,dict):
-    data = model(**dict)
-    db.session.add(data)
-    db.session.commit()
+
 
 CSV_FILE = 'data.csv'
 
