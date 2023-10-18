@@ -1,44 +1,57 @@
-from datetime import datetime, timedelta
-from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS #DEV ONLY
+from flask import Flask, request
 from flask_migrate import Migrate
-from helpers.itenerary import get_itenerary, load_config, home_vars, home_vars_locust, itinerary_vars, get_city_description_chatgpt
-from helpers.get_secret import get_secret
-from database import db
+from flask_sqlalchemy import SQLAlchemy
+from google.cloud.sql.connector import Connector, IPTypes
 from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities, CityDescriptors
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema, CityDescriptorSchema
-from sqlalchemy.exc import IntegrityError
-import pandas as pd
-from psycopg2.errors import UniqueViolation
-from sqlalchemy import select
 from crud.read import list_tables, query_search, most_searched, query_search_fe
+from crud.write import insert_data
+from helpers.itenerary import itinerary_vars, get_itenerary
+from sqlalchemy.exc import IntegrityError, DatabaseError
+from database import db
+import pg8000
 import json
 
 
+# initialize Python Connector object
+connector = Connector()
+
+# Python Connector database connection function
+def getconn():
+    conn = connector.connect(
+        "resolute-tracer-402011:europe-west1:travelmate-backend-gpt", # Cloud SQL Instance Connection Name
+        "pg8000",
+        user="Karel",
+        password="fghjk56789$$!!",
+        db="postgres",
+        ip_type= IPTypes.PUBLIC  # IPTypes.PRIVATE for private IP
+    )
+    return conn
+
+
 app = Flask(__name__)
-CORS(app) #DEV ONLY
-config = {}
-config["api_key"] = get_secret("resolute-tracer-402011", "api_key")
-config["db_host"] = get_secret("resolute-tracer-402011", "db_host")
-config["db_password"] = get_secret("resolute-tracer-402011", "db_password")
-config["db_user"] = get_secret("resolute-tracer-402011", "db_user")
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{config["db_user"]}:{config["db_password"]}@{config["db_host"]}/postgres'  
+
+# configure Flask-SQLAlchemy to use Python Connector
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+pg8000://"
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+    "creator": getconn
+}
+
+# initialize the app with the extension
 db.init_app(app)
 migrate = Migrate(app, db)
 
-def insert_data(model,db,dict):
-    data = model(**dict)
-    db.session.add(data)
-    db.session.commit()
 
-@app.route("/top10", methods = ["GET"])
-def top10():
-    results = most_searched(db,SearchHistory,UniqueSearchHistory)
-    result_list = [{'country': country, 'city': city, 'itenerary_length': x, 'number_of_searches': y} for country, city, x, y in results]
-    result_json = json.dumps(result_list)
+@app.route("/", methods=["GET", "POST"])
+def home():
+    return "Healthy" 
 
-    return result_list
-
+@app.route("/db_health", methods=["GET"])
+def db_health():
+    with app.app_context():  # Ensuring the database operation is within the app context
+        city_id = query_search_fe(model=WorldCities, only_id=1, city='Brussels')
+        print(city_id)
+        return str(city_id)
 
 @app.route("/get_city_description", methods = ["POST"])
 def get_city_description():
@@ -64,7 +77,6 @@ def get_city_description():
     else:
         return city_description
 
-
 @app.route("/first_backend", methods = ["POST"])
 def first_backend():
     itenerary_dict = itinerary_vars(request)
@@ -76,7 +88,7 @@ def first_backend():
     try: 
         db.session.add(unique_search_history_data)
         db.session.commit()
-    except IntegrityError as e:
+    except DatabaseError as e:
         db.session.rollback() 
         unique_search_history_id = query_search_fe(model = UniqueSearchHistory,only_id = 1, num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
         results = query_search_fe(model = Itenerary, only_id = 0, unique_search_history_id=unique_search_history_id)
@@ -102,18 +114,20 @@ def first_backend():
             try: 
                 db.session.add(itenerary_data)
                 db.session.commit()
-            except IntegrityError as e:
+            except DatabaseError as e:
                 pass
     results = query_search_fe(model = Itenerary,only_id = 0, unique_search_history_id=unique_search_history_data.id)
     insert_data(SearchHistory, db, {'unique_search_history_id': unique_search_history_data.id})
 
     return results
 
+@app.route("/top10", methods = ["GET"])
+def top10():
+    results = most_searched(db,SearchHistory,UniqueSearchHistory)
+    result_list = [{'country': country, 'city': city, 'itenerary_length': x, 'number_of_searches': y} for country, city, x, y in results]
+    result_json = json.dumps(result_list)
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    return "Healthy"
-
+    return result_list
 
 if __name__ == "__main__":
     app.run()

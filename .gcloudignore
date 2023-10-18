@@ -12,6 +12,7 @@
 # below:
 .git
 .gitignore
+.Dockerfile
 
 # Python pycache:
 __pycache__/
