@@ -52,7 +52,7 @@ app = Flask(__name__)
 limiter = Limiter(get_ip, app=app, storage_uri="memory://")
 
 #CORS(app)
-CORS(app, origins=["https://travelagenda-fe.web.app"])
+CORS(app, origins=["https://travelagenda-fe.web.app","https://www.travelagenda-fe.web.app","https://tripagenda.co","https://www.tripagenda.co"])
 
 # configure Flask-SQLAlchemy to use Python Connector
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+pg8000://"
