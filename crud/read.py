@@ -23,7 +23,6 @@ def query_search_fe(model,only_id, **kwargs):
         for item in data:
             return item.id 
     else:
-        print("went here")
         results = [item.to_dict() for item in data] if data else []
         json_string = json.dumps(results, indent=4) 
         return json_string

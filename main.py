@@ -1,5 +1,6 @@
 from flask import Flask, request, send_from_directory
 from flask_cors import CORS
+from flask_limiter import Limiter
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from google.cloud.sql.connector import Connector, IPTypes
@@ -7,13 +8,16 @@ from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities, C
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema, CityDescriptorSchema
 from crud.read import list_tables, query_search, most_searched, query_search_fe
 from crud.write import insert_data
-from helpers.itenerary import itinerary_vars, get_itenerary
+from helpers.api_validators import validate_first_backend, validate_get_city_description
+from helpers.ipfunctions import get_ip
+from helpers.itenerary import itinerary_vars, get_itenerary, get_city_description_chatgpt
 from helpers.get_secret import get_secret
 from sqlalchemy.exc import IntegrityError, DatabaseError
 from database import db
 import pg8000
 import json
 import os
+
 
 
 # initialize Python Connector object
@@ -40,6 +44,14 @@ def getconn():
 
 #app = Flask(__name__, static_folder='../travelmate-fe/build')
 app = Flask(__name__)
+
+
+
+
+
+limiter = Limiter(get_ip, app=app, storage_uri="memory://")
+
+#CORS(app)
 CORS(app, origins=["https://travelagenda-fe.web.app"])
 
 # configure Flask-SQLAlchemy to use Python Connector
@@ -63,24 +75,24 @@ migrate = Migrate(app, db)
 
 
 @app.route("/db_health", methods=["GET"])
+@limiter.limit('5 per minute')
 def db_health():
     with app.app_context():  # Ensuring the database operation is within the app context
         city_id = query_search_fe(model=WorldCities, only_id=1, city='Brussels')
-        print(city_id)
         return str(city_id)
 
 @app.route("/get_city_description", methods = ["POST"])
+@limiter.limit('15 per minute')
 def get_city_description():
-    print("posted to me")
     data = request.json
+    if validate_get_city_description(data) is False:
+        return None
     country = data.get("country").replace(" ", "")
     city = data.get("cities").replace(" ", "")
     city_id = query_search_fe(model = WorldCities,only_id = 1, city=city)
-    print(city_id) 
 
     city_description = query_search_fe(model = CityDescriptors,only_id = 0, city_id=city_id)
     if city_description == "[]":
-        print("entered")
         df = get_city_description_chatgpt(country = country, region_string=city, config = config)
         city_descriptor_schema = CityDescriptorSchema(city_id = city_id,city_description =  df['description'][0])
         if city_descriptor_schema.validate_data:  # Custom validation function
@@ -94,8 +106,12 @@ def get_city_description():
         return city_description
 
 @app.route("/first_backend", methods = ["POST"])
+@limiter.limit('15 per minute')
 def first_backend():
     itenerary_dict = itinerary_vars(request)
+    if validate_first_backend(itenerary_dict) is False:
+        return None
+
     unique_search_history_schema = UniqueSearchHistorySchema(num_days=itenerary_dict['days'], country=itenerary_dict['country'], specific_places=itenerary_dict['cities'])
     if unique_search_history_schema.validate_data:  # Custom validation function
         data_dict = unique_search_history_schema.to_dict()
@@ -144,6 +160,12 @@ def top10():
     result_json = json.dumps(result_list)
 
     return result_list
+
+
+@app.route('/remote')
+def show_remote_addr():
+    remote_addr = request.remote_addr
+    return f'Your remote address is: {remote_addr}'
 
 if __name__ == "__main__":
     app.run()
