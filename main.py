@@ -40,7 +40,7 @@ def getconn():
 
 #app = Flask(__name__, static_folder='../travelmate-fe/build')
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://travelagenda-fe.web.app"])
 
 # configure Flask-SQLAlchemy to use Python Connector
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+pg8000://"
