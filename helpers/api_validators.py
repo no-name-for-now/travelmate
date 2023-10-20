@@ -3,6 +3,13 @@ cities_list = [
   { "country": "Belgium", "cities": "Antwerp" },
   { "country": "Belgium", "cities": "Brussels" },
   { "country": "Spain", "cities": "Madrid" },
+  {"country": "Spain", "cities": "Barcelona"},
+  {"country": "Spain", "cities": "Sevilla"},
+  {"country": "Spain", "cities": "Malaga"},
+	{"country": "Portugal", "cities": "Aves"},
+	{"country": "Portugal", "cities": "Sintra"},
+	{"country": "Portugal", "cities": "Vila Nova de Gaia"},
+	{"country": "Portugal", "cities": "Cascais"},
   { "country": "Portugal", "cities": "Lisbon" },
   { "country": "Portugal", "cities": "Porto" }
 ]

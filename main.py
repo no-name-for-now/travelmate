@@ -51,8 +51,13 @@ app = Flask(__name__)
 
 limiter = Limiter(get_ip, app=app, storage_uri="memory://")
 
-#CORS(app)
-CORS(app, origins=["https://travelagenda-fe.web.app","https://www.travelagenda-fe.web.app","https://tripagenda.co","https://www.tripagenda.co"])
+
+env = os.getenv('environment', default=None)
+print(env)
+if env == 'DEV':
+    CORS(app)
+else:
+    CORS(app, origins=["https://travelagenda-fe.web.app","https://www.travelagenda-fe.web.app","https://tripagenda.co","https://www.tripagenda.co"])
 
 # configure Flask-SQLAlchemy to use Python Connector
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+pg8000://"
@@ -134,7 +139,7 @@ def first_backend():
         itenerary_schema = ItenerarySchema(
             unique_search_history_id = row['unique_search_history_id'],
             day = row['day'],
-            city = row['city'],
+            city = row['specific_places'],
             travel_method = row['travel_method'],
             travel_time = row['travel_time'],
             morning_activity = row['morning_activity'],
@@ -168,4 +173,7 @@ def show_remote_addr():
     return f'Your remote address is: {remote_addr}'
 
 if __name__ == "__main__":
-    app.run()
+    if env == 'DEV':
+        app.run(debug=True)
+    else:
+        app.run()
