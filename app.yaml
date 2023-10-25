@@ -1,9 +1,9 @@
 runtime: python39  # or another version if you prefer
 
-instance_class: F4
-
-env_variables:
-  DB_URI: "postgres://Karel:fghjk56789$$!!@/postgres?host=/cloudsql/resolute-tracer-402011:europe-west1:travelmate-backend-gpt"
+instance_class: B4
+basic_scaling:
+  max_instances: 1
+  idle_timeout: 10m
 
 beta_settings:
     cloud_sql_instances: resolute-tracer-402011:europe-west1:travelmate-backend-gpt

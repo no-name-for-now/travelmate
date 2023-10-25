@@ -54,7 +54,7 @@ def get_city_description_chatgpt(country, region_string, config):
 def itinerary_vars(request):
     data = request.json
     country = data.get("country").replace(" ", "")
-    cities = data.get("cities").replace(" ", "").replace(" ", "")
+    cities = data.get("city").replace(" ", "").replace(" ", "")
     cities = sort_csv(cities)
     from_date_obj = datetime.strptime(data.get("from"), '%Y-%m-%d')
     to_date_obj = datetime.strptime(data.get("to"), '%Y-%m-%d')
