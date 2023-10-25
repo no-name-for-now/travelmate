@@ -170,7 +170,7 @@ def top10():
 @app.route('/remote')
 def show_remote_addr():
     remote_addr = request.remote_addr
-    return f'Your remote address is: {remote_addr}'
+    return f'Your remote address is 2: {remote_addr}'
 
 if __name__ == "__main__":
     if env == 'DEV':
