@@ -82,7 +82,15 @@ def store_user_search():
     data=request.json
     if validate_store_user_search(data) is False:
         return None
-    print(data)
+
+    try:
+        user_saved_itinerary = UserSavedItinerary(**data)
+        db.session.add(user_saved_itinerary)
+        db.session.commit()
+    except DatabaseError as e:
+        db.session.rollback() 
+        return "Data Already Stored"
+
 
     #UserSavedItinerary
 
