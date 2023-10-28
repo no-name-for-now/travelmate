@@ -55,7 +55,7 @@ print(env)
 if env == 'DEV':
     CORS(app)
 else:
-    CORS(app, origins=["https://travelagenda-fe.web.app","https://www.travelagenda-fe.web.app","https://tripagenda.co","https://www.tripagenda.co"])
+    CORS(app, origins=["https://travelagenda-fe.web.app","https://www.travelagenda-fe.web.app","https://tripagenda.co","https://www.tripagenda.co","https://travelmate-next-shadcnui.vercel.app"])
 
 # configure Flask-SQLAlchemy to use Python Connector
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+pg8000://"
