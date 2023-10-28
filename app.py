@@ -4,11 +4,11 @@ from flask_limiter import Limiter
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from google.cloud.sql.connector import Connector, IPTypes
-from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities, CityDescriptors
+from models import Itenerary, UniqueSearchHistory, SearchHistory, WorldCities, CityDescriptors, UserSavedItinerary
 from contracts.model_contracts import UniqueSearchHistorySchema, ItenerarySchema, CityDescriptorSchema
 from crud.read import list_tables, query_search, most_searched, query_search_fe
 from crud.write import insert_data
-from helpers.api_validators import validate_first_backend, validate_get_city_description
+from helpers.api_validators import validate_first_backend, validate_get_city_description, validate_store_user_search
 from helpers.ipfunctions import get_ip
 from helpers.itenerary import itinerary_vars, get_itenerary, get_city_description_chatgpt
 from helpers.get_secret import get_secret
@@ -75,6 +75,20 @@ def db_health():
     with app.app_context():  # Ensuring the database operation is within the app context
         city_id = query_search_fe(model=WorldCities, only_id=1, city='Brussels')
         return str(city_id)
+
+@app.route("/store_user_search", methods=["POST"])
+@limiter.limit('5 per minute')
+def store_user_search():
+    data=request.json
+    if validate_store_user_search(data) is False:
+        return None
+    print(data)
+
+    #UserSavedItinerary
+
+    return "awe"
+
+
 
 @app.route("/get_city_description", methods = ["POST"])
 @limiter.limit('15 per minute')

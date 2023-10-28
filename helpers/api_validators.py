@@ -42,4 +42,9 @@ def validate_get_city_description(itenerary_dict):
 	else:
 		return False
 
+def validate_store_user_search(itenerary_dict):
+		return True
+
+
+
 	

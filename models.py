@@ -69,6 +69,22 @@ class UniqueSearchHistory(db.Model):
         UniqueConstraint('country', 'specific_places', 'num_days'),
     )
 
+class UserSavedItinerary(db.Model):
+    __tablename__ = 'user_saved_itinerary'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.UUID(as_uuid=True))
+    ush_id = db.Column(db.Integer, db.ForeignKey('unique_search_history.id', ondelete='CASCADE'), nullable=False)
+    from_date = db.Column(db.DateTime)
+    to_date = db.Column(db.DateTime)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    __table_args__ = (
+        UniqueConstraint('user_id', 'ush_id', 'from_date', 'to_date'),
+    )
+
+
 class SearchHistory(db.Model):
     __tablename__ = 'search_history'
 

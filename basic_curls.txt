@@ -1,0 +1,23 @@
+curl -X POST http://127.0.0.1:5000/get_itinerary \
+     -H "Content-Type: application/json" \
+     -d '{
+           "key": "value"
+         }'
+
+
+curl -X POST http://127.0.0.1:5000/first_backend \
+     -H "Content-Type: application/json" \
+     -d '{
+           "country": "Belgium",
+           "city": "Brussels",
+           "ndays": 3
+         }'
+
+curl -X POST http://127.0.0.1:5000/store_user_search \
+     -H "Content-Type: application/json" \
+     -d '{
+           "user_id": "9248140c-afb3-4e07-a4bb-83164d335b15",
+           "ush_id": "1",
+           "from_date":"2023-11-02"
+           "to_date":"2023-11-05"
+         }'
