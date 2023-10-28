@@ -80,8 +80,25 @@ def db_health():
 @limiter.limit('5 per minute')
 def get_user_search():
     data=request.json
-    stored_itineraries = query_search_fe(model = UserSavedItinerary,only_id = 0, user_id=data["user_id"])
-    return stored_itineraries
+    results = db.session.query(UserSavedItinerary, UniqueSearchHistory) \
+    .join(UniqueSearchHistory, UserSavedItinerary.ush_id == UniqueSearchHistory.id) \
+    .filter(UserSavedItinerary.user_id == data["user_id"]) \
+    .all()
+    response = []
+    for user_saved, unique_search in results:
+        row = {
+            'user_id': user_saved.user_id,
+            'ush_id': user_saved.ush_id,
+            'from_date': user_saved.from_date,
+            'to_date': user_saved.to_date,
+            'country': unique_search.country,
+            'city': unique_search.specific_places,
+            'days': unique_search.num_days
+
+        }
+        response.append(row)
+
+    return response
 
 @app.route("/store_user_search", methods=["POST"])
 @limiter.limit('5 per minute')
