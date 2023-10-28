@@ -84,6 +84,17 @@ class UserSavedItinerary(db.Model):
         UniqueConstraint('user_id', 'ush_id', 'from_date', 'to_date'),
     )
 
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'user_id': self.user_id,
+            'ush_id': self.ush_id,
+            'from_date': self.from_date,
+            'to_date': self.to_date,
+            'created_at': self.created_at.isoformat() if self.created_at else None,
+            'updated_at': self.created_at.isoformat() if self.created_at else None,
+        }
+
 
 class SearchHistory(db.Model):
     __tablename__ = 'search_history'

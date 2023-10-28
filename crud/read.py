@@ -1,7 +1,15 @@
 from sqlalchemy import func
 from flask import jsonify
 import json
+import uuid
 
+def json_serial(obj):
+    """JSON serializer for objects not serializable by default json code"""
+
+    if isinstance(obj, uuid.UUID):
+        # if the obj is uuid, we simply return the value of uuid
+        return str(obj)
+    
 
 def list_tables(db):
     # Get a list of all tables in the database
@@ -14,6 +22,7 @@ def list_tables(db):
 
 def query_search_fe(model,only_id, **kwargs):
     query = model.query
+    print("awe")
 
     for column, value in kwargs.items():
         query = query.filter(getattr(model, column) == value)
@@ -24,7 +33,7 @@ def query_search_fe(model,only_id, **kwargs):
             return item.id 
     else:
         results = [item.to_dict() for item in data] if data else []
-        json_string = json.dumps(results, indent=4) 
+        json_string = json.dumps(results, default=json_serial, indent=4) 
         return json_string
 
 def query_search(model, **kwargs):

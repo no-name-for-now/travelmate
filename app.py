@@ -76,6 +76,13 @@ def db_health():
         city_id = query_search_fe(model=WorldCities, only_id=1, city='Brussels')
         return str(city_id)
 
+@app.route("/get_user_search", methods = ["POST"])
+@limiter.limit('5 per minute')
+def get_user_search():
+    data=request.json
+    stored_itineraries = query_search_fe(model = UserSavedItinerary,only_id = 0, user_id=data["user_id"])
+    return stored_itineraries
+
 @app.route("/store_user_search", methods=["POST"])
 @limiter.limit('5 per minute')
 def store_user_search():
