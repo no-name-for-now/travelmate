@@ -56,11 +56,9 @@ def itinerary_vars(request):
     country = data.get("country").replace(" ", "")
     cities = data.get("city").replace(" ", "").replace(" ", "")
     cities = sort_csv(cities)
-    from_date_obj = datetime.strptime(data.get("from"), '%Y-%m-%d')
-    to_date_obj = datetime.strptime(data.get("to"), '%Y-%m-%d')
-    days = (to_date_obj - from_date_obj).days 
+    ndays = data.get("ndays")
 
-    var_dict = {'country' : country, 'cities' : cities, 'from_date_obj':from_date_obj , 'to_date_obj':to_date_obj, 'days':days }
+    var_dict = {'country' : country, 'cities' : cities, 'days':ndays }
 
     return var_dict
 

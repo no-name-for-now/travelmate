@@ -30,7 +30,7 @@ def validate_first_backend(itenerary_dict):
 	if location_request not in cities_list:
 		return False
 
-	if (itenerary_dict['to_date_obj'] - itenerary_dict['from_date_obj']).days > 7:
+	if itenerary_dict['days'] > 7:
 		return False
 	
 	return True
