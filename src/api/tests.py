@@ -1,8 +1,9 @@
-# TODO: not working yet, will fix later
+"""Test cases for the API."""
 from django.conf import settings
 from django.test import TransactionTestCase
 from django.test.runner import DiscoverRunner
 from fastapi.testclient import TestClient
+from tripagenda import logger
 from tripagenda.asgi import app
 
 
@@ -11,12 +12,10 @@ reverse = app.router.url_path_for
 
 
 class TestRunner(DiscoverRunner):
+    """TestRunner class."""
+
     def teardown_databases(self, old_config, **kwargs):
-        # This is necessary because either FastAPI/Starlette or Django's
-        # ORM isn't cleaning up the connections after it's done with
-        # them.
-        # The query below kills all database connections before
-        # dropping the database.
+        """Clean up DB connections after tests are run."""
         from django.db import connection
 
         with connection.cursor() as cursor:
@@ -32,13 +31,15 @@ class TestRunner(DiscoverRunner):
 
 
 class SmokeTests(TransactionTestCase):
+    """Smoke tests."""
+
     def __init__(self, *args, **kwargs):
+        """Initialize the test client."""
         super().__init__(*args, **kwargs)
-        # Warning: Naming this `self.client` leads Django to overwrite it
-        # with its own test client.
         self.c = TestClient(app)
 
     def setUp(self):
+        """Initialize the test client parameters."""
         self.headers = {"Content-Type": "application/json"}
         self.data = {
             "user_id": "1",
@@ -50,11 +51,19 @@ class SmokeTests(TransactionTestCase):
         self.query_params = {"ush_id": "1"}
 
     def test_search_post_404(self):
+        """Test search post 404."""
+        logger.info("test_search_post_404")
+        logger.info(reverse("search-post"))
+
         response = self.c.post(
             reverse("search-post"),
             headers=self.headers,
-            data=self.data,
+            json=self.data,
             params=self.query_params,
         )
+
+        logger.info(response.status_code)
+        logger.info(response.json())
+
         self.assertEqual(response.status_code, 404)
         self.assertEqual(response.json(), {"detail": "Object not found."})

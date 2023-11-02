@@ -33,3 +33,6 @@ tilt-down:
 
 up: docker-up
 down: docker-down
+
+test-xmlrunner:
+	@cd src && ./manage.py test --no-input --keepdb

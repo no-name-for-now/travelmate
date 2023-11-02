@@ -15,6 +15,7 @@ fastapi = {extras = ["all"], version = "^0.104.1"}
 gunicorn = "^21.2.0"
 psycopg2-binary = "^2.9.9"
 pydantic = "^2.4.2"
+unittest-xml-reporting = "^3.2.0"
 uvicorn = {extras = ["all"], version = "^0.23.2"}
 
 [tool.poetry.dev-dependencies]
