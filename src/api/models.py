@@ -68,7 +68,7 @@ class ItineraryORM(AbstractBaseModel):
     class Meta:
         db_table = "itineraries"
 
-    unique_search_history_id = models.ForeignKey(
+    unique_search_history = models.ForeignKey(
         UniqueSearchHistoryORM, on_delete=models.CASCADE
     )
     day = models.CharField(max_length=50)
@@ -124,6 +124,7 @@ class WorldCitiesORM(AbstractBaseModel):
     lat = models.FloatField()
     lng = models.FloatField()
     population = models.IntegerField()
+    use_on_app = models.BooleanField(default=False)
 
     @classmethod
     def from_api(cls, model: "WorldCitiesContract"):
@@ -139,6 +140,7 @@ class WorldCitiesORM(AbstractBaseModel):
             lat=model.lat,
             lng=model.lng,
             population=model.population,
+            use_on_app=model.use_on_app,
         )
 
     def update_from_api(self, api_model: "WorldCitiesContract"):
@@ -153,6 +155,7 @@ class WorldCitiesORM(AbstractBaseModel):
         self.lat = api_model.lat
         self.lng = api_model.lng
         self.population = api_model.population
+        self.use_on_app = api_model.use_on_app
 
 
 class CityDescriptorsORM(AbstractBaseModel):
@@ -161,7 +164,7 @@ class CityDescriptorsORM(AbstractBaseModel):
     class Meta:
         db_table = "city_descriptor"
 
-    city_id = models.ForeignKey(WorldCitiesORM, on_delete=models.CASCADE)
+    city = models.ForeignKey(WorldCitiesORM, on_delete=models.CASCADE)
     city_description = models.CharField(max_length=2000)
 
     @classmethod
@@ -188,7 +191,7 @@ class SearchHistoryORM(AbstractBaseModel):
     class Meta:
         db_table = "search_history"
 
-    unique_search_history_id = models.ForeignKey(
+    unique_search_history = models.ForeignKey(
         UniqueSearchHistoryORM, on_delete=models.CASCADE
     )
 
@@ -212,17 +215,22 @@ class UserSavedItineraryORM(AbstractBaseModel):
     """User Saved Itinerary model."""
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user_id", "ush_id", "from_date", "to_date"],
+                name="constraint__user_saved_itinerary",
+            )
+        ]
         db_table = "user_saved_itinerary"
 
     user_id = models.IntegerField()
-    ush_id = models.ForeignKey(UniqueSearchHistoryORM, on_delete=models.CASCADE)
+    ush = models.ForeignKey(UniqueSearchHistoryORM, on_delete=models.CASCADE)
     from_date = models.DateField()
     to_date = models.DateField()
 
     @classmethod
     def from_api(
         cls,
-        unique_search_history: UniqueSearchHistoryORM,
         model: "UserSavedItineraryContract",
     ):
         """
@@ -230,7 +238,7 @@ class UserSavedItineraryORM(AbstractBaseModel):
         """
         return cls(
             user_id=model.user_id,
-            ush_id=unique_search_history,
+            ush_id=model.ush_id,
             from_date=model.from_date,
             to_date=model.to_date,
         )
@@ -341,6 +349,7 @@ class WorldCitiesContract(BaseModel):
     lat: float
     lng: float
     population: int
+    use_on_app: bool
 
     @classmethod
     def from_model(cls, instance: WorldCitiesORM):
@@ -357,6 +366,7 @@ class WorldCitiesContract(BaseModel):
             lat=instance.lat,
             lng=instance.lng,
             population=instance.population,
+            use_on_app=instance.use_on_app,
         )
 
     def to_dict(self):
@@ -370,6 +380,7 @@ class WorldCitiesContract(BaseModel):
             "lat": self.lat,
             "lng": self.lng,
             "population": self.population,
+            "use_on_app": self.use_on_app,
         }
 
 
@@ -473,7 +484,7 @@ class APIUserSavedItinerary(UserSavedItineraryContract):
 class UserSearchContract(BaseModel):
     """User Search contract."""
 
-    user_id: str
+    user_id: int
     ush_id: int
     from_date: date
     to_date: date
@@ -484,8 +495,7 @@ class UserSearchContract(BaseModel):
     @classmethod
     def from_model(
         cls,
-        instance: UserSavedItineraryORM,
-        unique_search_history: UniqueSearchHistoryORM,
+        instance,
     ):
         """
         Convert a Django UserSavedItinerary model instance to an APIUserSavedItinerary instance.
@@ -496,9 +506,9 @@ class UserSearchContract(BaseModel):
             ush_id=instance.ush_id,
             from_date=instance.from_date,
             to_date=instance.to_date,
-            country=unique_search_history.country,
-            specific_places=unique_search_history.specific_places,
-            num_days=unique_search_history.num_days,
+            country=instance.ush.country,
+            specific_places=instance.ush.specific_places,
+            num_days=instance.ush.num_days,
         )
 
     def to_dict(self):
