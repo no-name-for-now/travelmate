@@ -26,11 +26,11 @@ repos:
   - id: mypy
     name: Run type checks
     args: ["--ignore-missing-imports", "--install-types", "--non-interactive"]
-# - repo: https://github.com/PyCQA/pydocstyle
-#   rev: 6.3.0
-#   hooks:
-#   - id: pydocstyle
-#     additional_dependencies: [tomli==2.0.1]
+- repo: https://github.com/PyCQA/pydocstyle
+  rev: 6.3.0
+  hooks:
+  - id: pydocstyle
+    additional_dependencies: [tomli==2.0.1]
 - repo: local
   hooks:
   - id: migrations-check
