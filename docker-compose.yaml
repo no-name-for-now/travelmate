@@ -22,6 +22,8 @@ services:
       POSTGRES_USER: api
       POSTGRES_PASSWORD: api
       POSTGRES_DB: api
+    ports:
+      - '5432:5432'
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     healthcheck:
