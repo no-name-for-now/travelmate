@@ -2,6 +2,7 @@
 from typing import Type
 
 from api.models import UniqueSearchHistoryORM
+from api.models import UserSavedItineraryORM
 from django.db import models
 from fastapi import HTTPException
 from fastapi import Query
@@ -24,3 +25,11 @@ def get_unique_search_history(
 ) -> models.Model:
     """Retrieve a unique search history by ID."""
     return get_object(UniqueSearchHistoryORM, ush_id)
+
+
+def get_user_search_history(
+    user_id: str = Query(..., description="The ID of the user.")
+) -> models.Model:
+    """Retrieve a user's search history by ID."""
+    res = UserSavedItineraryORM.objects.filter(user_id=user_id).select_related("ush_id")
+    return res

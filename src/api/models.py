@@ -470,6 +470,54 @@ class APIUserSavedItinerary(UserSavedItineraryContract):
     id: int
 
 
+class UserSearchContract(BaseModel):
+    """User Search contract."""
+
+    user_id: str
+    ush_id: int
+    from_date: date
+    to_date: date
+    country: str
+    specific_places: str
+    num_days: int
+
+    @classmethod
+    def from_model(
+        cls,
+        instance: UserSavedItineraryORM,
+        unique_search_history: UniqueSearchHistoryORM,
+    ):
+        """
+        Convert a Django UserSavedItinerary model instance to an APIUserSavedItinerary instance.
+        """
+        return cls(
+            id=instance.id,
+            user_id=instance.user_id,
+            ush_id=instance.ush_id,
+            from_date=instance.from_date,
+            to_date=instance.to_date,
+            country=unique_search_history.country,
+            specific_places=unique_search_history.specific_places,
+            num_days=unique_search_history.num_days,
+        )
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "user_id": self.user_id,
+            "ush_id": self.ush_id,
+            "from_date": self.from_date,
+            "to_date": self.to_date,
+            "country": self.country,
+            "specific_places": self.specific_places,
+            "num_days": self.num_days,
+        }
+
+
+class APIUserSearch(UserSearchContract):
+    id: int
+
+
 """
 Listed responses - used to return lists of data from the API.
 """
@@ -557,3 +605,17 @@ class APIUserSavedItineraryList(BaseModel):
         Convert a Django UserSavedItinerary queryset to APIUserSavedItinerary instances.
         """
         return cls(items=[APIUserSavedItinerary.from_model(i) for i in qs])
+
+
+# APIUserSearchList contracts
+class APIUserSearchList(BaseModel):
+    """API User Search List contract."""
+
+    items: List[APIUserSearch]
+
+    @classmethod
+    def from_qs(cls, qs):
+        """
+        Convert a Django UserSearch queryset to APIUserSearch instances.
+        """
+        return cls(items=[APIUserSearch.from_model(i) for i in qs])

@@ -1,17 +1,26 @@
 from api import views
 from api.models import APIUserSavedItinerary
+from api.models import APIUserSearch
 from fastapi import APIRouter
 
 
 router = APIRouter()
 
 # db_health GET
-# get_user_search POST
+
+# get_user_search GET
 # curl -X POST http://127.0.0.1:5000/get_user_search \
 #      -H "Content-Type: application/json" \
 #      -d '{
 #            "user_id": "1"
 #          }'
+router.get(
+    "/get_user_search",
+    summary="Get a user's itinerary search history.",
+    tags=["search"],
+    response_model=APIUserSearch,
+    name="search-get",
+)(views.search_get)
 
 # router.get(
 #     "/get_user_search/",
