@@ -201,19 +201,19 @@ class UserSavedItineraryORM(AbstractBaseModel):
     class Meta:
         db_table = "user_saved_itinerary"
 
-    user_id = models.UUIDField()
+    user_id = models.IntegerField()
     ush_id = models.ForeignKey(UniqueSearchHistoryORM, on_delete=models.CASCADE)
     from_date = models.DateField()
     to_date = models.DateField()
 
     @classmethod
-    def from_api(cls, model: "UserSavedItineraryContract"):
+    def from_api(cls, unique_search_history: UniqueSearchHistoryORM, model: "UserSavedItineraryContract"):
         """
         Return a UserSavedItinerary instance from an APIUserSavedItinerary instance.
         """
         return cls(
             user_id=model.user_id,
-            ush_id=model.ush_id,
+            ush_id=unique_search_history,
             from_date=model.from_date,
             to_date=model.to_date,
         )
