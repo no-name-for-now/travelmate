@@ -1,21 +1,17 @@
-# Use the official Python image as a parent image
-FROM python:3.9
+FROM --platform=$BUILDPLATFORM python:3.10-alpine AS builder
 
-# Set the working directory in the container
-WORKDIR /app
+# update apt and install gcc with python3-dev
+RUN apk update && apk add --no-cache gcc python3-dev musl-dev bash
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+EXPOSE 8000
 
-# Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+WORKDIR /app 
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+COPY pyproject.toml /app
 
-# Define environment variables
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
+RUN pip install --upgrade pip
+RUN pip install poetry
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-dev --no-interaction --no-ansi
 
-# Run the application
-CMD ["flask", "run"]
+COPY ./src .

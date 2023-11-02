@@ -1,0 +1,81 @@
+---
+version: '3.8'
+x-api-common: &api-common
+  pull_policy: ${API_IMAGE_PULL_POLICY:-always}
+  build: .
+  env_file:
+    - ${API_PROJ_DIR:-.}/.env
+  environment: &api-common-env
+    API__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://api:api@postgres/api
+    API__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://api:api@postgres/api
+  volumes:
+    - ${API_PROJ_DIR:-./src}:/app
+  user: ${API_UID:-50000}:0
+  depends_on:
+    - redis
+    - postgres
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: api
+      POSTGRES_PASSWORD: api
+      POSTGRES_DB: api
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD, pg_isready, -U, api]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  redis:
+    image: redis:7.2.2
+    expose:
+      - 6379
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 10s
+      timeout: 30s
+      retries: 50
+      start_period: 30s
+    restart: always
+  
+  api-init:
+    <<: *api-common
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        set -e
+        echo "Creating database tables..."
+        ./manage.py migrate --noinput
+        echo "Database tables created"
+        echo "Creating superadmin user..."
+        if ! ./manage.py createsuperuser --noinput; then
+          echo "Superadmin user already exists"
+        fi
+    environment:
+      <<: *api-common-env
+      DJANGO_SUPERUSER_PASSWORD: superadmin
+      DJANGO_SUPERUSER_USERNAME: superadmin
+      DJANGO_SUPERUSER_EMAIL: superadmin@test.com
+    user: 0:0
+
+  api:
+    <<: *api-common
+    command: python3 -m gunicorn tripagenda.asgi:app -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8000
+    ports: 
+      - '8000:8000'
+    healthcheck:
+      test: [CMD, curl, --fail, http://localhost:8000/health]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+      start_period: 30s
+    restart: always
+
+volumes:
+  postgres-db-volume:
