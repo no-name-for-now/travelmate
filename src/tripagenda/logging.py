@@ -14,7 +14,6 @@ log_config = {
             "()": "uvicorn.logging.DefaultFormatter",
             "fmt": LOG_FORMAT,
             "datefmt": "%Y-%m-%d %H:%M:%S",
-
         },
     },
     "handlers": {

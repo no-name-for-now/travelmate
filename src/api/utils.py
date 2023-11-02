@@ -1,17 +1,13 @@
 from typing import Type
 
+from api.models import UniqueSearchHistoryORM
 from django.db import models
 from fastapi import HTTPException
 from fastapi import Query
-
-from api.models import UniqueSearchHistoryORM
-
 from tripagenda import logger
 
-def get_object(
-    model_class: Type[models.Model],
-    id: str
-) -> models.Model:
+
+def get_object(model_class: Type[models.Model], id: str) -> models.Model:
     """
     Retrieve an object by id.
 

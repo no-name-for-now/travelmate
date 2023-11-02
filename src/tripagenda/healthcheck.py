@@ -1,5 +1,4 @@
 from django.conf import settings
-
 from fastapi import APIRouter
 from pydantic import BaseModel
 

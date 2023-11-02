@@ -1,9 +1,6 @@
 from datetime import date
-from typing import Any
-from typing import Dict
 from typing import List
 
-import shortuuid
 from django.db import models
 from pydantic import BaseModel
 
@@ -11,6 +8,8 @@ from pydantic import BaseModel
 """
 General
 """
+
+
 class AbstractBaseModel(models.Model):
     """Base model that gives children created_at and updated_at fields."""
 
@@ -25,8 +24,11 @@ class AbstractBaseModel(models.Model):
 """
 Models - used to store data in the database.
 """
+
+
 class UniqueSearchHistoryORM(AbstractBaseModel):
     """Unique Search History model."""
+
     class Meta:
         constraints = [
             models.UniqueConstraint(
@@ -50,7 +52,7 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
             specific_places=model.specific_places,
             num_days=model.num_days,
         )
-    
+
     def update_from_api(self, api_model: "UniqueSearchHistoryContract"):
         """
         Update the UniqueSearchHistory Django model from an APIUniqueSearchHistory instance.
@@ -62,10 +64,13 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
 
 class ItineraryORM(AbstractBaseModel):
     """Itinerary model."""
+
     class Meta:
         db_table = "itineraries"
 
-    unique_search_history_id = models.ForeignKey(UniqueSearchHistoryORM, on_delete=models.CASCADE)
+    unique_search_history_id = models.ForeignKey(
+        UniqueSearchHistoryORM, on_delete=models.CASCADE
+    )
     day = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
     travel_method = models.CharField(max_length=50)
@@ -75,7 +80,9 @@ class ItineraryORM(AbstractBaseModel):
     evening_activity = models.CharField(max_length=150)
 
     @classmethod
-    def from_api(cls, unique_search_history: "UniqueSearchHistoryORM", model: "ItineraryContract"):
+    def from_api(
+        cls, unique_search_history: "UniqueSearchHistoryORM", model: "ItineraryContract"
+    ):
         """
         Return an Itinerary instance from an APIItinerary instance.
         """
@@ -89,7 +96,7 @@ class ItineraryORM(AbstractBaseModel):
             afternoon_activity=model.afternoon_activity,
             evening_activity=model.evening_activity,
         )
-    
+
     def update_from_api(self, api_model: "ItineraryContract"):
         """
         Update the Itinerary Django model from an APIItinerary instance.
@@ -105,6 +112,7 @@ class ItineraryORM(AbstractBaseModel):
 
 class WorldCitiesORM(AbstractBaseModel):
     """World Cities model."""
+
     class Meta:
         db_table = "world_cities"
 
@@ -132,7 +140,7 @@ class WorldCitiesORM(AbstractBaseModel):
             lng=model.lng,
             population=model.population,
         )
-    
+
     def update_from_api(self, api_model: "WorldCitiesContract"):
         """
         Update the WorldCities Django model from an APIWorldCities instance.
@@ -149,6 +157,7 @@ class WorldCitiesORM(AbstractBaseModel):
 
 class CityDescriptorsORM(AbstractBaseModel):
     """City Descriptors model."""
+
     class Meta:
         db_table = "city_descriptor"
 
@@ -164,7 +173,7 @@ class CityDescriptorsORM(AbstractBaseModel):
             city_id=model.city_id,
             city_description=model.city_description,
         )
-    
+
     def update_from_api(self, api_model: "CityDescriptorsContract"):
         """
         Update the CityDescriptors Django model from an APICityDescriptors instance.
@@ -175,10 +184,13 @@ class CityDescriptorsORM(AbstractBaseModel):
 
 class SearchHistoryORM(AbstractBaseModel):
     """Search History model."""
+
     class Meta:
         db_table = "search_history"
 
-    unique_search_history_id = models.ForeignKey(UniqueSearchHistoryORM, on_delete=models.CASCADE)
+    unique_search_history_id = models.ForeignKey(
+        UniqueSearchHistoryORM, on_delete=models.CASCADE
+    )
 
     @classmethod
     def from_api(cls, unique_search_history: "UniqueSearchHistoryORM"):
@@ -188,7 +200,7 @@ class SearchHistoryORM(AbstractBaseModel):
         return cls(
             unique_search_history_id=unique_search_history.id,
         )
-    
+
     def update_from_api(self, api_model: "UniqueSearchHistoryORM"):
         """
         Update the SearchHistory Django model from an APIUniqueSearchHistory instance.
@@ -198,6 +210,7 @@ class SearchHistoryORM(AbstractBaseModel):
 
 class UserSavedItineraryORM(AbstractBaseModel):
     """User Saved Itinerary model."""
+
     class Meta:
         db_table = "user_saved_itinerary"
 
@@ -207,7 +220,11 @@ class UserSavedItineraryORM(AbstractBaseModel):
     to_date = models.DateField()
 
     @classmethod
-    def from_api(cls, unique_search_history: UniqueSearchHistoryORM, model: "UserSavedItineraryContract"):
+    def from_api(
+        cls,
+        unique_search_history: UniqueSearchHistoryORM,
+        model: "UserSavedItineraryContract",
+    ):
         """
         Return a UserSavedItinerary instance from an APIUserSavedItinerary instance.
         """
@@ -217,7 +234,7 @@ class UserSavedItineraryORM(AbstractBaseModel):
             from_date=model.from_date,
             to_date=model.to_date,
         )
-    
+
     def update_from_api(self, api_model: "UserSavedItineraryContract"):
         """
         Update the UserSavedItinerary Django model from an APIUserSavedItinerary instance.
@@ -232,9 +249,12 @@ class UserSavedItineraryORM(AbstractBaseModel):
 Types - used to return data from the API.
 (a.k.a. contracts)
 """
+
+
 # Itinerary contracts
 class ItineraryContract(BaseModel):
     """Itinerary contract."""
+
     day: str
     city: str
     travel_method: str
@@ -279,6 +299,7 @@ class APIItinerary(ItineraryContract):
 # UniqueSearchHistory contracts
 class UniqueSearchHistoryContract(BaseModel):
     """Unique Search History contract."""
+
     country: str
     specific_places: str
     num_days: int
@@ -302,7 +323,8 @@ class UniqueSearchHistoryContract(BaseModel):
             "specific_places": self.specific_places,
             "num_days": self.num_days,
         }
-    
+
+
 class APIUniqueSearchHistory(UniqueSearchHistoryContract):
     id: int
 
@@ -310,6 +332,7 @@ class APIUniqueSearchHistory(UniqueSearchHistoryContract):
 # WorldCities contracts
 class WorldCitiesContract(BaseModel):
     """World Cities contract."""
+
     city: str
     city_ascii: str
     country: str
@@ -348,7 +371,7 @@ class WorldCitiesContract(BaseModel):
             "lng": self.lng,
             "population": self.population,
         }
-    
+
 
 class APIWorldCities(WorldCitiesContract):
     id: int
@@ -357,6 +380,7 @@ class APIWorldCities(WorldCitiesContract):
 # CityDescriptors contracts
 class CityDescriptorsContract(BaseModel):
     """City Descriptors contract."""
+
     city_id: int
     city_description: str
 
@@ -377,7 +401,7 @@ class CityDescriptorsContract(BaseModel):
             "city_id": self.city_id,
             "city_description": self.city_description,
         }
-    
+
 
 class APICityDescriptors(CityDescriptorsContract):
     id: int
@@ -386,6 +410,7 @@ class APICityDescriptors(CityDescriptorsContract):
 # SearchHistory contracts
 class SearchHistoryContract(BaseModel):
     """Search History contract."""
+
     unique_search_history_id: int
 
     @classmethod
@@ -403,7 +428,7 @@ class SearchHistoryContract(BaseModel):
             "id": self.id,
             "unique_search_history_id": self.unique_search_history_id,
         }
-    
+
 
 class APISearchHistory(SearchHistoryContract):
     id: int
@@ -412,6 +437,7 @@ class APISearchHistory(SearchHistoryContract):
 # UserSavedItinerary contracts
 class UserSavedItineraryContract(BaseModel):
     """User Saved Itinerary contract."""
+
     user_id: str
     ush_id: int
     from_date: date
@@ -438,7 +464,7 @@ class UserSavedItineraryContract(BaseModel):
             "from_date": self.from_date,
             "to_date": self.to_date,
         }
-    
+
 
 class APIUserSavedItinerary(UserSavedItineraryContract):
     id: int
@@ -447,9 +473,12 @@ class APIUserSavedItinerary(UserSavedItineraryContract):
 """
 Listed responses - used to return lists of data from the API.
 """
+
+
 # APIItineraryList contracts
 class APIItineraryList(BaseModel):
     """API Itinerary List contract."""
+
     items: List[APIItinerary]
 
     @classmethod
@@ -463,6 +492,7 @@ class APIItineraryList(BaseModel):
 # APIUniqueSearchHistoryList contracts
 class APIUniqueSearchHistoryList(BaseModel):
     """API Unique Search History List contract."""
+
     items: List[APIUniqueSearchHistory]
 
     @classmethod
@@ -471,11 +501,12 @@ class APIUniqueSearchHistoryList(BaseModel):
         Convert a Django UniqueSearchHistory queryset to APIUniqueSearchHistory instances.
         """
         return cls(items=[APIUniqueSearchHistory.from_model(i) for i in qs])
-    
+
 
 # APIWorldCitiesList contracts
 class APIWorldCitiesList(BaseModel):
     """API World Cities List contract."""
+
     items: List[APIWorldCities]
 
     @classmethod
@@ -484,11 +515,12 @@ class APIWorldCitiesList(BaseModel):
         Convert a Django WorldCities queryset to APIWorldCities instances.
         """
         return cls(items=[APIWorldCities.from_model(i) for i in qs])
-    
+
 
 # APICityDescriptorsList contracts
 class APICityDescriptorsList(BaseModel):
     """API City Descriptors List contract."""
+
     items: List[APICityDescriptors]
 
     @classmethod
@@ -502,6 +534,7 @@ class APICityDescriptorsList(BaseModel):
 # APISearchHistoryList contracts
 class APISearchHistoryList(BaseModel):
     """API Search History List contract."""
+
     items: List[APISearchHistory]
 
     @classmethod
@@ -510,11 +543,12 @@ class APISearchHistoryList(BaseModel):
         Convert a Django SearchHistory queryset to APISearchHistory instances.
         """
         return cls(items=[APISearchHistory.from_model(i) for i in qs])
-    
+
 
 # APIUserSavedItineraryList contracts
 class APIUserSavedItineraryList(BaseModel):
     """API User Saved Itinerary List contract."""
+
     items: List[APIUserSavedItinerary]
 
     @classmethod

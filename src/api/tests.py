@@ -3,8 +3,6 @@ from django.conf import settings
 from django.test import TransactionTestCase
 from django.test.runner import DiscoverRunner
 from fastapi.testclient import TestClient
-
-from .models import User
 from tripagenda.asgi import app
 
 
@@ -20,7 +18,7 @@ class TestRunner(DiscoverRunner):
         # The query below kills all database connections before
         # dropping the database.
         from django.db import connection
-        
+
         with connection.cursor() as cursor:
             cursor.execute(
                 f"""SELECT
@@ -45,15 +43,18 @@ class SmokeTests(TransactionTestCase):
         self.data = {
             "user_id": "1",
             "ush_id": "1",
-            "from_date":"2023-11-02",
-            "to_date":"2023-11-05"
+            "from_date": "2023-11-02",
+            "to_date": "2023-11-05",
         }
         # add query paramater ush_id = 1
-        self.query_params = {
-            "ush_id": "1"
-        }
+        self.query_params = {"ush_id": "1"}
 
     def test_search_post_404(self):
-        response = self.c.post(reverse("search-post"), headers=self.headers, data=self.data, params=self.query_params)
+        response = self.c.post(
+            reverse("search-post"),
+            headers=self.headers,
+            data=self.data,
+            params=self.query_params,
+        )
         self.assertEqual(response.status_code, 404)
         self.assertEqual(response.json(), {"detail": "Object not found."})

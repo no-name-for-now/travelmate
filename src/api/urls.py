@@ -1,7 +1,6 @@
-from fastapi import APIRouter
-
 from api import views
 from api.models import APIUserSavedItinerary
+from fastapi import APIRouter
 
 
 router = APIRouter()
