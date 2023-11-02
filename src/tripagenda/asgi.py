@@ -16,7 +16,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tripagenda.settings')
 
 application = get_asgi_application()
 
-from main.urls import router as main_router
+from api.urls import router as main_router
 
 app = FastAPI(
     title="Goatfish",
