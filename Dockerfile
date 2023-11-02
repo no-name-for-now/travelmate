@@ -5,7 +5,7 @@ RUN apk update && apk add --no-cache gcc python3-dev musl-dev bash
 
 EXPOSE 8000
 
-WORKDIR /app 
+WORKDIR /app
 
 COPY pyproject.toml /app
 
