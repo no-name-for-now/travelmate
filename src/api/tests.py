@@ -7,7 +7,6 @@ from tripagenda import logger
 from tripagenda.asgi import app
 
 
-# A convenient helper for getting URL paths by name.
 reverse = app.router.url_path_for
 
 
@@ -47,7 +46,6 @@ class SmokeTests(TransactionTestCase):
             "from_date": "2023-11-02",
             "to_date": "2023-11-05",
         }
-        # add query paramater ush_id = 1
         self.query_params = {"ush_id": "1"}
 
     def test_search_post_404(self):

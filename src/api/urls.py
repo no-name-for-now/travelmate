@@ -1,43 +1,20 @@
 from api import views
 from api.models import APIUserSavedItinerary
-from api.models import APIUserSearch
+from api.models import APIUserSearchList
 from fastapi import APIRouter
 
 
 router = APIRouter()
 
-# db_health GET
 
-# get_user_search GET
-# curl -X POST http://127.0.0.1:5000/get_user_search \
-#      -H "Content-Type: application/json" \
-#      -d '{
-#            "user_id": "1"
-#          }'
 router.get(
     "/get_user_search",
     summary="Get a user's itinerary search history.",
     tags=["search"],
-    response_model=APIUserSearch,
+    response_model=APIUserSearchList,
     name="search-get",
 )(views.search_get)
 
-# router.get(
-#     "/get_user_search/",
-#     summary="Get a user's search history.",
-#     tags=["search"],
-
-# )
-
-# store_user_search POST
-# curl -X POST http://127.0.0.1:5000/store_user_search \
-#      -H "Content-Type: application/json" \
-#      -d '{
-#            "user_id": "1",
-#            "ush_id": "1",
-#            "from_date":"2023-11-02",
-#            "to_date":"2023-11-05"
-#          }'
 router.post(
     "/store_user_search",
     summary="Store a user's search history.",
@@ -64,5 +41,3 @@ router.post(
 #          }'
 
 # top10 GET
-
-# remote GET
