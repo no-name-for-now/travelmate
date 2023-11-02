@@ -61,7 +61,7 @@ if os.getenv("IN_DOCKER"):
             "NAME": "api",
             "USER": "api",
             "PASSWORD": "api",
-            "HOST": "db",
+            "HOST": "postgres",
             "PORT": 5432,
             "CONN_MAX_AGE": 60 * 60,
         }
@@ -78,6 +78,7 @@ if os.getenv("IN_DOCKER"):
     SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
     SESSION_CACHE_ALIAS = "default"
     SESSION_COOKIE_AGE = 365 * 24 * 60 * 60
+    SESSION_COOKIE_SECURE = True
 elif os.getenv("DATABASE_URL"):
     # Running under Dokku.
     USER, PASSWORD, HOST, PORT, NAME = re.match(  # type: ignore
@@ -132,3 +133,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 TEST_RUNNER = "xmlrunner.extra.djangotestrunner.XMLTestRunner"
 
 TEST_OUTPUT_FILE_NAME = "report.xml"
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
