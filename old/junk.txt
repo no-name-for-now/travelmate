@@ -1,0 +1,8 @@
+  web:
+    build: .  # Replace with your Flask app directory path
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    volumes:
+      - ./migrations:/app/migrations  # Mount your migrations directory

@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Style normal links */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #007BFF; /* Set link color */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+/* Style links on hover */
+a:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+
+/* Add some casual styling here */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+/* Style the table with rounded edges */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px; /* Add rounded edges */
+  overflow: hidden; /* Hide overflow content */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+}
