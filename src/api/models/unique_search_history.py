@@ -11,14 +11,14 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["country", "specific_places", "num_days"],
+                fields=["country", "city", "num_days"],
                 name="constraint__unique_search_history",
             )
         ]
         db_table = "unique_search_history"
 
     country = models.CharField(max_length=50)
-    specific_places = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
     num_days = models.IntegerField()
 
     @classmethod
@@ -28,7 +28,7 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
         """
         return cls(
             country=model.country,
-            specific_places=model.specific_places,
+            city=model.city,
             num_days=model.num_days,
         )
 
@@ -37,7 +37,7 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
         Update the UniqueSearchHistory Django model from an APIUniqueSearchHistory instance.
         """
         self.country = api_model.country
-        self.specific_places = api_model.specific_places
+        self.city = api_model.city
         self.num_days = api_model.num_days
 
 
@@ -46,7 +46,7 @@ class UniqueSearchHistoryContract(BaseModel):
     """Unique Search History contract."""
 
     country: str
-    specific_places: str
+    city: str
     num_days: int
 
     @classmethod
@@ -57,7 +57,7 @@ class UniqueSearchHistoryContract(BaseModel):
         return cls(
             id=instance.id,
             country=instance.country,
-            specific_places=instance.specific_places,
+            city=instance.city,
             num_days=instance.num_days,
         )
 
@@ -65,7 +65,7 @@ class UniqueSearchHistoryContract(BaseModel):
         return {
             "id": self.id,
             "country": self.country,
-            "specific_places": self.specific_places,
+            "city": self.city,
             "num_days": self.num_days,
         }
 

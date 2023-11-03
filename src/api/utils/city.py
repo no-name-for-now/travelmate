@@ -2,7 +2,6 @@ from api.models.city_descriptors import CityDescriptorsORM
 from api.utils.validations import validate_get_city_description
 from fastapi import HTTPException
 from fastapi import Query
-from tripagenda import logger
 
 
 def get_city_description__oai(
@@ -33,7 +32,7 @@ def get_city_description__db(
     ok, _city, _country = validate_get_city_description(
         {"city": city, "country": country}
     )
-    logger.info(f"get_city_description__db: ok={ok}, city={_city}, country={_country}")
+
     if ok:
         return CityDescriptorsORM.objects.select_related("city").filter(
             city__city=_city, city__country=_country

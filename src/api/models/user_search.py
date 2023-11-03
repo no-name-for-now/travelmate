@@ -8,11 +8,11 @@ class UserSearchContract(BaseModel):
     """User Search contract."""
 
     user_id: int
-    ush_id: int
+    unique_search_history_id: int
     from_date: date
     to_date: date
     country: str
-    specific_places: str
+    city: str
     num_days: int
 
     @classmethod
@@ -26,23 +26,23 @@ class UserSearchContract(BaseModel):
         return cls(
             id=instance.id,
             user_id=instance.user_id,
-            ush_id=instance.ush_id,
+            unique_search_history_id=instance.unique_search_history_id,
             from_date=instance.from_date,
             to_date=instance.to_date,
-            country=instance.ush.country,
-            specific_places=instance.ush.specific_places,
-            num_days=instance.ush.num_days,
+            country=instance.unique_search_history.country,
+            city=instance.unique_search_history.city,
+            num_days=instance.unique_search_history.num_days,
         )
 
     def to_dict(self):
         return {
             "id": self.id,
             "user_id": self.user_id,
-            "ush_id": self.ush_id,
+            "unique_search_history_id": self.unique_search_history_id,
             "from_date": self.from_date,
             "to_date": self.to_date,
             "country": self.country,
-            "specific_places": self.specific_places,
+            "city": self.city,
             "num_days": self.num_days,
         }
 

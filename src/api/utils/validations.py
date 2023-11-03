@@ -1,3 +1,6 @@
+from typing import Any
+from typing import Dict
+
 cities_list = [
     {"country": "Belgium", "city": "Antwerp"},
     {"country": "Belgium", "city": "Brussels"},
@@ -20,16 +23,23 @@ cities_list = [
 ]
 
 
-def validate_first_backend(itenerary_dict):
-    """Validate the input for the first_backend endpoint."""
-    location_request = {key: itenerary_dict[key] for key in ["city", "country"]}
-    if location_request not in cities_list:
-        return False
+def validate_itinerary(itinerary_dict: Dict[str, Any]):
+    """Validate the input for the itinerary endpoint."""
+    if dict((k, itinerary_dict[k]) for k in ("country", "city")) in cities_list:
+        days = itinerary_dict["days"]
 
-    if itenerary_dict["days"] > 7:
-        return False
+        if days > 0 and days <= 7:
+            city = itinerary_dict["city"].strip()
+            country = itinerary_dict["country"].strip()
 
-    return True
+            if city == "" or country == "":
+                return False, None, None, None
+
+            return True, city, country, days
+        else:
+            return False, None, None, None
+
+    return False, None, None, None
 
 
 def validate_get_city_description(itinerary_dict):
