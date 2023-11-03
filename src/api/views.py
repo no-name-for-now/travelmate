@@ -1,7 +1,7 @@
-from api.models import APIUserSavedItinerary
-from api.models import APIUserSearchList
-from api.models import UserSavedItineraryContract
-from api.models import UserSavedItineraryORM
+from api.models.user_saved_itinerary import APIUserSavedItinerary
+from api.models.user_saved_itinerary import UserSavedItineraryContract
+from api.models.user_saved_itinerary import UserSavedItineraryORM
+from api.models.user_search import APIUserSearchList
 from api.utils.database import get_user_search_history
 from fastapi import Depends
 

@@ -1,8 +1,8 @@
 """Utility functions for the API."""
 from typing import Type
 
-from api.models import UniqueSearchHistoryORM
-from api.models import UserSavedItineraryORM
+from api.models.unique_search_history import UniqueSearchHistoryORM
+from api.models.user_saved_itinerary import UserSavedItineraryORM
 from django.db import models
 from fastapi import HTTPException
 from fastapi import Query

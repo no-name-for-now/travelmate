@@ -1,6 +1,6 @@
 from api import views
-from api.models import APIUserSavedItinerary
-from api.models import APIUserSearchList
+from api.models.user_saved_itinerary import APIUserSavedItinerary
+from api.models.user_search import APIUserSearchList
 from fastapi import APIRouter
 
 
