@@ -1,23 +1,23 @@
-from api.models.city_descriptors import APICityDescriptors
-from api.models.city_descriptors import CityDescriptorsContract
+from api.models.city_descriptors import APICityDescriptorsList
+from api.models.city_descriptors import CityDescriptorsORM
 from api.utils.city import get_city_description__db
 from api.utils.city import get_city_description__oai
 from fastapi import Depends
 
 
 def city_description_get__oai(
-    city_descriptor: CityDescriptorsContract = Depends(get_city_description__oai),
-) -> APICityDescriptors:
+    city_descriptor: CityDescriptorsORM = Depends(get_city_description__oai),
+) -> APICityDescriptorsList:
     """
     Get city description.
     """
-    return APICityDescriptors.from_model(city_descriptor)
+    return APICityDescriptorsList.from_qs(city_descriptor)
 
 
 def city_description_get(
-    city_descriptor: CityDescriptorsContract = Depends(get_city_description__db),
-) -> APICityDescriptors:
+    city_descriptor: CityDescriptorsORM = Depends(get_city_description__db),
+) -> APICityDescriptorsList:
     """
     Get city description.
     """
-    return APICityDescriptors.from_model(city_descriptor)
+    return APICityDescriptorsList.from_qs(city_descriptor)
