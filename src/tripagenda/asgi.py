@@ -13,14 +13,20 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tripagenda.settings")
 
 application = get_asgi_application()
 
-from tripagenda.healthcheck import router as main_router
-from api.urls import router as api_router
+from tripagenda.routers import router as internal_router
+from api.routers.city import router as city_router
+from api.routers.search import router as search_router
 
 app = FastAPI(
-    title="Goatfish",
-    description="A demo project. Also, an actual fish with a weird name.",
-    version="We aren't doing versions yet. Point oh.",
+    title="Tripagenda",
+    description="A travel itinerary generator.",
+    version=settings.APP_VERSION,
+    redirect_slashes=True,
 )
 
-app.include_router(api_router, prefix=f"{settings.API_PREFIX}/{settings.API_VERSION}")
-app.include_router(main_router, prefix=f"{settings.API_INTERNAL_PREFIX}")
+api_prefix = f"{settings.API_PREFIX}/{settings.API_VERSION}"
+internal_prefix = f"{settings.API_INTERNAL_PREFIX}"
+
+app.include_router(city_router, prefix=api_prefix)
+app.include_router(search_router, prefix=api_prefix)
+app.include_router(internal_router, prefix=internal_prefix)

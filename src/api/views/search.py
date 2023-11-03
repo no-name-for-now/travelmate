@@ -2,13 +2,8 @@ from api.models.user_saved_itinerary import APIUserSavedItinerary
 from api.models.user_saved_itinerary import UserSavedItineraryContract
 from api.models.user_saved_itinerary import UserSavedItineraryORM
 from api.models.user_search import APIUserSearchList
-from api.utils.database import get_user_search_history
+from api.utils.search import get_user_search_history
 from fastapi import Depends
-
-
-"""
-UserItinerary
-"""
 
 
 def search_get(

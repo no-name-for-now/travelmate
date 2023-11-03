@@ -1,5 +1,4 @@
 from django.conf import settings
-from fastapi import APIRouter
 from pydantic import BaseModel
 
 
@@ -23,20 +22,9 @@ class HealthCheck(BaseModel):
 
 def healthcheck() -> HealthCheck:
     """
-    Returns a healthcheck object.
+    Return a healthcheck object.
     """
     return HealthCheck(
         status=200,
         version=settings.APP_VERSION,
     )
-
-
-router = APIRouter()
-
-router.get(
-    "/healthcheck",
-    summary="Check if the API is up and running.",
-    tags=["healthcheck"],
-    response_model=HealthCheck,
-    name="healthcheck-get",
-)(healthcheck)
