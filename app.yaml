@@ -13,3 +13,5 @@ automatic_scaling:
 env_variables:
   APPENGINE_URL: https://fastdjango.uc.r.appspot.com
   ENVIRONMENT: production
+  OPENAI_MODEL: gpt-3.5-turbo
+  LOG_LEVEL: WARN

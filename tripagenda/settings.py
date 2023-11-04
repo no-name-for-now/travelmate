@@ -54,9 +54,7 @@ API_INTERNAL_PREFIX = "/internal"
 API_VERSION = "v1"
 
 # OpenAI configs
-OPENAI_API_KEY = os.environ.get(
-    "OPENAI_API_KEY", ""
-)  # TODO: fetch from secrets manager
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-3.5-turbo")
 
 SECRET_KEY = env("SECRET_KEY")
