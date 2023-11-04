@@ -139,3 +139,16 @@ class WorldCitiesActiveContract(BaseModel):
             "city": self.city,
             "country": self.country,
         }
+
+
+class APIWorldCitiesActiveList(BaseModel):
+    """API World Cities Active List contract."""
+
+    items: List[WorldCitiesActiveContract]
+
+    @classmethod
+    def from_qs(cls, qs):
+        """
+        Convert a Django WorldCities queryset to APIWorldCities instances.
+        """
+        return cls(items=[WorldCitiesActiveContract.from_model(i) for i in qs])

@@ -1,31 +1,19 @@
 from typing import Any
 from typing import Dict
 
-cities_list = [
-    {"country": "Belgium", "city": "Antwerp"},
-    {"country": "Belgium", "city": "Brussels"},
-    {"country": "Belgium", "city": "Gent"},
-    {"country": "Belgium", "city": "Charleroi"},
-    {"country": "Belgium", "city": "Liege"},
-    {"country": "Germany", "city": "Berlin"},
-    {"country": "Germany", "city": "Stuttgart"},
-    {"country": "Germany", "city": "Munich"},
-    {"country": "Spain", "city": "Madrid"},
-    {"country": "Spain", "city": "Barcelona"},
-    {"country": "Spain", "city": "Sevilla"},
-    {"country": "Spain", "city": "Malaga"},
-    {"country": "Portugal", "city": "Aves"},
-    {"country": "Portugal", "city": "Sintra"},
-    {"country": "Portugal", "city": "Vila Nova de Gaia"},
-    {"country": "Portugal", "city": "Cascais"},
-    {"country": "Portugal", "city": "Lisbon"},
-    {"country": "Portugal", "city": "Porto"},
-]
+from api.models.world_cities import APIWorldCitiesActiveList
+from api.models.world_cities import WorldCitiesORM
+
+
+cities_list = APIWorldCitiesActiveList.from_qs(
+    WorldCitiesORM.objects.filter(use_on_app=True).all()
+)
+active_citiies = cities_list.items
 
 
 def validate_itinerary(itinerary_dict: Dict[str, Any]):
     """Validate the input for the itinerary endpoint."""
-    if dict((k, itinerary_dict[k]) for k in ("country", "city")) in cities_list:
+    if dict((k, itinerary_dict[k]) for k in ("country", "city")) in active_citiies:
         days = itinerary_dict["days"]
 
         if days > 0 and days <= 7:
@@ -44,7 +32,7 @@ def validate_itinerary(itinerary_dict: Dict[str, Any]):
 
 def validate_get_city(itinerary_dict):
     """Validate the input for the get_city_description endpoint."""
-    if itinerary_dict in cities_list:
+    if itinerary_dict in active_citiies:
         city = itinerary_dict["city"].strip()
         country = itinerary_dict["country"].strip()
         if city == "" or country == "":
@@ -57,4 +45,5 @@ def validate_get_city(itinerary_dict):
 
 def validate_store_user_search(itenerary_dict):
     """Validate the input for the store_user_search endpoint."""
+    _ = itenerary_dict
     return True
