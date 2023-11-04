@@ -6,7 +6,7 @@ setup:
 	@pip install "poetry[all]"
 	@$(MAKE) install
 	@pre-commit install -c .precommit/.pre-commit-config.yaml
-	@cp docker-compose/.example.env docker-compose/.env
+	@cp .example.env .env
 
 install:
 	@poetry lock
@@ -35,4 +35,4 @@ up: docker-up
 down: docker-down
 
 test-xmlrunner:
-	@cd src && ./manage.py test --no-input --keepdb
+	@./manage.py test --no-input --keepdb
