@@ -21,7 +21,17 @@ from api.routers.city import cities_router
 from api.routers.itinerary import router as itinerary_router
 from api.routers.search import router as search_router
 from tripagenda.routers import router as internal_router
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.middleware import SlowAPIMiddleware
+from slowapi.errors import RateLimitExceeded
 
+limiter = Limiter(key_func=get_remote_address, default_limits=["5/minute"])
+limiter = Limiter(
+    key_func=get_remote_address,
+    storage_uri="memory://" if settings.ENVIRONMENT == "local" else "redis://redis/1",
+    default_limits=["5/minute"],
+)
 
 app = FastAPI(
     title="Tripagenda",
@@ -29,6 +39,9 @@ app = FastAPI(
     version=settings.APP_VERSION,
     redirect_slashes=True,
 )
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
 api_prefix = f"{settings.API_PREFIX}/{settings.API_VERSION}"
 internal_prefix = f"{settings.API_INTERNAL_PREFIX}"

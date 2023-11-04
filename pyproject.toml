@@ -19,6 +19,7 @@ unittest-xml-reporting = "^3.2.0"
 uvicorn = {extras = ["all"], version = "^0.23.2"}
 openai = "^0.28.1"
 django-redis = "^5.4.0"
+slowapi = "^0.1.8"
 
 [tool.poetry.dev-dependencies]
 django-stubs = "*"
