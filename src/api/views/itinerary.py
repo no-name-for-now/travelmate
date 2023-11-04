@@ -7,7 +7,6 @@ from api.utils.itinerary import get_itinerary__oai
 from api.utils.itinerary import get_top_n_itinerary
 from fastapi import Depends
 from fastapi.responses import JSONResponse
-from tripagenda import logger
 
 
 def itinerary_get__oai(
@@ -16,7 +15,11 @@ def itinerary_get__oai(
     """
     Get itinerary from OpenAI.
     """
-    return APIItineraryList.from_qs(itinerary)
+    return (
+        APIItineraryList.from_qs(itinerary)
+        if isinstance(itinerary, ItineraryORM)
+        else itinerary
+    )
 
 
 def itinerary_get(
@@ -25,13 +28,11 @@ def itinerary_get(
     """
     Get itinerary from DB.
     """
-    res = (
+    return (
         APIItineraryList.from_qs(itinerary)
         if isinstance(itinerary, ItineraryORM)
         else itinerary
     )
-    logger.info(f"itinerary_get: {res}")
-    return res
 
 
 def itinerary_get_top_n(
@@ -40,4 +41,8 @@ def itinerary_get_top_n(
     """
     Get top {count} itineraries.
     """
-    return APITopSearchedList.from_qs(top_itineraries)
+    return (
+        APIItineraryList.from_qs(top_itineraries)
+        if isinstance(top_itineraries, UniqueSearchHistoryORM)
+        else top_itineraries
+    )

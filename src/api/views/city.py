@@ -11,7 +11,11 @@ def city_description_get__oai(
     """
     Get city description.
     """
-    return APICityDescriptorsList.from_qs(city_descriptor)
+    return (
+        APICityDescriptorsList.from_qs(city_descriptor)
+        if isinstance(city_descriptor, CityDescriptorsORM)
+        else city_descriptor
+    )
 
 
 def city_description_get(
@@ -20,4 +24,8 @@ def city_description_get(
     """
     Get city description.
     """
-    return APICityDescriptorsList.from_qs(city_descriptor)
+    return (
+        APICityDescriptorsList.from_qs(city_descriptor)
+        if isinstance(city_descriptor, CityDescriptorsORM)
+        else city_descriptor
+    )
