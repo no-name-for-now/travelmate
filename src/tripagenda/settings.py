@@ -23,7 +23,7 @@ API_VERSION = "v1"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# TODO: fetch from secrets manager
 SECRET_KEY = os.getenv("SECRET_KEY", "superdupersecretkey")
 
 ENVIRONMENT = os.getenv("ENVIRONMENT", "local")
@@ -54,6 +54,7 @@ MIDDLEWARE = [
 
 ASGI_APPLICATION = "tripagenda.asgi.app"
 
+# TODO: setup connection option for cloudsql
 if os.getenv("IN_DOCKER"):
     DATABASES = {
         "default": {
@@ -134,4 +135,5 @@ TEST_RUNNER = "xmlrunner.extra.djangotestrunner.XMLTestRunner"
 
 TEST_OUTPUT_FILE_NAME = "report.xml"
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # TODO: fetch from secrets manager
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
