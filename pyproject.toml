@@ -18,6 +18,7 @@ pydantic = "^2.4.2"
 unittest-xml-reporting = "^3.2.0"
 uvicorn = {extras = ["all"], version = "^0.23.2"}
 openai = "^0.28.1"
+django-redis = "^5.4.0"
 
 [tool.poetry.dev-dependencies]
 django-stubs = "*"
