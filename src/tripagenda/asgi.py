@@ -9,14 +9,17 @@ from django.conf import settings
 from django.core.asgi import get_asgi_application
 from fastapi import FastAPI
 
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tripagenda.settings")
 
 application = get_asgi_application()
 
-from tripagenda.routers import router as internal_router
+
 from api.routers.city import router as city_router
 from api.routers.itinerary import router as itinerary_router
 from api.routers.search import router as search_router
+from tripagenda.routers import router as internal_router
+
 
 app = FastAPI(
     title="Tripagenda",

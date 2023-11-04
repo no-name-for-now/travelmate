@@ -1,4 +1,5 @@
 from api.models.city_descriptors import CityDescriptorsORM
+from api.utils.base import get_object__oai
 from api.utils.http import Error
 from api.utils.validations import validate_get_city_description
 from fastapi import Query
@@ -16,8 +17,11 @@ def get_city_description__oai(
     )
     try:
         if ok:
-            qs = CityDescriptorsORM.objects.select_related("city").filter(
-                city__city=_city, city__country=_country
+            qs = get_object__oai(
+                model_class=CityDescriptorsORM,
+                class_function="get_city_description",
+                city=_city,
+                country=_country,
             )
             if not qs:
                 return Error(404, "city entry not found", __name__)

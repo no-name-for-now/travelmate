@@ -1,5 +1,6 @@
 from api.models.itinerary import ItineraryORM
 from api.models.unique_search_history import UniqueSearchHistoryORM
+from api.utils.base import get_object__oai
 from api.utils.http import Error
 from api.utils.validations import validate_itinerary
 from django.db.models import Count
@@ -20,10 +21,12 @@ def get_itinerary__oai(
 
     try:
         if ok:
-            qs = ItineraryORM.objects.select_related("unique_search_history").filter(
-                unique_search_history__city=_city,
-                unique_search_history__country=_country,
-                unique_search_history__num_days=_days,
+            qs = get_object__oai(
+                model_class=ItineraryORM,
+                class_function="get_itinerary",
+                city=_city,
+                country=_country,
+                num_days=_days,
             )
             if not qs:
                 return Error(404, "itinerary not found", __name__)
