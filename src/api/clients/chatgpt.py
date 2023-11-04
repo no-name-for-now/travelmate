@@ -54,28 +54,26 @@ class OpenAI:
 
         return self.chat_completion_create(messages)
 
-    def get_itenerary(self, country, cities_regions, num_days):
+    def get_itenerary(self, country, cities_regions, num_days) -> Dict[Any, Any]:
         """Get an itenerary from OpenAI."""
         init = "Create a travel itenarary in json for {0} days in {1}, add these specific regions or cities: {2}.".format(
             num_days, country, cities_regions
         )
 
-        messages = (
-            [
-                {"role": "system", "content": "You are a travel assistant."},
-                {
-                    "role": "user",
-                    "content": init
-                    + """
-                Respond in the following format: {Day : n,
-                                                            {Overnight City: ,
-                                                            Travel Method : ,
-                                                            Travel Time : ,
-                                                            Morning Activity : ,
-                                                            Afternoon Activity : ,
-                                                            Evening Activity : }}""",
-                },
-            ],
-        )
+        messages = [
+            {"role": "system", "content": "You are a travel assistant."},
+            {
+                "role": "user",
+                "content": init
+                + """
+            Respond in the following format: {Day : n,
+                                                        {Overnight City: ,
+                                                        Travel Method : ,
+                                                        Travel Time : ,
+                                                        Morning Activity : ,
+                                                        Afternoon Activity : ,
+                                                        Evening Activity : }}""",
+            },
+        ]
 
         return self.chat_completion_create(messages)
