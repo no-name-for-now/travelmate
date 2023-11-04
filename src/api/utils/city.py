@@ -1,5 +1,6 @@
 from api.models.city_climate import CityClimateORM
 from api.models.city_descriptors import CityDescriptorsORM
+from api.models.world_cities import WorldCitiesORM
 from api.utils.base import get_object__oai
 from api.utils.http import Error
 from api.utils.validations import validate_get_city
@@ -97,5 +98,17 @@ def get_city_climate__db(
                 return qs
         else:
             return Error(422, "invalid city or country", __name__)
+    except Exception as e:
+        return Error(500, e, __name__)
+
+
+def get_cities_active__db() -> WorldCitiesORM:
+    """Retrieve all active cities."""
+    try:
+        qs = WorldCitiesORM.objects.filter(use_on_app=True)
+        if not qs:
+            return Error(404, "no active cities found", __name__)
+        else:
+            return qs
     except Exception as e:
         return Error(500, e, __name__)

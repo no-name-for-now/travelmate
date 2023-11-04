@@ -116,3 +116,26 @@ class APIWorldCitiesList(BaseModel):
         Convert a Django WorldCities queryset to APIWorldCities instances.
         """
         return cls(items=[APIWorldCities.from_model(i) for i in qs])
+
+
+class WorldCitiesActiveContract(BaseModel):
+    """World Cities Active contract."""
+
+    city: str
+    country: str
+
+    @classmethod
+    def from_model(cls, instance: WorldCitiesORM):
+        """
+        Convert a Django WorldCities model instance to an APIWorldCities instance.
+        """
+        return cls(
+            city=instance.city,
+            country=instance.country,
+        )
+
+    def to_dict(self):
+        return {
+            "city": self.city,
+            "country": self.country,
+        }
