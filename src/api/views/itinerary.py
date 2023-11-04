@@ -5,44 +5,45 @@ from api.models.unique_search_history import UniqueSearchHistoryORM
 from api.utils.itinerary import get_itinerary__db
 from api.utils.itinerary import get_itinerary__oai
 from api.utils.itinerary import get_top_n_itinerary
+from django.db.models.query import QuerySet
 from fastapi import Depends
-from fastapi.responses import JSONResponse
+from starlette.responses import JSONResponse
 
 
 def itinerary_get__oai(
     itinerary: ItineraryORM = Depends(get_itinerary__oai),
-) -> APIItineraryList:
+) -> APIItineraryList | JSONResponse:
     """
     Get itinerary from OpenAI.
     """
     return (
         APIItineraryList.from_qs(itinerary)
-        if isinstance(itinerary, ItineraryORM)
+        if itinerary.__class__ is QuerySet
         else itinerary
     )
 
 
 def itinerary_get(
-    itinerary: ItineraryORM | JSONResponse = Depends(get_itinerary__db),
-) -> APIItineraryList:
+    itinerary: ItineraryORM = Depends(get_itinerary__db),
+) -> APIItineraryList | JSONResponse:
     """
     Get itinerary from DB.
     """
     return (
         APIItineraryList.from_qs(itinerary)
-        if isinstance(itinerary, ItineraryORM)
+        if itinerary.__class__ is QuerySet
         else itinerary
     )
 
 
 def itinerary_get_top_n(
     top_itineraries: UniqueSearchHistoryORM = Depends(get_top_n_itinerary),
-) -> APITopSearchedList:
+) -> APITopSearchedList | JSONResponse:
     """
     Get top {count} itineraries.
     """
     return (
-        APIItineraryList.from_qs(top_itineraries)
-        if isinstance(top_itineraries, UniqueSearchHistoryORM)
+        APITopSearchedList.from_qs(top_itineraries)
+        if top_itineraries.__class__ is QuerySet
         else top_itineraries
     )

@@ -30,7 +30,7 @@ def get_city_description__oai(
         else:
             return Error(422, "invalid city or country", __name__)
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_city_description__db(
@@ -52,7 +52,7 @@ def get_city_description__db(
         else:
             return Error(422, "invalid city or country", __name__)
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_city_climate__oai(
@@ -77,7 +77,7 @@ def get_city_climate__oai(
         else:
             return Error(422, "invalid city or country", __name__)
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_city_climate__db(
@@ -99,7 +99,7 @@ def get_city_climate__db(
         else:
             return Error(422, "invalid city or country", __name__)
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_cities_active__db() -> WorldCitiesORM:
@@ -111,4 +111,4 @@ def get_cities_active__db() -> WorldCitiesORM:
         else:
             return qs
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)

@@ -152,3 +152,8 @@ class APIWorldCitiesActiveList(BaseModel):
         Convert a Django WorldCities queryset to APIWorldCities instances.
         """
         return cls(items=[WorldCitiesActiveContract.from_model(i) for i in qs])
+
+    def to_dict(self):
+        return {
+            "items": [i.to_dict() for i in self.items],
+        }

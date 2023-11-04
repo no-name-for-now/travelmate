@@ -8,7 +8,7 @@ from api.models.world_cities import WorldCitiesORM
 cities_list = APIWorldCitiesActiveList.from_qs(
     WorldCitiesORM.objects.filter(use_on_app=True).all()
 )
-active_citiies = cities_list.items
+active_citiies = cities_list.to_dict()["items"]
 
 
 def validate_itinerary(itinerary_dict: Dict[str, Any]):

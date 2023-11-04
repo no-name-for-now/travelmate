@@ -21,7 +21,7 @@ def get_unique_search_history(
         else:
             return qs
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_user_search_history(
@@ -37,7 +37,7 @@ def get_user_search_history(
         else:
             return qs
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def post_user_search_history(
@@ -51,4 +51,4 @@ def post_user_search_history(
         obj.save()
         return obj
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)

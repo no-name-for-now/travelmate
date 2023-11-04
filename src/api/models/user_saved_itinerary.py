@@ -55,7 +55,7 @@ class UserSavedItineraryORM(AbstractBaseModel):
 class UserSavedItineraryContract(BaseModel):
     """User Saved Itinerary contract."""
 
-    user_id: str
+    user_id: int
     unique_search_history_id: int
     from_date: date
     to_date: date

@@ -34,7 +34,7 @@ def get_itinerary__oai(
         else:
             return Error(422, "invalid number of days, city or country", __name__)
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_itinerary__db(
@@ -60,7 +60,7 @@ def get_itinerary__db(
         else:
             return Error(422, "invalid number of days, city or country", __name__)
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)
 
 
 def get_top_n_itinerary(
@@ -79,4 +79,4 @@ def get_top_n_itinerary(
             return Error(404, "itinerary not found", __name__)
         return qs
     except Exception as e:
-        return Error(500, e, __name__)
+        return Error(500, e.__str__(), __name__)

@@ -1,6 +1,6 @@
 from api.models.city_climate import APICityClimateList
 from api.models.city_descriptors import APICityDescriptorsList
-from api.models.world_cities import WorldCitiesActiveContract
+from api.models.world_cities import APIWorldCitiesActiveList
 from api.views import city as views
 from fastapi import APIRouter
 from fastapi import status
@@ -13,6 +13,13 @@ city_router = APIRouter(
     responses=responses,
 )
 
+cities_router = APIRouter(
+    prefix="/cities",
+    tags=["cities"],
+    responses=responses,
+)
+
+# City endpoints
 city_router.get(
     "/description",
     summary="Get city description.",
@@ -45,16 +52,11 @@ city_router.get(
     status_code=status.HTTP_200_OK,
 )(views.city_climate_get__oai)
 
-cities_router = APIRouter(
-    prefix="/cities",
-    tags=["cities"],
-    responses=responses,
-)
-
+# Cities endpoints
 cities_router.get(
     "/active",
     summary="Get all active cities.",
-    response_model=WorldCitiesActiveContract,
+    response_model=APIWorldCitiesActiveList,
     name="cities-active-get",
     status_code=status.HTTP_200_OK,
 )(views.cities_active_get)
