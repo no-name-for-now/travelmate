@@ -60,6 +60,6 @@ class APIUserSearchList(BaseModel):
     @classmethod
     def from_qs(cls, qs):
         """
-        Convert a Django UserSearch queryset to APIUserSearch instances.
+        Convert a Django UserSavedItinerary queryset to APIUserSearch instances.
         """
         return cls(items=[APIUserSearch.from_model(i) for i in qs])
