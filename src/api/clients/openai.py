@@ -5,6 +5,7 @@ from typing import Any
 from typing import Dict
 
 import openai
+from api.clients.contracts.city_climate import CityClimateOpenAIContract
 from django.conf import settings
 
 
@@ -18,12 +19,16 @@ class OpenAI:
         self.client = openai
         self.client.api_key = self.api_key
 
-    def chat_completion_create(self, messages: list) -> dict:
+    def chat_completion_create(
+        self, messages: list, functions: list = [], function_call: dict = {}
+    ) -> dict:
         """Create a chat completion."""
         try:
             response = self.client.ChatCompletion.create(
                 model=self.model,
                 messages=messages,
+                functions=functions,
+                function_call=function_call,
             )
 
             object = json.loads(response.choices[0]["message"])
@@ -84,3 +89,33 @@ class OpenAI:
         ]
 
         return self.chat_completion_create(messages)
+
+    def get_city_climate(self, **kwargs) -> Dict[Any, Any]:
+        """Get a city's climate from OpenAI."""
+        country = kwargs.get("country")
+        city = kwargs.get("city")
+
+        init = "Monthly return of The Avg Rainfall (mm), Avg Low (C) as, Avg High (C) for {0}, {1}, dont return the measurement unit.".format(
+            country, city
+        )
+
+        messages = [
+            {"role": "system", "content": "You are a Meteorology Analyst."},
+            {
+                "role": "user",
+                "content": init
+                + 'Respond in the following format: {"city": ,"description":}}',
+            },
+        ]
+
+        functions = [
+            {
+                "name": "get_answer_for_user_query",
+                "description": "Get user answer in series of steps",
+                "parameters": CityClimateOpenAIContract.model_json_schema(),
+            }
+        ]
+
+        function_call = {"name": "get_answer_for_user_query"}
+
+        return self.chat_completion_create(messages, functions, function_call)

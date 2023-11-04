@@ -1,3 +1,4 @@
+from api.models.city_climate import APICityClimateList
 from api.models.city_descriptors import APICityDescriptorsList
 from api.views import city as views
 from fastapi import APIRouter
@@ -26,3 +27,19 @@ router.get(
     name="city-description-get-oai",
     status_code=status.HTTP_200_OK,
 )(views.city_description_get__oai)
+
+router.get(
+    "/climate",
+    summary="Get city climate.",
+    response_model=APICityClimateList,
+    name="city-climate-get",
+    status_code=status.HTTP_200_OK,
+)(views.city_climate_get)
+
+router.get(
+    "/climate/oai",
+    summary="Get city climate from OpenAI.",
+    response_model=APICityClimateList,
+    name="city-climate-get-oai",
+    status_code=status.HTTP_200_OK,
+)(views.city_climate_get__oai)

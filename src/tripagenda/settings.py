@@ -21,6 +21,10 @@ API_PREFIX = "/api"
 API_INTERNAL_PREFIX = "/internal"
 API_VERSION = "v1"
 
+# OpenAI configs
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # TODO: fetch from secrets manager
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -135,6 +139,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 TEST_RUNNER = "xmlrunner.extra.djangotestrunner.XMLTestRunner"
 
 TEST_OUTPUT_FILE_NAME = "report.xml"
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # TODO: fetch from secrets manager
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")

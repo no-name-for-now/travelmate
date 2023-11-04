@@ -5,15 +5,16 @@ It exposes the ASGI callable as a module-level variable named ``app``.
 """
 import os
 
-from django.conf import settings
 from django.core.asgi import get_asgi_application
-from fastapi import FastAPI
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tripagenda.settings")
 
 application = get_asgi_application()
 
+
+from django.conf import settings
+from fastapi import FastAPI
 
 from api.routers.city import router as city_router
 from api.routers.itinerary import router as itinerary_router

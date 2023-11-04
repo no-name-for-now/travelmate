@@ -42,7 +42,7 @@ def validate_itinerary(itinerary_dict: Dict[str, Any]):
     return False, None, None, None
 
 
-def validate_get_city_description(itinerary_dict):
+def validate_get_city(itinerary_dict):
     """Validate the input for the get_city_description endpoint."""
     if itinerary_dict in cities_list:
         city = itinerary_dict["city"].strip()
