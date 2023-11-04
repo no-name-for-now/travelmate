@@ -37,10 +37,13 @@ class OpenAI:
 
         return object
 
-    def get_city_description(self, country, region_string) -> Dict[Any, Any]:
+    def get_city_description(self, **kwargs) -> Dict[Any, Any]:
         """Get a city description from OpenAI."""
+        country = kwargs.get("country")
+        city = kwargs.get("city")
+
         init = "Create a 100 word description of {0}, {1} for a tourist".format(
-            country, region_string
+            country, city
         )
 
         messages = [
@@ -54,10 +57,14 @@ class OpenAI:
 
         return self.chat_completion_create(messages)
 
-    def get_itenerary(self, country, cities_regions, num_days) -> Dict[Any, Any]:
+    def get_itenerary(self, **kwargs) -> Dict[Any, Any]:
         """Get an itenerary from OpenAI."""
-        init = "Create a travel itenarary in json for {0} days in {1}, add these specific regions or cities: {2}.".format(
-            num_days, country, cities_regions
+        country = kwargs.get("country")
+        city = kwargs.get("city")
+        num_days = kwargs.get("num_days")
+
+        init = "Create a travel itenarary in json for {0} days in {1}, add this specific region or city: {2}.".format(
+            num_days, country, city
         )
 
         messages = [
