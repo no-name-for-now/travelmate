@@ -59,9 +59,7 @@ OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-3.5-turbo")
 
 SECRET_KEY = env("SECRET_KEY")
 
-DEBUG = env("DEBUG")
-if not DEBUG:
-    DEBUG = False
+DEBUG = env.bool("DEBUG", default=False)
 
 ALLOWED_HOSTS = (
     ["*"]
