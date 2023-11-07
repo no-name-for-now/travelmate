@@ -9,7 +9,7 @@ x-api-common: &api-common
     API__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://api:api@postgres/api
     API__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://api:api@postgres/api
   volumes:
-    - ${API_PROJ_DIR:-./src}:/app
+    - ${API_PROJ_DIR:-.}:/app
   user: ${API_UID:-50000}:0
   depends_on:
     - redis

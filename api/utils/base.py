@@ -2,6 +2,7 @@ from typing import Type
 
 from django.db import models
 
+from tripagenda import logger
 from tripagenda import oai
 
 
@@ -36,10 +37,13 @@ def get_object__oai(
     - queryset of model_class
 
     """
-    function = getattr(oai, class_function)
-    res = function(kwargs)
+    try:
+        function = getattr(oai, class_function)
+        res = function(**kwargs)
+        obj = model_class.from_api(res)
+        obj.save()
 
-    obj = model_class.from_api(res)
-    obj.save()
-
-    return obj
+        return obj
+    except Exception as e:
+        logger.error(e)
+        raise e

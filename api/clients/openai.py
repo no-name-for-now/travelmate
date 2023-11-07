@@ -63,7 +63,7 @@ class OpenAI:
 
         return self.chat_completion_create(messages)
 
-    def get_itenerary(self, **kwargs) -> Dict[Any, Any]:
+    def get_itinerary(self, **kwargs) -> Dict[Any, Any]:
         """Get an itenerary from OpenAI."""
         country = kwargs.get("country")
         city = kwargs.get("city")
