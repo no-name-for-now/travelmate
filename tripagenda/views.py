@@ -20,6 +20,24 @@ class HealthCheck(BaseModel):
         }
 
 
+class Wake(BaseModel):
+    status: int
+    message: str
+
+    @classmethod
+    def from_dict(cls, d: dict):
+        return cls(
+            status=d["status"],
+            message=d["message"],
+        )
+
+    def to_dict(self) -> dict:
+        return {
+            "status": self.status,
+            "message": self.message,
+        }
+
+
 def healthcheck() -> HealthCheck:
     """
     Return a healthcheck object.
@@ -27,4 +45,14 @@ def healthcheck() -> HealthCheck:
     return HealthCheck(
         status=200,
         version=settings.APP_VERSION,
+    )
+
+
+def wake() -> Wake:
+    """
+    Return a wake object.
+    """
+    return Wake(
+        status=200,
+        message="Ok, I'm up!",
     )

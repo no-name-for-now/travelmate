@@ -2,8 +2,10 @@ from fastapi import APIRouter
 from fastapi import status
 
 from api.utils.http import responses
-from tripagenda.healthcheck import HealthCheck
-from tripagenda.healthcheck import healthcheck
+from tripagenda.views import HealthCheck
+from tripagenda.views import healthcheck
+from tripagenda.views import Wake
+from tripagenda.views import wake
 
 
 router = APIRouter(
@@ -19,3 +21,11 @@ router.get(
     name="healthcheck-get",
     status_code=status.HTTP_200_OK,
 )(healthcheck)
+
+router.get(
+    "/wake",
+    summary="Wake up the API.",
+    response_model=Wake,
+    name="wake",
+    status_code=status.HTTP_200_OK,
+)(wake)
