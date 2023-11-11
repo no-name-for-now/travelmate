@@ -23,7 +23,7 @@ def get_city_description__oai(
                 class_function="get_city_description",
                 city=_city,
                 country=_country,
-            )
+            ).first()
             if not qs:
                 return Error(404, "city entry not found", __name__)
             else:
@@ -43,8 +43,10 @@ def get_city_description__db(
 
     try:
         if ok:
-            qs = CityDescriptorsORM.objects.select_related("city").filter(
-                city__city=_city, city__country=_country
+            qs = (
+                CityDescriptorsORM.objects.select_related("city")
+                .filter(city__city=_city, city__country=_country)
+                .first()
             )
             if not qs:
                 return Error(404, "city entry not found", __name__)

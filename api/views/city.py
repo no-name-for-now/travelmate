@@ -5,6 +5,7 @@ from starlette.responses import JSONResponse
 from api.models.city_climate import APICityClimateList
 from api.models.city_climate import CityClimateORM
 from api.models.city_descriptors import APICityDescriptorsList
+from api.models.city_descriptors import CityDescriptorsContract
 from api.models.city_descriptors import CityDescriptorsORM
 from api.models.world_cities import APIWorldCitiesActiveList
 from api.models.world_cities import WorldCitiesORM
@@ -17,12 +18,12 @@ from api.utils.city import get_city_description__oai
 
 def city_description_get__oai(
     city_descriptor: CityDescriptorsORM = Depends(get_city_description__oai),
-) -> APICityDescriptorsList | JSONResponse:
+) -> CityDescriptorsContract | JSONResponse:
     """
     Get city description.
     """
     return (
-        APICityDescriptorsList.from_qs(city_descriptor)
+        CityDescriptorsContract.from_model(city_descriptor)
         if city_descriptor.__class__ is QuerySet
         else city_descriptor
     )
