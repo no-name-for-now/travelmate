@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from fastapi import status
 
 from api.models.city_climate import APICityClimateList
-from api.models.city_descriptors import APICityDescriptorsList
+from api.models.city_descriptors import CityDescriptorsContract
 from api.models.world_cities import APIWorldCitiesActiveList
 from api.views import city as views
 from tripagenda.routers import responses
@@ -24,7 +24,7 @@ cities_router = APIRouter(
 city_router.get(
     "/description",
     summary="Get city description.",
-    response_model=APICityDescriptorsList,
+    response_model=CityDescriptorsContract,
     name="city-description-get",
     status_code=status.HTTP_200_OK,
 )(views.city_description_get)
@@ -32,7 +32,7 @@ city_router.get(
 city_router.get(
     "/description/oai",
     summary="Get city description from OpenAI.",
-    response_model=APICityDescriptorsList,
+    response_model=CityDescriptorsContract,
     name="city-description-get-oai",
     status_code=status.HTTP_200_OK,
 )(views.city_description_get__oai)
