@@ -10,11 +10,17 @@ from api.models.world_cities import WorldCitiesORM
 class CityDescriptorsORM(AbstractBaseModel):
     """City Descriptors model."""
 
-    class Meta:
-        db_table = "city_descriptor"
-
     city = models.ForeignKey(WorldCitiesORM, on_delete=models.CASCADE)
     city_description = models.CharField(max_length=2000)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["city_id", "city_description"],
+                name="constraint__unique_city_description",
+            )
+        ]
+        db_table = "city_descriptor"
 
     @classmethod
     def from_api(cls, model: "CityDescriptorsContract"):
@@ -32,6 +38,22 @@ class CityDescriptorsORM(AbstractBaseModel):
         """
         self.city_id = api_model.city_id
         self.city_description = api_model.city_description
+
+    @classmethod
+    def from_oai(cls, oai_model: dict):
+        """
+        Update the CityDescriptors Django model from an OpenAI model.
+        """
+        city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
+        city_id = city.id if city else None
+        city_description = oai_model.get("description", None)
+
+        if not city_id:
+            raise Exception("City not found")
+        if not city_description:
+            raise Exception("City description not found")
+
+        return cls(city_id=city_id, city_description=city_description)
 
 
 # CityDescriptors contracts
