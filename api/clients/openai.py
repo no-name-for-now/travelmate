@@ -20,19 +20,33 @@ class OpenAI:
         self.client = openai
         self.client.api_key = self.api_key
 
-    def chat_completion_create(
-        self, messages: list, functions: list = [], function_call: dict = {}
-    ) -> dict:
-        """Create a chat completion."""
+    def chat_completion_create(self, messages: list, **kwargs) -> dict:
+        """
+        Create a chat completion.
+
+        Parameters
+        ----------
+        messages : list
+            list of messages to send to OpenAI
+        **kwargs : dict
+            additional arguments to pass to the OpenAI API
+            expected keys: functions: array, function_call: dict
+
+        """
         try:
             response = self.client.ChatCompletion.create(
-                model=self.model,
-                messages=messages,
-                functions=functions,
-                function_call=function_call,
+                model=self.model, messages=messages, **kwargs
             )
 
-            object = json.loads(response.choices[0]["message"])
+            if kwargs.get("functions", None):
+                message = response.choices[0]["message"]
+                data_string = message["function_call"]["arguments"]
+                data = json.loads(data_string)
+                return data
+
+            message = response.choices[0]["message"]
+            content = json.loads(message["content"])
+            return content
         except Exception as e:
             object = {
                 "error": "Error occurred while fetching from OpenAI API",
@@ -96,7 +110,7 @@ class OpenAI:
         country = kwargs.get("country")
         city = kwargs.get("city")
 
-        init = "Monthly return of The Avg Rainfall (mm), Avg Low (C) as, Avg High (C) for {0}, {1}, dont return the measurement unit.".format(
+        init = "Monthly return of The Avg Rainfall (mm), Avg Low (C) as, Avg High (C) for {0}, {1}, don't return the measurement unit.".format(
             country, city
         )
 
@@ -104,8 +118,7 @@ class OpenAI:
             {"role": "system", "content": "You are a Meteorology Analyst."},
             {
                 "role": "user",
-                "content": init
-                + 'Respond in the following format: {"city": ,"description":}}',
+                "content": init,
             },
         ]
 
@@ -119,4 +132,6 @@ class OpenAI:
 
         function_call = {"name": "get_answer_for_user_query"}
 
-        return self.chat_completion_create(messages, functions, function_call)
+        return self.chat_completion_create(
+            messages, **{"functions": functions, "function_call": function_call}
+        )
