@@ -59,6 +59,7 @@ class ItineraryORM(AbstractBaseModel):
 class ItineraryContract(BaseModel):
     """Itinerary contract."""
 
+    unique_search_history_id: int
     day: str
     city: str
     travel_method: str
@@ -74,6 +75,7 @@ class ItineraryContract(BaseModel):
         """
         return cls(
             id=instance.id,
+            unique_search_history_id=instance.unique_search_history_id,
             day=instance.day,
             city=instance.city,
             travel_method=instance.travel_method,
@@ -86,6 +88,7 @@ class ItineraryContract(BaseModel):
     def to_dict(self):
         return {
             "id": self.id,
+            "unique_search_history_id": self.unique_search_history_id,
             "day": self.day,
             "city": self.city,
             "travel_method": self.travel_method,
