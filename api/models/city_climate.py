@@ -44,6 +44,20 @@ class CityClimateORM(AbstractBaseModel):
         self.high = api_model.high
         self.rainfall = api_model.rainfall
 
+    @classmethod
+    def from_oai(cls, oai_model) -> "CityClimateORM":
+        """Create a CityClimateORM object from OpenAI data."""
+        city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
+        city_id = city.id if city else None
+
+        return cls(
+            city_id=city_id,
+            month=oai_model.get("month"),
+            low=oai_model.get("low"),
+            high=oai_model.get("high"),
+            rainfall=oai_model.get("rainfall"),
+        )
+
 
 # CityClimate contracts
 class CityClimateContract(BaseModel):

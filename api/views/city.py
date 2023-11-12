@@ -1,3 +1,5 @@
+from typing import List
+
 from django.db.models.query import QuerySet
 from fastapi import Depends
 from starlette.responses import JSONResponse
@@ -56,14 +58,14 @@ def city_climate_get(
 
 
 def city_climate_get__oai(
-    city_climate: CityClimateORM = Depends(get_city_climate__oai),
+    city_climate: List = Depends(get_city_climate__oai),
 ) -> APICityClimateList | JSONResponse:
     """
     Get city climate.
     """
     return (
         APICityClimateList.from_qs(city_climate)
-        if city_climate.__class__ is QuerySet
+        if isinstance(city_climate, list)
         else city_climate
     )
 

@@ -1,3 +1,4 @@
+from typing import Any
 from typing import Type
 
 from django.db import models
@@ -16,7 +17,6 @@ def get_object_by_id(model_class: Type[models.Model], id: str) -> models.Model:
 
 
 def get_object__oai(
-    model_class: Type[models.Model],
     class_function: str,
     **kwargs,
 ) -> models.Model:
@@ -34,14 +34,47 @@ def get_object__oai(
 
     Returns
     -------
-    - queryset of model_class
+    - OpenAI Reponse : dict
 
     """
     try:
         function = getattr(oai, class_function)
         res = function(**kwargs)
-        obj = model_class.from_api(res)
-        obj.save()
+
+        if res.get("error", False):
+            logger.error(res["error_message"])
+            raise Exception(res["error_message"])
+
+        return res
+    except Exception as e:
+        logger.error(e)
+        raise e
+
+
+def oai_obj_to_qs(model_class: Type[models.Model], oai_obj: Any) -> models.Model:
+    """
+    Convert an oai object to a queryset.
+
+    Parameters
+    ----------
+    model_class : Type[models.Model]
+        the model class to return
+    oai_obj : dict
+        the oai object to convert
+
+    Returns
+    -------
+    - queryset of model_class
+
+    """
+    try:
+        if isinstance(oai_obj, dict):
+            obj = model_class.from_oai(oai_model=oai_obj)
+            obj.save()
+        else:
+            obj = model_class.objects.bulk_create(
+                [model_class.from_oai(oai_model=o) for o in oai_obj]
+            )
 
         return obj
     except Exception as e:

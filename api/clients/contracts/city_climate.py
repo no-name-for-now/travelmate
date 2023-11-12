@@ -6,25 +6,28 @@ from pydantic import BaseModel
 class CityClimateOpenAIContract(BaseModel):
     """City Climate response from OpenAI contract."""
 
-    Month: List[str]
-    Low: List[float]
-    High: List[float]
-    Rainfall: List[float]
+    city: str
+    month: List[str]
+    low: List[float]
+    high: List[float]
+    rainfall: List[float]
 
     @classmethod
     def from_model(cls, instance) -> "CityClimateOpenAIContract":
         """Convert a Django CityClimateORM model instance to an APICityClimate instance."""
         return cls(
-            Month=instance.month,
-            Low=instance.low,
-            High=instance.high,
-            Rainfall=instance.rainfall,
+            city=instance.city,
+            month=instance.month,
+            low=instance.low,
+            high=instance.high,
+            rainfall=instance.rainfall,
         )
 
     def to_dict(self):
         return {
-            "Month": self.Month,
-            "Low": self.Low,
-            "High": self.High,
-            "Rainfall": self.Rainfall,
+            "city": self.city,
+            "month": self.Month,
+            "low": self.Low,
+            "high": self.High,
+            "rainfall": self.Rainfall,
         }

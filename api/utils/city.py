@@ -1,9 +1,13 @@
+from typing import List
+
 from fastapi import Query
+from starlette.responses import JSONResponse
 
 from api.models.city_climate import CityClimateORM
 from api.models.city_descriptors import CityDescriptorsORM
 from api.models.world_cities import WorldCitiesORM
 from api.utils.base import get_object__oai
+from api.utils.base import oai_obj_to_qs
 from api.utils.http import Error
 from api.utils.validations import validate_get_city
 
@@ -13,17 +17,16 @@ def get_city_description__oai(
     country: str = Query(..., description="The name of the country."),
 ) -> CityDescriptorsORM:
     """Retrieve a city description by city and country."""
-    # TODO: add in handling fetch from OpenAI and persist to DB, and return
-    # Currently just returns from DB
     ok, _city, _country = validate_get_city({"city": city, "country": country})
     try:
         if ok:
-            qs = get_object__oai(
-                model_class=CityDescriptorsORM,
+            res = get_object__oai(
                 class_function="get_city_description",
                 city=_city,
                 country=_country,
-            ).first()
+            )
+
+            qs = oai_obj_to_qs(CityDescriptorsORM, res)
             if not qs:
                 return Error(404, "city entry not found", __name__)
             else:
@@ -61,22 +64,37 @@ def get_city_description__db(
 def get_city_climate__oai(
     city: str = Query(..., description="The name of the city."),
     country: str = Query(..., description="The name of the country."),
-) -> CityClimateORM:
+) -> List | JSONResponse:
     """Retrieve a city's climate by city and country."""
     ok, _city, _country = validate_get_city({"city": city, "country": country})
 
     try:
         if ok:
-            qs = get_object__oai(
-                model_class=CityClimateORM,
+            res = get_object__oai(
                 class_function="get_city_climate",
                 city=_city,
                 country=_country,
             )
-            if not qs:
+
+            monthly_data = list()
+            for month, low, high, rain in zip(
+                res["month"], res["low"], res["high"], res["rainfall"]
+            ):
+                monthly_data.append(
+                    {
+                        "city": city,
+                        "month": month,
+                        "low": low,
+                        "high": high,
+                        "rainfall": rain,
+                    }
+                )
+
+            obj = oai_obj_to_qs(CityClimateORM, monthly_data)
+            if not obj:
                 return Error(404, "city entry not found", __name__)
             else:
-                return qs
+                return obj
         else:
             return Error(422, "invalid city or country", __name__)
     except Exception as e:

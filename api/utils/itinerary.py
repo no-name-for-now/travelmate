@@ -23,7 +23,6 @@ def get_itinerary__oai(
     try:
         if ok:
             qs = get_object__oai(
-                model_class=ItineraryORM,
                 class_function="get_itinerary",
                 city=_city,
                 country=_country,
