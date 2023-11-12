@@ -11,7 +11,7 @@ automatic_scaling:
   max_concurrent_requests: 50
 
 env_variables:
-  APPENGINE_URL: https://fastdjango.uc.r.appspot.com
+  APPENGINE_URL: https://resolute-tracer-402011.uc.r.appspot.com
   ENVIRONMENT: production
   OPENAI_MODEL: gpt-3.5-turbo
   LOG_LEVEL: WARN
