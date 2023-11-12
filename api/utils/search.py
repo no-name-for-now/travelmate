@@ -7,6 +7,7 @@ from api.models.user_saved_itinerary import UserSavedItineraryContract
 from api.models.user_saved_itinerary import UserSavedItineraryORM
 from api.utils.base import get_object_by_id
 from api.utils.http import Error
+from api.utils.validations import validate_store_user_search
 
 
 def get_unique_search_history(
@@ -47,9 +48,13 @@ def post_user_search_history(
     ),
 ) -> models.Model:
     """Store a user's search history."""
+    ok = validate_store_user_search(data)
     try:
-        obj = UserSavedItineraryORM.from_api(data)
-        obj.save()
-        return obj
+        if ok:
+            obj = UserSavedItineraryORM.from_api(data)
+            obj.save()
+            return obj
+        else:
+            return Error(422, "invalid body", __name__)
     except Exception as e:
         return Error(500, e.__str__(), __name__)

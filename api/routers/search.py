@@ -22,7 +22,7 @@ router.get(
 )(views.search_get)
 
 router.post(
-    "/user",
+    "/store",
     summary="Store a user's search history.",
     response_model=APIUserSavedItinerary,
     name="search-post",
