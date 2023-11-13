@@ -1,0 +1,2106 @@
+[
+	{
+		"id" : 1,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-15T12:52:03.360Z",
+		"updated_at" : "2023-10-15T12:52:03.360Z"
+	},
+	{
+		"id" : 161,
+		"num_days" : 2,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:44:50.334Z",
+		"updated_at" : "2023-10-20T06:44:50.334Z"
+	},
+	{
+		"id" : 3,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-15T12:52:52.764Z",
+		"updated_at" : "2023-10-15T12:52:52.764Z"
+	},
+	{
+		"id" : 162,
+		"num_days" : 3,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:45:12.829Z",
+		"updated_at" : "2023-10-20T06:45:12.829Z"
+	},
+	{
+		"id" : 5,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-15T12:53:55.510Z",
+		"updated_at" : "2023-10-15T12:53:55.510Z"
+	},
+	{
+		"id" : 163,
+		"num_days" : 4,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:45:44.783Z",
+		"updated_at" : "2023-10-20T06:45:44.783Z"
+	},
+	{
+		"id" : 164,
+		"num_days" : 5,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:46:37.900Z",
+		"updated_at" : "2023-10-20T06:46:37.900Z"
+	},
+	{
+		"id" : 165,
+		"num_days" : 6,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:47:36.252Z",
+		"updated_at" : "2023-10-20T06:47:36.252Z"
+	},
+	{
+		"id" : 166,
+		"num_days" : 7,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:48:46.220Z",
+		"updated_at" : "2023-10-20T06:48:46.220Z"
+	},
+	{
+		"id" : 167,
+		"num_days" : 1,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:50:13.905Z",
+		"updated_at" : "2023-10-20T06:50:13.905Z"
+	},
+	{
+		"id" : 11,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-15T12:54:28.881Z",
+		"updated_at" : "2023-10-15T12:54:28.881Z"
+	},
+	{
+		"id" : 168,
+		"num_days" : 2,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:50:24.457Z",
+		"updated_at" : "2023-10-20T06:50:24.457Z"
+	},
+	{
+		"id" : 13,
+		"num_days" : 3,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-15T13:52:31.821Z",
+		"updated_at" : "2023-10-15T13:52:31.821Z"
+	},
+	{
+		"id" : 169,
+		"num_days" : 3,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:50:46.645Z",
+		"updated_at" : "2023-10-20T06:50:46.645Z"
+	},
+	{
+		"id" : 15,
+		"num_days" : 3,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-15T13:53:57.019Z",
+		"updated_at" : "2023-10-15T13:53:57.019Z"
+	},
+	{
+		"id" : 170,
+		"num_days" : 4,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:51:18.889Z",
+		"updated_at" : "2023-10-20T06:51:18.889Z"
+	},
+	{
+		"id" : 171,
+		"num_days" : 5,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:52:08.074Z",
+		"updated_at" : "2023-10-20T06:52:08.074Z"
+	},
+	{
+		"id" : 172,
+		"num_days" : 6,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:53:01.888Z",
+		"updated_at" : "2023-10-20T06:53:01.888Z"
+	},
+	{
+		"id" : 173,
+		"num_days" : 7,
+		"country" : "Spain",
+		"city" : "Malaga",
+		"created_at" : "2023-10-20T06:54:09.265Z",
+		"updated_at" : "2023-10-20T06:54:09.265Z"
+	},
+	{
+		"id" : 174,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T06:59:11.423Z",
+		"updated_at" : "2023-10-20T06:59:11.423Z"
+	},
+	{
+		"id" : 175,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T06:59:24.060Z",
+		"updated_at" : "2023-10-20T06:59:24.060Z"
+	},
+	{
+		"id" : 176,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T06:59:48.049Z",
+		"updated_at" : "2023-10-20T06:59:48.049Z"
+	},
+	{
+		"id" : 177,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T07:00:23.062Z",
+		"updated_at" : "2023-10-20T07:00:23.062Z"
+	},
+	{
+		"id" : 178,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T07:01:07.749Z",
+		"updated_at" : "2023-10-20T07:01:07.749Z"
+	},
+	{
+		"id" : 179,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T07:02:03.950Z",
+		"updated_at" : "2023-10-20T07:02:03.950Z"
+	},
+	{
+		"id" : 180,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T07:03:13.522Z",
+		"updated_at" : "2023-10-20T07:03:13.522Z"
+	},
+	{
+		"id" : 181,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:04:31.310Z",
+		"updated_at" : "2023-10-20T07:04:31.310Z"
+	},
+	{
+		"id" : 182,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:04:44.878Z",
+		"updated_at" : "2023-10-20T07:04:44.878Z"
+	},
+	{
+		"id" : 183,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:05:09.499Z",
+		"updated_at" : "2023-10-20T07:05:09.499Z"
+	},
+	{
+		"id" : 184,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:05:42.660Z",
+		"updated_at" : "2023-10-20T07:05:42.660Z"
+	},
+	{
+		"id" : 31,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-18T17:53:07.300Z",
+		"updated_at" : "2023-10-18T17:53:07.300Z"
+	},
+	{
+		"id" : 32,
+		"num_days" : 1,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-18T17:53:27.500Z",
+		"updated_at" : "2023-10-18T17:53:27.500Z"
+	},
+	{
+		"id" : 185,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:06:38.867Z",
+		"updated_at" : "2023-10-20T07:06:38.867Z"
+	},
+	{
+		"id" : 186,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:07:36.536Z",
+		"updated_at" : "2023-10-20T07:07:36.536Z"
+	},
+	{
+		"id" : 187,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Sintra",
+		"created_at" : "2023-10-20T07:08:46.644Z",
+		"updated_at" : "2023-10-20T07:08:46.644Z"
+	},
+	{
+		"id" : 38,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-18T17:54:10.857Z",
+		"updated_at" : "2023-10-18T17:54:10.857Z"
+	},
+	{
+		"id" : 40,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Porto",
+		"created_at" : "2023-10-18T17:55:00.149Z",
+		"updated_at" : "2023-10-18T17:55:00.149Z"
+	},
+	{
+		"id" : 41,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T17:56:21.166Z",
+		"updated_at" : "2023-10-18T17:56:21.166Z"
+	},
+	{
+		"id" : 42,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T17:56:42.065Z",
+		"updated_at" : "2023-10-18T17:56:42.065Z"
+	},
+	{
+		"id" : 44,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T17:58:58.765Z",
+		"updated_at" : "2023-10-18T17:58:58.765Z"
+	},
+	{
+		"id" : 46,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T18:00:07.352Z",
+		"updated_at" : "2023-10-18T18:00:07.352Z"
+	},
+	{
+		"id" : 47,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T18:01:30.268Z",
+		"updated_at" : "2023-10-18T18:01:30.268Z"
+	},
+	{
+		"id" : 48,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T18:02:31.631Z",
+		"updated_at" : "2023-10-18T18:02:31.631Z"
+	},
+	{
+		"id" : 49,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Lisbon",
+		"created_at" : "2023-10-18T18:03:45.971Z",
+		"updated_at" : "2023-10-18T18:03:45.971Z"
+	},
+	{
+		"id" : 50,
+		"num_days" : 2,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-18T18:07:30.735Z",
+		"updated_at" : "2023-10-18T18:07:30.735Z"
+	},
+	{
+		"id" : 52,
+		"num_days" : 4,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-18T18:09:53.675Z",
+		"updated_at" : "2023-10-18T18:09:53.675Z"
+	},
+	{
+		"id" : 53,
+		"num_days" : 5,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-18T18:10:24.915Z",
+		"updated_at" : "2023-10-18T18:10:24.915Z"
+	},
+	{
+		"id" : 54,
+		"num_days" : 6,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-18T18:13:37.735Z",
+		"updated_at" : "2023-10-18T18:13:37.735Z"
+	},
+	{
+		"id" : 55,
+		"num_days" : 7,
+		"country" : "Spain",
+		"city" : "Madrid",
+		"created_at" : "2023-10-18T18:14:21.883Z",
+		"updated_at" : "2023-10-18T18:14:21.883Z"
+	},
+	{
+		"id" : 56,
+		"num_days" : 1,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:17:36.040Z",
+		"updated_at" : "2023-10-18T18:17:36.040Z"
+	},
+	{
+		"id" : 57,
+		"num_days" : 2,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:17:54.848Z",
+		"updated_at" : "2023-10-18T18:17:54.848Z"
+	},
+	{
+		"id" : 58,
+		"num_days" : 3,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:18:43.526Z",
+		"updated_at" : "2023-10-18T18:18:43.526Z"
+	},
+	{
+		"id" : 59,
+		"num_days" : 4,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:19:32.336Z",
+		"updated_at" : "2023-10-18T18:19:32.336Z"
+	},
+	{
+		"id" : 60,
+		"num_days" : 5,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:20:20.651Z",
+		"updated_at" : "2023-10-18T18:20:20.651Z"
+	},
+	{
+		"id" : 61,
+		"num_days" : 6,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:21:12.400Z",
+		"updated_at" : "2023-10-18T18:21:12.400Z"
+	},
+	{
+		"id" : 62,
+		"num_days" : 1,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-18T18:21:45.812Z",
+		"updated_at" : "2023-10-18T18:21:45.812Z"
+	},
+	{
+		"id" : 63,
+		"num_days" : 7,
+		"country" : "Belgium",
+		"city" : "Antwerp",
+		"created_at" : "2023-10-18T18:22:02.479Z",
+		"updated_at" : "2023-10-18T18:22:02.479Z"
+	},
+	{
+		"id" : 738,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T19:05:14.848Z",
+		"updated_at" : "2023-11-02T19:05:14.848Z"
+	},
+	{
+		"id" : 739,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T19:05:42.697Z",
+		"updated_at" : "2023-11-02T19:05:42.697Z"
+	},
+	{
+		"id" : 67,
+		"num_days" : 2,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-18T18:25:35.291Z",
+		"updated_at" : "2023-10-18T18:25:35.291Z"
+	},
+	{
+		"id" : 740,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T19:06:14.902Z",
+		"updated_at" : "2023-11-02T19:06:14.902Z"
+	},
+	{
+		"id" : 69,
+		"num_days" : 4,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-18T18:26:20.760Z",
+		"updated_at" : "2023-10-18T18:26:20.760Z"
+	},
+	{
+		"id" : 741,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T19:07:02.388Z",
+		"updated_at" : "2023-11-02T19:07:02.388Z"
+	},
+	{
+		"id" : 742,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:12:06.457Z",
+		"updated_at" : "2023-11-02T19:12:06.457Z"
+	},
+	{
+		"id" : 72,
+		"num_days" : 5,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-18T18:26:53.199Z",
+		"updated_at" : "2023-10-18T18:26:53.199Z"
+	},
+	{
+		"id" : 73,
+		"num_days" : 6,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-18T18:31:32.865Z",
+		"updated_at" : "2023-10-18T18:31:32.865Z"
+	},
+	{
+		"id" : 74,
+		"num_days" : 7,
+		"country" : "Belgium",
+		"city" : "Brussels",
+		"created_at" : "2023-10-18T18:32:57.136Z",
+		"updated_at" : "2023-10-18T18:32:57.136Z"
+	},
+	{
+		"id" : 743,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:12:14.151Z",
+		"updated_at" : "2023-11-02T19:12:14.151Z"
+	},
+	{
+		"id" : 744,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:12:23.294Z",
+		"updated_at" : "2023-11-02T19:12:23.294Z"
+	},
+	{
+		"id" : 745,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:12:49.463Z",
+		"updated_at" : "2023-11-02T19:12:49.463Z"
+	},
+	{
+		"id" : 746,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:13:17.960Z",
+		"updated_at" : "2023-11-02T19:13:17.960Z"
+	},
+	{
+		"id" : 751,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:13:58.292Z",
+		"updated_at" : "2023-11-02T19:13:58.292Z"
+	},
+	{
+		"id" : 752,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Barcelos",
+		"created_at" : "2023-11-02T19:14:38.764Z",
+		"updated_at" : "2023-11-02T19:14:38.764Z"
+	},
+	{
+		"id" : 753,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:15:17.946Z",
+		"updated_at" : "2023-11-02T19:15:17.946Z"
+	},
+	{
+		"id" : 207,
+		"num_days" : 1,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:06:39.063Z",
+		"updated_at" : "2023-10-20T13:06:39.064Z"
+	},
+	{
+		"id" : 208,
+		"num_days" : 2,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:06:49.126Z",
+		"updated_at" : "2023-10-20T13:06:49.126Z"
+	},
+	{
+		"id" : 209,
+		"num_days" : 3,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:07:09.403Z",
+		"updated_at" : "2023-10-20T13:07:09.403Z"
+	},
+	{
+		"id" : 210,
+		"num_days" : 4,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:07:35.818Z",
+		"updated_at" : "2023-10-20T13:07:35.818Z"
+	},
+	{
+		"id" : 211,
+		"num_days" : 5,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:08:12.648Z",
+		"updated_at" : "2023-10-20T13:08:12.648Z"
+	},
+	{
+		"id" : 212,
+		"num_days" : 6,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:08:56.558Z",
+		"updated_at" : "2023-10-20T13:08:56.558Z"
+	},
+	{
+		"id" : 213,
+		"num_days" : 7,
+		"country" : "Belgium",
+		"city" : "Gent",
+		"created_at" : "2023-10-20T13:09:48.427Z",
+		"updated_at" : "2023-10-20T13:09:48.427Z"
+	},
+	{
+		"id" : 214,
+		"num_days" : 1,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:10:53.454Z",
+		"updated_at" : "2023-10-20T13:10:53.454Z"
+	},
+	{
+		"id" : 215,
+		"num_days" : 2,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:11:02.586Z",
+		"updated_at" : "2023-10-20T13:11:02.586Z"
+	},
+	{
+		"id" : 216,
+		"num_days" : 3,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:11:21.365Z",
+		"updated_at" : "2023-10-20T13:11:21.365Z"
+	},
+	{
+		"id" : 217,
+		"num_days" : 4,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:11:48.082Z",
+		"updated_at" : "2023-10-20T13:11:48.082Z"
+	},
+	{
+		"id" : 146,
+		"num_days" : 1,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:39:26.642Z",
+		"updated_at" : "2023-10-20T06:39:26.642Z"
+	},
+	{
+		"id" : 147,
+		"num_days" : 2,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:39:37.212Z",
+		"updated_at" : "2023-10-20T06:39:37.212Z"
+	},
+	{
+		"id" : 148,
+		"num_days" : 3,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:39:58.421Z",
+		"updated_at" : "2023-10-20T06:39:58.421Z"
+	},
+	{
+		"id" : 149,
+		"num_days" : 4,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:40:37.526Z",
+		"updated_at" : "2023-10-20T06:40:37.526Z"
+	},
+	{
+		"id" : 150,
+		"num_days" : 5,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:41:18.749Z",
+		"updated_at" : "2023-10-20T06:41:18.749Z"
+	},
+	{
+		"id" : 151,
+		"num_days" : 6,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:42:14.461Z",
+		"updated_at" : "2023-10-20T06:42:14.461Z"
+	},
+	{
+		"id" : 152,
+		"num_days" : 7,
+		"country" : "Spain",
+		"city" : "Barcelona",
+		"created_at" : "2023-10-20T06:43:24.990Z",
+		"updated_at" : "2023-10-20T06:43:24.990Z"
+	},
+	{
+		"id" : 218,
+		"num_days" : 5,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:12:23.740Z",
+		"updated_at" : "2023-10-20T13:12:23.740Z"
+	},
+	{
+		"id" : 219,
+		"num_days" : 6,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:13:02.235Z",
+		"updated_at" : "2023-10-20T13:13:02.235Z"
+	},
+	{
+		"id" : 220,
+		"num_days" : 7,
+		"country" : "Belgium",
+		"city" : "Charleroi",
+		"created_at" : "2023-10-20T13:13:58.266Z",
+		"updated_at" : "2023-10-20T13:13:58.266Z"
+	},
+	{
+		"id" : 221,
+		"num_days" : 1,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:14:58.936Z",
+		"updated_at" : "2023-10-20T13:14:58.936Z"
+	},
+	{
+		"id" : 222,
+		"num_days" : 2,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:15:08.867Z",
+		"updated_at" : "2023-10-20T13:15:08.867Z"
+	},
+	{
+		"id" : 223,
+		"num_days" : 3,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:15:29.437Z",
+		"updated_at" : "2023-10-20T13:15:29.437Z"
+	},
+	{
+		"id" : 224,
+		"num_days" : 4,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:15:59.801Z",
+		"updated_at" : "2023-10-20T13:15:59.801Z"
+	},
+	{
+		"id" : 160,
+		"num_days" : 1,
+		"country" : "Spain",
+		"city" : "Sevilla",
+		"created_at" : "2023-10-20T06:44:38.546Z",
+		"updated_at" : "2023-10-20T06:44:38.546Z"
+	},
+	{
+		"id" : 225,
+		"num_days" : 5,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:16:33.470Z",
+		"updated_at" : "2023-10-20T13:16:33.470Z"
+	},
+	{
+		"id" : 226,
+		"num_days" : 6,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:17:15.473Z",
+		"updated_at" : "2023-10-20T13:17:15.473Z"
+	},
+	{
+		"id" : 227,
+		"num_days" : 7,
+		"country" : "Belgium",
+		"city" : "Liege",
+		"created_at" : "2023-10-20T13:18:11.485Z",
+		"updated_at" : "2023-10-20T13:18:11.485Z"
+	},
+	{
+		"id" : 754,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:15:26.257Z",
+		"updated_at" : "2023-11-02T19:15:26.257Z"
+	},
+	{
+		"id" : 662,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:21:08.272Z",
+		"updated_at" : "2023-11-02T18:21:08.272Z"
+	},
+	{
+		"id" : 663,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:22:06.968Z",
+		"updated_at" : "2023-11-02T18:22:06.968Z"
+	},
+	{
+		"id" : 664,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:22:59.596Z",
+		"updated_at" : "2023-11-02T18:22:59.596Z"
+	},
+	{
+		"id" : 665,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:23:07.533Z",
+		"updated_at" : "2023-11-02T18:23:07.533Z"
+	},
+	{
+		"id" : 767,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:21:53.463Z",
+		"updated_at" : "2023-11-02T19:21:53.463Z"
+	},
+	{
+		"id" : 768,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:22:00.260Z",
+		"updated_at" : "2023-11-02T19:22:00.260Z"
+	},
+	{
+		"id" : 769,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:22:34.180Z",
+		"updated_at" : "2023-11-02T19:22:34.180Z"
+	},
+	{
+		"id" : 770,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:22:55.178Z",
+		"updated_at" : "2023-11-02T19:22:55.178Z"
+	},
+	{
+		"id" : 771,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:23:22.753Z",
+		"updated_at" : "2023-11-02T19:23:22.753Z"
+	},
+	{
+		"id" : 772,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:23:57.045Z",
+		"updated_at" : "2023-11-02T19:23:57.045Z"
+	},
+	{
+		"id" : 595,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Alcobaça",
+		"created_at" : "2023-11-02T17:43:40.033Z",
+		"updated_at" : "2023-11-02T17:43:40.033Z"
+	},
+	{
+		"id" : 596,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:47:24.131Z",
+		"updated_at" : "2023-11-02T17:47:24.131Z"
+	},
+	{
+		"id" : 773,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Valongo",
+		"created_at" : "2023-11-02T19:24:42.003Z",
+		"updated_at" : "2023-11-02T19:24:42.003Z"
+	},
+	{
+		"id" : 598,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:48:46.719Z",
+		"updated_at" : "2023-11-02T17:48:46.719Z"
+	},
+	{
+		"id" : 599,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:49:10.298Z",
+		"updated_at" : "2023-11-02T17:49:10.298Z"
+	},
+	{
+		"id" : 600,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:49:31.109Z",
+		"updated_at" : "2023-11-02T17:49:31.109Z"
+	},
+	{
+		"id" : 774,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:25:36.926Z",
+		"updated_at" : "2023-11-02T19:25:36.926Z"
+	},
+	{
+		"id" : 775,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:25:51.936Z",
+		"updated_at" : "2023-11-02T19:25:51.936Z"
+	},
+	{
+		"id" : 776,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:26:10.560Z",
+		"updated_at" : "2023-11-02T19:26:10.560Z"
+	},
+	{
+		"id" : 777,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:26:35.086Z",
+		"updated_at" : "2023-11-02T19:26:35.086Z"
+	},
+	{
+		"id" : 605,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:49:46.761Z",
+		"updated_at" : "2023-11-02T17:49:46.761Z"
+	},
+	{
+		"id" : 606,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:50:29.237Z",
+		"updated_at" : "2023-11-02T17:50:29.237Z"
+	},
+	{
+		"id" : 607,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Loures",
+		"created_at" : "2023-11-02T17:51:11.096Z",
+		"updated_at" : "2023-11-02T17:51:11.096Z"
+	},
+	{
+		"id" : 608,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:51:56.759Z",
+		"updated_at" : "2023-11-02T17:51:56.759Z"
+	},
+	{
+		"id" : 609,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:52:04.325Z",
+		"updated_at" : "2023-11-02T17:52:04.325Z"
+	},
+	{
+		"id" : 610,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:52:24.329Z",
+		"updated_at" : "2023-11-02T17:52:24.329Z"
+	},
+	{
+		"id" : 611,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:52:49.606Z",
+		"updated_at" : "2023-11-02T17:52:49.606Z"
+	},
+	{
+		"id" : 612,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:53:19.151Z",
+		"updated_at" : "2023-11-02T17:53:19.151Z"
+	},
+	{
+		"id" : 456,
+		"num_days" : -17,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-29T17:38:23.588Z",
+		"updated_at" : "2023-10-29T17:38:23.589Z"
+	},
+	{
+		"id" : 613,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:53:53.352Z",
+		"updated_at" : "2023-11-02T17:53:53.352Z"
+	},
+	{
+		"id" : 614,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Braga",
+		"created_at" : "2023-11-02T17:54:42.318Z",
+		"updated_at" : "2023-11-02T17:54:42.318Z"
+	},
+	{
+		"id" : 615,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:55:32.716Z",
+		"updated_at" : "2023-11-02T17:55:32.716Z"
+	},
+	{
+		"id" : 616,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:55:40.292Z",
+		"updated_at" : "2023-11-02T17:55:40.292Z"
+	},
+	{
+		"id" : 617,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:55:56.156Z",
+		"updated_at" : "2023-11-02T17:55:56.156Z"
+	},
+	{
+		"id" : 618,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:56:22.517Z",
+		"updated_at" : "2023-11-02T17:56:22.517Z"
+	},
+	{
+		"id" : 619,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:56:44.569Z",
+		"updated_at" : "2023-11-02T17:56:44.569Z"
+	},
+	{
+		"id" : 620,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:57:17.466Z",
+		"updated_at" : "2023-11-02T17:57:17.466Z"
+	},
+	{
+		"id" : 621,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Almada",
+		"created_at" : "2023-11-02T17:57:55.969Z",
+		"updated_at" : "2023-11-02T17:57:55.969Z"
+	},
+	{
+		"id" : 622,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T17:58:43.006Z",
+		"updated_at" : "2023-11-02T17:58:43.007Z"
+	},
+	{
+		"id" : 623,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T17:58:53.423Z",
+		"updated_at" : "2023-11-02T17:58:53.423Z"
+	},
+	{
+		"id" : 624,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T17:59:09.964Z",
+		"updated_at" : "2023-11-02T17:59:09.964Z"
+	},
+	{
+		"id" : 778,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:27:06.734Z",
+		"updated_at" : "2023-11-02T19:27:06.734Z"
+	},
+	{
+		"id" : 779,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:27:50.856Z",
+		"updated_at" : "2023-11-02T19:27:50.856Z"
+	},
+	{
+		"id" : 628,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T18:04:23.498Z",
+		"updated_at" : "2023-11-02T18:04:23.498Z"
+	},
+	{
+		"id" : 629,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T18:04:59.111Z",
+		"updated_at" : "2023-11-02T18:04:59.111Z"
+	},
+	{
+		"id" : 630,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T18:05:37.950Z",
+		"updated_at" : "2023-11-02T18:05:37.950Z"
+	},
+	{
+		"id" : 631,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Matosinhos",
+		"created_at" : "2023-11-02T18:06:25.156Z",
+		"updated_at" : "2023-11-02T18:06:25.156Z"
+	},
+	{
+		"id" : 632,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:07:09.875Z",
+		"updated_at" : "2023-11-02T18:07:09.875Z"
+	},
+	{
+		"id" : 633,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:07:24.861Z",
+		"updated_at" : "2023-11-02T18:07:24.861Z"
+	},
+	{
+		"id" : 634,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:07:40.011Z",
+		"updated_at" : "2023-11-02T18:07:40.011Z"
+	},
+	{
+		"id" : 635,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:08:01.064Z",
+		"updated_at" : "2023-11-02T18:08:01.064Z"
+	},
+	{
+		"id" : 636,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:08:28.383Z",
+		"updated_at" : "2023-11-02T18:08:28.383Z"
+	},
+	{
+		"id" : 637,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:09:02.399Z",
+		"updated_at" : "2023-11-02T18:09:02.399Z"
+	},
+	{
+		"id" : 638,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Amadora",
+		"created_at" : "2023-11-02T18:09:41.140Z",
+		"updated_at" : "2023-11-02T18:09:41.140Z"
+	},
+	{
+		"id" : 639,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:10:45.369Z",
+		"updated_at" : "2023-11-02T18:10:45.369Z"
+	},
+	{
+		"id" : 640,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:10:55.075Z",
+		"updated_at" : "2023-11-02T18:10:55.075Z"
+	},
+	{
+		"id" : 641,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:11:20.402Z",
+		"updated_at" : "2023-11-02T18:11:20.402Z"
+	},
+	{
+		"id" : 642,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:11:47.544Z",
+		"updated_at" : "2023-11-02T18:11:47.544Z"
+	},
+	{
+		"id" : 647,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:12:20.573Z",
+		"updated_at" : "2023-11-02T18:12:20.573Z"
+	},
+	{
+		"id" : 648,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:13:05.795Z",
+		"updated_at" : "2023-11-02T18:13:05.795Z"
+	},
+	{
+		"id" : 649,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Oeiras",
+		"created_at" : "2023-11-02T18:13:47.116Z",
+		"updated_at" : "2023-11-02T18:13:47.116Z"
+	},
+	{
+		"id" : 650,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:14:36.112Z",
+		"updated_at" : "2023-11-02T18:14:36.112Z"
+	},
+	{
+		"id" : 651,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:14:43.172Z",
+		"updated_at" : "2023-11-02T18:14:43.172Z"
+	},
+	{
+		"id" : 652,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:15:03.629Z",
+		"updated_at" : "2023-11-02T18:15:03.629Z"
+	},
+	{
+		"id" : 653,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:15:31.970Z",
+		"updated_at" : "2023-11-02T18:15:31.970Z"
+	},
+	{
+		"id" : 654,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:16:06.556Z",
+		"updated_at" : "2023-11-02T18:16:06.556Z"
+	},
+	{
+		"id" : 655,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:16:55.574Z",
+		"updated_at" : "2023-11-02T18:16:55.574Z"
+	},
+	{
+		"id" : 656,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Gondomar",
+		"created_at" : "2023-11-02T18:17:53.645Z",
+		"updated_at" : "2023-11-02T18:17:53.645Z"
+	},
+	{
+		"id" : 657,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:18:51.481Z",
+		"updated_at" : "2023-11-02T18:18:51.481Z"
+	},
+	{
+		"id" : 658,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:19:00.760Z",
+		"updated_at" : "2023-11-02T18:19:00.760Z"
+	},
+	{
+		"id" : 659,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:19:21.781Z",
+		"updated_at" : "2023-11-02T18:19:21.781Z"
+	},
+	{
+		"id" : 660,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:19:52.899Z",
+		"updated_at" : "2023-11-02T18:19:52.899Z"
+	},
+	{
+		"id" : 661,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Seixal",
+		"created_at" : "2023-11-02T18:20:26.754Z",
+		"updated_at" : "2023-11-02T18:20:26.754Z"
+	},
+	{
+		"id" : 666,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:23:24.716Z",
+		"updated_at" : "2023-11-02T18:23:24.716Z"
+	},
+	{
+		"id" : 667,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:23:55.267Z",
+		"updated_at" : "2023-11-02T18:23:55.267Z"
+	},
+	{
+		"id" : 668,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:24:28.139Z",
+		"updated_at" : "2023-11-02T18:24:28.139Z"
+	},
+	{
+		"id" : 669,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:25:07.521Z",
+		"updated_at" : "2023-11-02T18:25:07.521Z"
+	},
+	{
+		"id" : 670,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Guimarães",
+		"created_at" : "2023-11-02T18:25:57.385Z",
+		"updated_at" : "2023-11-02T18:25:57.385Z"
+	},
+	{
+		"id" : 671,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:27:29.228Z",
+		"updated_at" : "2023-11-02T18:27:29.228Z"
+	},
+	{
+		"id" : 672,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:27:37.137Z",
+		"updated_at" : "2023-11-02T18:27:37.137Z"
+	},
+	{
+		"id" : 673,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:27:58.777Z",
+		"updated_at" : "2023-11-02T18:27:58.777Z"
+	},
+	{
+		"id" : 674,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:28:21.947Z",
+		"updated_at" : "2023-11-02T18:28:21.947Z"
+	},
+	{
+		"id" : 675,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:28:55.806Z",
+		"updated_at" : "2023-11-02T18:28:55.806Z"
+	},
+	{
+		"id" : 676,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:29:32.903Z",
+		"updated_at" : "2023-11-02T18:29:32.903Z"
+	},
+	{
+		"id" : 677,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Odivelas",
+		"created_at" : "2023-11-02T18:30:19.240Z",
+		"updated_at" : "2023-11-02T18:30:19.240Z"
+	},
+	{
+		"id" : 678,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:31:12.451Z",
+		"updated_at" : "2023-11-02T18:31:12.451Z"
+	},
+	{
+		"id" : 679,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:31:21.992Z",
+		"updated_at" : "2023-11-02T18:31:21.992Z"
+	},
+	{
+		"id" : 680,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:31:36.850Z",
+		"updated_at" : "2023-11-02T18:31:36.850Z"
+	},
+	{
+		"id" : 681,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:31:58.510Z",
+		"updated_at" : "2023-11-02T18:31:58.510Z"
+	},
+	{
+		"id" : 682,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:32:31.252Z",
+		"updated_at" : "2023-11-02T18:32:31.252Z"
+	},
+	{
+		"id" : 683,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:33:03.161Z",
+		"updated_at" : "2023-11-02T18:33:03.161Z"
+	},
+	{
+		"id" : 684,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Coimbra",
+		"created_at" : "2023-11-02T18:33:55.977Z",
+		"updated_at" : "2023-11-02T18:33:55.977Z"
+	},
+	{
+		"id" : 692,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:48:12.827Z",
+		"updated_at" : "2023-11-02T18:48:12.827Z"
+	},
+	{
+		"id" : 693,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:48:41.743Z",
+		"updated_at" : "2023-11-02T18:48:41.743Z"
+	},
+	{
+		"id" : 695,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:48:57.000Z",
+		"updated_at" : "2023-11-02T18:48:57.000Z"
+	},
+	{
+		"id" : 696,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:49:16.911Z",
+		"updated_at" : "2023-11-02T18:49:16.911Z"
+	},
+	{
+		"id" : 697,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:49:43.608Z",
+		"updated_at" : "2023-11-02T18:49:43.608Z"
+	},
+	{
+		"id" : 698,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:50:15.090Z",
+		"updated_at" : "2023-11-02T18:50:15.090Z"
+	},
+	{
+		"id" : 699,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Famalicão",
+		"created_at" : "2023-11-02T18:50:58.155Z",
+		"updated_at" : "2023-11-02T18:50:58.155Z"
+	},
+	{
+		"id" : 700,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:51:33.259Z",
+		"updated_at" : "2023-11-02T18:51:33.259Z"
+	},
+	{
+		"id" : 701,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:51:40.997Z",
+		"updated_at" : "2023-11-02T18:51:40.997Z"
+	},
+	{
+		"id" : 702,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:51:57.606Z",
+		"updated_at" : "2023-11-02T18:51:57.606Z"
+	},
+	{
+		"id" : 703,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:52:18.130Z",
+		"updated_at" : "2023-11-02T18:52:18.130Z"
+	},
+	{
+		"id" : 704,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:52:51.925Z",
+		"updated_at" : "2023-11-02T18:52:51.925Z"
+	},
+	{
+		"id" : 705,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:53:27.283Z",
+		"updated_at" : "2023-11-02T18:53:27.283Z"
+	},
+	{
+		"id" : 755,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:15:39.680Z",
+		"updated_at" : "2023-11-02T19:15:39.680Z"
+	},
+	{
+		"id" : 756,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:16:01.238Z",
+		"updated_at" : "2023-11-02T19:16:01.238Z"
+	},
+	{
+		"id" : 757,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:16:29.220Z",
+		"updated_at" : "2023-11-02T19:16:29.220Z"
+	},
+	{
+		"id" : 758,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:16:59.558Z",
+		"updated_at" : "2023-11-02T19:16:59.558Z"
+	},
+	{
+		"id" : 759,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Funchal",
+		"created_at" : "2023-11-02T19:17:39.010Z",
+		"updated_at" : "2023-11-02T19:17:39.010Z"
+	},
+	{
+		"id" : 760,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:18:36.239Z",
+		"updated_at" : "2023-11-02T19:18:36.239Z"
+	},
+	{
+		"id" : 761,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:18:47.531Z",
+		"updated_at" : "2023-11-02T19:18:47.531Z"
+	},
+	{
+		"id" : 762,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:19:00.848Z",
+		"updated_at" : "2023-11-02T19:19:00.848Z"
+	},
+	{
+		"id" : 763,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:19:26.781Z",
+		"updated_at" : "2023-11-02T19:19:26.781Z"
+	},
+	{
+		"id" : 764,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:19:53.055Z",
+		"updated_at" : "2023-11-02T19:19:53.055Z"
+	},
+	{
+		"id" : 765,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:20:24.693Z",
+		"updated_at" : "2023-11-02T19:20:24.693Z"
+	},
+	{
+		"id" : 261,
+		"num_days" : 1,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T15:58:34.564Z",
+		"updated_at" : "2023-10-20T15:58:34.564Z"
+	},
+	{
+		"id" : 262,
+		"num_days" : 2,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T15:58:43.932Z",
+		"updated_at" : "2023-10-20T15:58:43.932Z"
+	},
+	{
+		"id" : 263,
+		"num_days" : 3,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T15:58:58.053Z",
+		"updated_at" : "2023-10-20T15:58:58.053Z"
+	},
+	{
+		"id" : 264,
+		"num_days" : 4,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T15:59:20.330Z",
+		"updated_at" : "2023-10-20T15:59:20.330Z"
+	},
+	{
+		"id" : 265,
+		"num_days" : 5,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T15:59:53.716Z",
+		"updated_at" : "2023-10-20T15:59:53.716Z"
+	},
+	{
+		"id" : 766,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Viseu",
+		"created_at" : "2023-11-02T19:21:04.141Z",
+		"updated_at" : "2023-11-02T19:21:04.141Z"
+	},
+	{
+		"id" : 267,
+		"num_days" : 6,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T16:09:54.174Z",
+		"updated_at" : "2023-10-20T16:09:54.174Z"
+	},
+	{
+		"id" : 268,
+		"num_days" : 7,
+		"country" : "Germany",
+		"city" : "Berlin",
+		"created_at" : "2023-10-20T16:10:36.693Z",
+		"updated_at" : "2023-10-20T16:10:36.693Z"
+	},
+	{
+		"id" : 269,
+		"num_days" : 1,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:11:20.174Z",
+		"updated_at" : "2023-10-20T16:11:20.174Z"
+	},
+	{
+		"id" : 270,
+		"num_days" : 2,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:11:28.121Z",
+		"updated_at" : "2023-10-20T16:11:28.121Z"
+	},
+	{
+		"id" : 271,
+		"num_days" : 3,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:11:41.765Z",
+		"updated_at" : "2023-10-20T16:11:41.765Z"
+	},
+	{
+		"id" : 272,
+		"num_days" : 4,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:12:01.414Z",
+		"updated_at" : "2023-10-20T16:12:01.414Z"
+	},
+	{
+		"id" : 273,
+		"num_days" : 5,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:12:28.817Z",
+		"updated_at" : "2023-10-20T16:12:28.817Z"
+	},
+	{
+		"id" : 274,
+		"num_days" : 6,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:13:01.103Z",
+		"updated_at" : "2023-10-20T16:13:01.103Z"
+	},
+	{
+		"id" : 275,
+		"num_days" : 7,
+		"country" : "Germany",
+		"city" : "Stuttgart",
+		"created_at" : "2023-10-20T16:13:49.179Z",
+		"updated_at" : "2023-10-20T16:13:49.179Z"
+	},
+	{
+		"id" : 276,
+		"num_days" : 1,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:14:40.920Z",
+		"updated_at" : "2023-10-20T16:14:40.920Z"
+	},
+	{
+		"id" : 277,
+		"num_days" : 2,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:14:54.979Z",
+		"updated_at" : "2023-10-20T16:14:54.979Z"
+	},
+	{
+		"id" : 278,
+		"num_days" : 3,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:15:11.256Z",
+		"updated_at" : "2023-10-20T16:15:11.256Z"
+	},
+	{
+		"id" : 279,
+		"num_days" : 4,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:15:31.972Z",
+		"updated_at" : "2023-10-20T16:15:31.972Z"
+	},
+	{
+		"id" : 280,
+		"num_days" : 5,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:15:58.858Z",
+		"updated_at" : "2023-10-20T16:15:58.858Z"
+	},
+	{
+		"id" : 281,
+		"num_days" : 6,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:16:37.215Z",
+		"updated_at" : "2023-10-20T16:16:37.215Z"
+	},
+	{
+		"id" : 282,
+		"num_days" : 7,
+		"country" : "Germany",
+		"city" : "Munich",
+		"created_at" : "2023-10-20T16:17:20.045Z",
+		"updated_at" : "2023-10-20T16:17:20.045Z"
+	},
+	{
+		"id" : 780,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Paredes",
+		"created_at" : "2023-11-02T19:28:38.426Z",
+		"updated_at" : "2023-11-02T19:28:38.426Z"
+	},
+	{
+		"id" : 284,
+		"num_days" : 0,
+		"country" : "Portugal",
+		"city" : "Aves",
+		"created_at" : "2023-10-20T18:26:31.010Z",
+		"updated_at" : "2023-10-20T18:26:31.010Z"
+	},
+	{
+		"id" : 706,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Leiria",
+		"created_at" : "2023-11-02T18:54:06.504Z",
+		"updated_at" : "2023-11-02T18:54:06.504Z"
+	},
+	{
+		"id" : 707,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T18:54:49.880Z",
+		"updated_at" : "2023-11-02T18:54:49.880Z"
+	},
+	{
+		"id" : 708,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T18:54:56.502Z",
+		"updated_at" : "2023-11-02T18:54:56.502Z"
+	},
+	{
+		"id" : 709,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Setúbal",
+		"created_at" : "2023-11-02T18:55:14.396Z",
+		"updated_at" : "2023-11-02T18:55:14.396Z"
+	},
+	{
+		"id" : 813,
+		"num_days" : 3,
+		"country" : "Italy",
+		"city" : "Rome",
+		"created_at" : "2023-11-04T12:45:19.898Z",
+		"updated_at" : "2023-11-04T12:45:19.898Z"
+	},
+	{
+		"id" : 1041,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:38:17.024Z",
+		"updated_at" : "2023-11-10T13:38:17.024Z"
+	},
+	{
+		"id" : 1042,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:38:25.538Z",
+		"updated_at" : "2023-11-10T13:38:25.538Z"
+	},
+	{
+		"id" : 1043,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:38:41.265Z",
+		"updated_at" : "2023-11-10T13:38:41.265Z"
+	},
+	{
+		"id" : 1044,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:39:02.759Z",
+		"updated_at" : "2023-11-10T13:39:02.759Z"
+	},
+	{
+		"id" : 1045,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:39:29.814Z",
+		"updated_at" : "2023-11-10T13:39:29.814Z"
+	},
+	{
+		"id" : 1046,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:40:27.141Z",
+		"updated_at" : "2023-11-10T13:40:27.141Z"
+	},
+	{
+		"id" : 1047,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Cascais",
+		"created_at" : "2023-11-10T13:41:17.651Z",
+		"updated_at" : "2023-11-10T13:41:17.651Z"
+	},
+	{
+		"id" : 1048,
+		"num_days" : 1,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:43:10.748Z",
+		"updated_at" : "2023-11-10T13:43:10.748Z"
+	},
+	{
+		"id" : 1049,
+		"num_days" : 2,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:43:17.257Z",
+		"updated_at" : "2023-11-10T13:43:17.257Z"
+	},
+	{
+		"id" : 1050,
+		"num_days" : 3,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:43:31.862Z",
+		"updated_at" : "2023-11-10T13:43:31.862Z"
+	},
+	{
+		"id" : 1051,
+		"num_days" : 4,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:43:52.726Z",
+		"updated_at" : "2023-11-10T13:43:52.726Z"
+	},
+	{
+		"id" : 1052,
+		"num_days" : 5,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:44:28.289Z",
+		"updated_at" : "2023-11-10T13:44:28.289Z"
+	},
+	{
+		"id" : 1053,
+		"num_days" : 6,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:45:07.127Z",
+		"updated_at" : "2023-11-10T13:45:07.127Z"
+	},
+	{
+		"id" : 1054,
+		"num_days" : 7,
+		"country" : "Portugal",
+		"city" : "Maia",
+		"created_at" : "2023-11-10T13:45:44.175Z",
+		"updated_at" : "2023-11-10T13:45:44.175Z"
+	}
+]

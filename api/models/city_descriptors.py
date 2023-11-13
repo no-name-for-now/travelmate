@@ -16,8 +16,8 @@ class CityDescriptorsORM(AbstractBaseModel):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["city_id", "city_description"],
-                name="constraint__unique_city_description",
+                fields=["city_id"],
+                name="constraint__unique_city_id",
             )
         ]
         db_table = "city_descriptor"
@@ -40,7 +40,7 @@ class CityDescriptorsORM(AbstractBaseModel):
         self.city_description = api_model.city_description
 
     @classmethod
-    def from_oai(cls, oai_model: dict):
+    def from_oai(cls, oai_model):
         """
         Update the CityDescriptors Django model from an OpenAI model.
         """
@@ -52,6 +52,11 @@ class CityDescriptorsORM(AbstractBaseModel):
             raise Exception("City not found")
         if not city_description:
             raise Exception("City description not found")
+
+        from tripagenda import logger
+
+        logger.info(f"oai_model: {oai_model}")
+        logger.info(f"city: {city}")
 
         return cls(city_id=city_id, city_description=city_description)
 

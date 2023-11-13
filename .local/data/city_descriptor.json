@@ -1,0 +1,275 @@
+[
+	{
+		"id" : 21,
+		"city_id" : 458,
+		"city_description" : "Brussels, the capital city of Belgium, is a vibrant and culturally rich destination that seamlessly blends historical charm with modern allure. Known as the 'Capital of Europe', Brussels is home to the headquarters of the European Union and NATO. Visitors can explore the iconic Grand Palace, a UNESCO World Heritage Site, marvel at the stunning architecture of the Atomium, and indulge in delicious Belgian chocolates and waffles in the charming cafes. With its numerous museums, art galleries, and parks, Brussels offers a diverse range of experiences for every traveler. Whether you're a history buff, food lover, or art enthusiast, Brussels has something for everyone.",
+		"created_at" : "2023-10-15T16:00:04.099Z",
+		"updated_at" : "2023-10-15T16:00:04.099Z"
+	},
+	{
+		"id" : 22,
+		"city_id" : 151,
+		"city_description" : "Barcelona, the vibrant capital city of Catalonia, Spain, is a mesmerizing blend of ancient history and modern attractions. Known for its stunning architecture, Barcelona is home to the famous Sagrada Familia, Park Guell, and Casa Batllo, designed by the renowned architect Antoni Gaudi. The city is also known for its captivating beaches, where tourists can soak up the sun or indulge in various water sports. Barcelona's lively food scene offers a mix of traditional Catalan cuisine and modern international flavors, with tapas and paella being must-try dishes. Take a stroll down Las Ramblas, explore the Gothic Quarter or watch a mesmerizing flamenco performance for an unforgettable cultural experience.",
+		"created_at" : "2023-11-04T13:33:36.664Z",
+		"updated_at" : "2023-11-04T13:33:36.664Z"
+	},
+	{
+		"id" : 23,
+		"city_id" : 291,
+		"city_description" : "Stuttgart, the capital of the state of Baden-Württemberg in Germany, offers a delightful blend of history, culture, and natural beauty. This vibrant city is known for its architectural wonders, including the stunning Neues Schloss palace and the iconic Stuttgart TV tower. Art enthusiasts will be captivated by the world-class collections exhibited at the Staatsgalerie and the Stuttgart Art Museum. For automotive enthusiasts, a visit to the Porsche and Mercedes-Benz museums is a must. With picturesque parks, such as the Rosensteinpark and the Schlossgarten, along with its impeccable vineyards, Stuttgart boasts ample opportunities for outdoor adventures and relaxation.",
+		"created_at" : "2023-11-04T13:34:00.973Z",
+		"updated_at" : "2023-11-04T13:34:00.973Z"
+	},
+	{
+		"id" : 24,
+		"city_id" : 318,
+		"city_description" : "Munich, the vibrant capital city of Germany's Bavaria region, is a perfect blend of historical charm and modern sophistication. Renowned for its famous Oktoberfest celebrations, Munich beckons tourists with its stunning architecture, cultural allure, and picturesque landscapes. Discover the majestic Marienplatz, home to the impressive Neues Rathaus and the famous Glockenspiel. Explore the sprawling English Garden, one of the world's largest urban parks, where you can relax by the serene lakes or witness the popular surfers riding the river's artificial wave. Immerse yourself in the rich history by visiting the Nymphenburg Palace and the sobering Dachau Concentration Camp Memorial Site. Delight your taste buds with traditional Bavarian cuisine and the world-famous beers at the city's cozy beer gardens. Munich is sure to leave you spellbound with its unique blend of history, culture, and natural beauty.",
+		"created_at" : "2023-11-04T13:35:22.845Z",
+		"updated_at" : "2023-11-04T13:35:22.845Z"
+	},
+	{
+		"id" : 25,
+		"city_id" : 282,
+		"city_description" : "Experience the enchanting allure of Rome, Italy's eternal city. Embark on a journey through time as you marvel at ancient landmarks like the Colosseum, Roman Forum, and Pantheon. Immerse yourself in the vibrant atmosphere of the charming streets, lined with lively cafes, trattorias, and gelaterias. Delve into art and culture as you explore world-renowned museums such as the Vatican Museums, home to the iconic Sistine Chapel. Take a leisurely stroll alongside the Tiber River, or throw a coin into the Trevi Fountain to ensure your return to this magnificent city. Rome captivates with its rich history, breathtaking architecture, and irresistible Italian charm.",
+		"created_at" : "2023-11-04T13:35:46.177Z",
+		"updated_at" : "2023-11-04T13:35:46.177Z"
+	},
+	{
+		"id" : 26,
+		"city_id" : 3201,
+		"city_description" : "Loures is a charming city located in the central region of Portugal, just a short drive from Lisbon. It offers a mix of historical sites, natural beauty, and vibrant culture. History enthusiasts will appreciate a visit to the majestic Loures Castle, a medieval fortress with panoramic views of the surrounding countryside. Nature lovers can explore the beautiful Parque da Cidade, a sprawling park with lush greenery and walking trails. Food lovers will delight in the local gastronomy, with traditional dishes like grilled sardines and pastel de nata. Loures is the perfect destination for those seeking a relaxed and authentic Portuguese experience.",
+		"created_at" : "2023-11-04T13:41:16.567Z",
+		"updated_at" : "2023-11-04T13:41:16.568Z"
+	},
+	{
+		"id" : 27,
+		"city_id" : 3617,
+		"city_description" : "Matosinhos is a charming coastal city located in the northern part of Portugal, known for its stunning beaches and delicious seafood. The city offers a perfect combination of relaxation and adventure, with its golden sandy beaches providing the ideal spot for sunbathing and swimming. Matosinhos is also a paradise for seafood lovers, with numerous restaurants serving the freshest fish and seafood sourced directly from the nearby fishing port. Explore the picturesque streets lined with colorful buildings and traditional shops, or wander along the vibrant promenade and enjoy breathtaking views of the Atlantic Ocean. With its beautiful landscapes, rich culinary scene, and warm hospitality, Matosinhos is a must-visit destination for any traveler seeking a memorable experience in Portugal.",
+		"created_at" : "2023-11-04T13:41:51.000Z",
+		"updated_at" : "2023-11-04T13:41:51.000Z"
+	},
+	{
+		"id" : 28,
+		"city_id" : 4206,
+		"city_description" : "Located just north of Lisbon, Odivelas is a charming city that offers a perfect blend of history, culture, and natural beauty. With its well-preserved medieval buildings and picturesque streets, Odivelas takes visitors on a journey back in time. Explore the impressive Monastery of São Dinis, a beautiful example of Portuguese Gothic architecture. Wander through the vibrant open-air markets and taste local delicacies like Pastéis de Nata. Nature enthusiasts will appreciate the breathtaking landscapes of the nearby Parque do Jamor, where they can enjoy hiking trails and relaxing picnics. With its friendly locals, lively atmosphere, and proximity to the capital, Odivelas is a must-visit destination in Portugal.",
+		"created_at" : "2023-11-04T13:42:58.020Z",
+		"updated_at" : "2023-11-04T13:42:58.020Z"
+	},
+	{
+		"id" : 29,
+		"city_id" : 4536,
+		"city_description" : "Maia is a charming city located in the northern region of Portugal. Known for its rich history and stunning landscapes, Maia offers a perfect blend of modernity and tradition. The city is home to several historical landmarks, such as the beautiful Nossa Senhora da Assunção Church and the impressive Castle of Maia. Nature lovers will be in awe of the breathtaking Serra de Maia, a mountain range with hiking trails and panoramic views. Maia is also renowned for its gastronomy, with a wide range of local dishes and wines to indulge in. With warm and welcoming locals, Maia ensures an unforgettable travel experience for every visitor.",
+		"created_at" : "2023-11-04T13:43:39.390Z",
+		"updated_at" : "2023-11-04T13:43:39.390Z"
+	},
+	{
+		"id" : 30,
+		"city_id" : 4349,
+		"city_description" : "Coimbra, located in central Portugal, is a charming medieval city that captivates visitors with its rich history and vibrant culture. Known as the 'City of Students', it is home to one of Europe's oldest universities, dating back to the 13th century. The university's stunning library, Biblioteca Joanina, with its intricate baroque design, is a must-visit attraction. Strolling through the narrow cobbled streets of the old town, visitors will find picturesque squares, traditional cafes, and beautiful churches. Coimbra is also famous for its fado music, which can be enjoyed in cozy bars. With its impressive architecture and enchanting atmosphere, Coimbra offers an unforgettable experience for every traveler.",
+		"created_at" : "2023-11-04T13:44:26.393Z",
+		"updated_at" : "2023-11-04T13:44:26.393Z"
+	},
+	{
+		"id" : 32,
+		"city_id" : 2566,
+		"city_description" : "Gent, located in the heart of Belgium, is a charming city that seamlessly blends rich history with modern attractions. Known as the 'City of Flowers', Gent is adorned with picturesque canals, medieval buildings, and cobblestone streets. Visitors can explore the iconic Belfry Tower, a UNESCO World Heritage Site, offering a panoramic view of the city. The St. Bavo's Cathedral houses the famous Ghent Altarpiece, a masterpiece of Renaissance art. Art enthusiasts can immerse themselves in the city's vibrant culture by visiting the Museum of Fine Arts, while foodies can indulge in delicious Belgian cuisine at the local markets and restaurants. With its welcoming atmosphere, Gent is a hidden gem that offers something for every traveler.",
+		"created_at" : "2023-11-04T13:45:07.870Z",
+		"updated_at" : "2023-11-04T13:45:07.870Z"
+	},
+	{
+		"id" : 46,
+		"city_id" : 14686,
+		"city_description" : "Located in central Portugal, Viseu is a charming city filled with historical and cultural treasures. As you wander through its narrow streets, you'll be captivated by the well-preserved medieval architecture and stunning monuments. Visit the majestic Viseu Cathedral, dating back to the 12th century, or explore the grandiose Grão Vasco Museum, showcasing an impressive collection of Portuguese art. Don't miss the lively Rossio Square, where you can soak up the vibrant atmosphere and indulge in delicious local cuisine at the surrounding cafes and restaurants. With its quaint charm and rich heritage, Viseu offers a delightful experience for any traveler.",
+		"created_at" : "2023-11-04T13:51:59.811Z",
+		"updated_at" : "2023-11-04T13:51:59.811Z"
+	},
+	{
+		"id" : 50,
+		"city_id" : 18288,
+		"city_description" : "Welcome to Oeiras, a charming coastal town in Portugal that offers a perfect blend of history and natural beauty. Located just outside of Lisbon, Oeiras is known for its picturesque beaches, including the popular Praia da Torre. Stroll along the beautiful promenade and enjoy breathtaking views of the Atlantic Ocean. Explore the historic center, filled with well-preserved buildings and charming streets. Don't miss the chance to visit the remarkable Oeiras Palace, a grand 18th-century palace surrounded by stunning gardens. Whether you're a history enthusiast or a beach lover, Oeiras is a delightful destination that will captivate your senses.",
+		"created_at" : "2023-11-04T13:54:17.714Z",
+		"updated_at" : "2023-11-04T13:54:17.714Z"
+	},
+	{
+		"id" : 53,
+		"city_id" : 12060,
+		"city_description" : "Valongo is a picturesque city located in the northwestern part of Portugal. Known for its rich history and cultural heritage, Valongo offers a unique blend of traditional charm and modern amenities. The city is surrounded by stunning natural landscapes, with lush mountains and green valleys. Visitors can explore the well-preserved historical sites, such as the Valongo Castle and the Church of São Mamede. Valongo is also famous for its vibrant festivals and events, showcasing traditional music, dance, and cuisine. With its warm and friendly atmosphere, Valongo is the perfect destination for travelers looking to immerse themselves in authentic Portuguese culture.",
+		"created_at" : "2023-11-04T13:55:30.679Z",
+		"updated_at" : "2023-11-04T13:55:30.680Z"
+	},
+	{
+		"id" : 55,
+		"city_id" : 12384,
+		"city_description" : "Nestled in the heart of northern Portugal, Paredes is a charming city filled with rich history and natural beauty. This picturesque destination offers visitors a peaceful escape from the bustling urban life. Explore the historic center with its narrow cobblestone streets and traditional buildings, or visit the stunning Paredes Gardens for a relaxing walk surrounded by colorful flowers and serene fountains. Don't miss the opportunity to taste the delicious local cuisine, known for its hearty flavors and fresh ingredients. With its warm hospitality and beautiful landscapes, Paredes is the perfect destination for those seeking tranquility and charm.",
+		"created_at" : "2023-11-04T13:56:17.642Z",
+		"updated_at" : "2023-11-04T13:56:17.642Z"
+	},
+	{
+		"id" : 34,
+		"city_id" : 3236,
+		"city_description" : "Charleroi is a city in Belgium known for its rich industrial heritage and vibrant cultural scene. Located in the French-speaking region of Wallonia, it offers visitors a unique blend of history, art, and gastronomy. Explore the city's charming historic center, filled with beautiful architecture and picturesque squares. Don't miss the chance to visit the fascinating Bois du Cazier, a former coal mine turned museum, showcasing the region's coal mining history. Art enthusiasts will be delighted by the array of museums and galleries, including the beautiful BPS22 and the impressive Glass Museum. With its friendly locals and lively atmosphere, Charleroi is a must-visit destination in Belgium.",
+		"created_at" : "2023-11-04T13:46:38.823Z",
+		"updated_at" : "2023-11-04T13:46:38.823Z"
+	},
+	{
+		"id" : 35,
+		"city_id" : 26060,
+		"city_description" : "Berlin, the capital city of Germany, is a vibrant and diverse metropolis that seamlessly blends history, culture, and modernity. This city is renowned for its remarkable landmarks, such as the iconic Brandenburg Gate and the Berlin Wall, which have witnessed significant historical events. Visitors can explore world-class museums like the Pergamon Museum and the Museum Island, housing ancient artifacts and exquisite art collections. Berlin also boasts a thriving arts and music scene, with numerous theaters, galleries, and music venues offering a variety of performances. The city's lively nightlife, delicious cuisine, and diverse neighborhoods make Berlin an unforgettable destination.",
+		"created_at" : "2023-11-04T13:46:53.953Z",
+		"updated_at" : "2023-11-04T13:46:53.953Z"
+	},
+	{
+		"id" : 37,
+		"city_id" : 5366,
+		"city_description" : "Madrid, the vibrant capital city of Spain, is a perfect fusion of rich history and modern sophistication. Known for its iconic landmarks, such as the Royal Palace and Puerta del Sol, Madrid offers visitors a taste of Spanish culture at its finest. Art enthusiasts can explore the world-renowned Prado Museum and Reina Sofia Museum, housing masterpieces by Goya, Velázquez, and Picasso. Food lovers will be delighted by the delicious tapas and traditional Spanish cuisine, while shopaholics can indulge in retail therapy at the trendy boutiques of Gran Via and the bustling El Rastro flea market. With its lively atmosphere, stunning architecture, and warm Mediterranean climate, Madrid is a must-visit destination for any traveler.",
+		"created_at" : "2023-11-04T13:47:44.987Z",
+		"updated_at" : "2023-11-04T13:47:44.987Z"
+	},
+	{
+		"id" : 38,
+		"city_id" : 16565,
+		"city_description" : "Sevilla, the capital of Spain's Andalusia region, is a city that exudes charm and history. With its stunning architecture, vibrant culture, and passionate flamenco, it offers an unforgettable experience to every tourist. Explore the iconic landmarks such as the breathtaking Alcazar Palace, the magnificent Seville Cathedral, and the iconic Plaza de España. Get lost in the narrow winding streets of the charming Santa Cruz neighborhood and indulge in delicious tapas at the bustling Triana market. Immerse yourself in the rich history and traditions of Sevilla by visiting the Moorish Real Alcázar or attending a bullfight. Sevilla is a city that mesmerizes and captivates its visitors with its enchanting beauty and warm, welcoming atmosphere.",
+		"created_at" : "2023-11-04T13:48:14.566Z",
+		"updated_at" : "2023-11-04T13:48:14.566Z"
+	},
+	{
+		"id" : 39,
+		"city_id" : 1759,
+		"city_description" : "Located in Portugal, Aves is a beautiful city tucked away in the mountainside, offering stunning landscapes and a tranquil atmosphere. This picturesque destination is known for its rich history and charming architecture, with narrow cobbled streets and colorful tiled houses. Aves also boasts a vibrant culinary scene, where visitors can indulge in delicious traditional dishes and local wines. Nature lovers will be captivated by the breathtaking views of lush green valleys, cascading waterfalls, and crystal-clear rivers. Whether it's exploring historical landmarks, hiking through scenic trails, or simply relaxing amidst natural beauty, Aves is the perfect getaway for those seeking a peaceful and rejuvenating vacation.",
+		"created_at" : "2023-11-04T13:48:29.529Z",
+		"updated_at" : "2023-11-04T13:48:29.529Z"
+	},
+	{
+		"id" : 40,
+		"city_id" : 1922,
+		"city_description" : "Sintra, located in Portugal, is a charming town that is renowned for its fairytale-like atmosphere and stunning natural landscapes. The town is nestled in the foothills of the Sintra Mountains, which provide a picturesque backdrop of lush greenery and majestic castles. Visitors to Sintra can explore the enchanting Pena Palace, a colorful and whimsical castle sitting atop a hill, offering breathtaking views of the surrounding countryside. The town is also home to the mystical Quinta da Regaleira, a unique estate with secret tunnels, beautiful gardens, and a mystical initiation well. With its rich history, stunning architecture, and serene surroundings, Sintra is a must-visit destination for any traveler.",
+		"created_at" : "2023-11-04T13:48:50.858Z",
+		"updated_at" : "2023-11-04T13:48:50.858Z"
+	},
+	{
+		"id" : 41,
+		"city_id" : 3172,
+		"city_description" : "Cascais is a charming coastal town in Portugal, located just 30 minutes away from the vibrant city of Lisbon. Known for its beautiful beaches, stunning cliffs, and vibrant marina, Cascais is a favorite destination for tourists seeking both relaxation and adventure. The town offers a mix of historical and modern attractions, with its narrow streets lined with colorful buildings, traditional Portuguese restaurants, and trendy shops. Nature lovers can explore the nearby Sintra-Cascais Natural Park, home to lush forests and breathtaking viewpoints. Whether you want to soak up the sun, indulge in fresh seafood, or delve into Portugal's rich history, Cascais has something for everyone.",
+		"created_at" : "2023-11-04T13:49:12.194Z",
+		"updated_at" : "2023-11-04T13:49:12.194Z"
+	},
+	{
+		"id" : 42,
+		"city_id" : 44134,
+		"city_description" : "Lisbon, the vibrant capital city of Portugal, is a charming blend of old-world charm and modern vitality. With its winding cobblestone streets, colorful tiled buildings, and stunning views of the Tagus River, Lisbon is a picturesque destination that will captivate any visitor. Discover the city's rich history by exploring historic sites such as the Jeronimos Monastery and Belem Tower. Savor delicious Portuguese cuisine at traditional taverns and trendy restaurants. Immerse yourself in the lively atmosphere of the city's lively neighborhoods like Bairro Alto and Alfama, and enjoy the vibrant nightlife. Lisbon is a must-visit destination that will leave you enchanted with its cultural richness and warm hospitality.",
+		"created_at" : "2023-11-04T13:49:29.727Z",
+		"updated_at" : "2023-11-04T13:49:29.727Z"
+	},
+	{
+		"id" : 43,
+		"city_id" : 36120,
+		"city_description" : "Porto, known as Oporto in English, is a vibrant city located in the north of Portugal. Famous for its stunning landscapes, iconic bridges, and delicious Port wine, Porto offers a unique blend of history, culture, and gastronomy. Visitors can explore the charming old town and wander through narrow streets lined with colorful houses and azulejo-adorned facades. Don't miss the breathtaking views from the Dom Luís I Bridge, and be sure to visit the Livraria Lello, one of the most beautiful bookstores in the world. With its warm and welcoming atmosphere, Porto is a must-visit destination for any traveler.",
+		"created_at" : "2023-11-04T13:49:56.023Z",
+		"updated_at" : "2023-11-04T13:49:56.023Z"
+	},
+	{
+		"id" : 45,
+		"city_id" : 4834,
+		"city_description" : "Located in central Portugal, Leiria is a charming city full of history and natural beauty. The city is dominated by the impressive Leiria Castle, a medieval fortress that offers stunning panoramic views of the surrounding area. Wander through the narrow streets of the old town and discover the beautiful Gothic architecture of the Leiria Cathedral. Nature enthusiasts will love exploring the Pinhal de Leiria, a vast forest with walking trails and picnic areas. Don't miss the opportunity to taste the traditional regional cuisine, known for its fresh seafood and tasty pastries. Leiria is a perfect destination for those seeking a mix of culture, history, and natural landscapes.",
+		"created_at" : "2023-11-04T13:51:04.095Z",
+		"updated_at" : "2023-11-04T13:51:04.095Z"
+	},
+	{
+		"id" : 47,
+		"city_id" : 21485,
+		"city_description" : "Barcelos, a charming city in Portugal, is a delightful destination for tourists looking to immerse themselves in rich history and vibrant culture. Known for its traditional pottery, Barcelos is home to a wide array of artisan shops and markets where visitors can browse unique and beautifully crafted ceramics. The city is also famous for its weekly market, attracting locals and foreigners alike with its lively atmosphere and variety of goods. History enthusiasts can explore the medieval castle, stroll through the narrow streets adorned with historical buildings, or visit the impressive Baroque-style churches. With its warm and welcoming locals, Barcelos offers an authentic taste of Portuguese life.",
+		"created_at" : "2023-11-04T13:52:23.192Z",
+		"updated_at" : "2023-11-04T13:52:23.192Z"
+	},
+	{
+		"id" : 48,
+		"city_id" : 3595,
+		"city_description" : "Located in Portugal, Almada is a charming city that offers a perfect blend of history, culture, and beautiful landscapes. With its stunning beaches and picturesque cliffs, visitors can enjoy breathtaking views of the Atlantic Ocean. The city is known for its historical sites, including the iconic Cristo Rei monument, which provides panoramic views of Lisbon. Almada is also home to the beautiful Costa da Caparica, a popular destination for surfers and beach lovers. In addition, the city offers a vibrant nightlife, with a variety of bars, restaurants, and live music venues to explore. Whether you're seeking relaxation or adventure, Almada has something to offer for every traveler.",
+		"created_at" : "2023-11-04T13:53:24.442Z",
+		"updated_at" : "2023-11-04T13:53:24.442Z"
+	},
+	{
+		"id" : 49,
+		"city_id" : 3541,
+		"city_description" : "Amadora is a charming city located just 15 minutes away from Lisbon, Portugal's capital. Known for its lively atmosphere and rich history, Amadora offers a perfect blend of urban excitement and natural beauty. Visitors can explore the historic streets of the city center, adorned with colorful buildings and vibrant markets. Nature lovers will enjoy the nearby Monsanto Forest Park, with its extensive hiking trails and breathtaking views. Amadora also boasts a vibrant cultural scene, with theaters, art galleries, and live music venues. Whether you're seeking history, nature, or entertainment, Amadora has something to offer every traveler.",
+		"created_at" : "2023-11-04T13:53:47.277Z",
+		"updated_at" : "2023-11-04T13:53:47.277Z"
+	},
+	{
+		"id" : 51,
+		"city_id" : 30984,
+		"city_description" : "Located in northern Portugal, Gondomar is a charming city that offers a perfect blend of historical richness and natural beauty. Known for its stunning landscapes, picturesque riverfronts, and lush green mountains, Gondomar is a paradise for nature lovers. The city is also home to several historical sites, including the iconic Gondomar Castle, which dates back to the 11th century. Visitors can explore the narrow cobbled streets of the old town, visit traditional local markets, and indulge in authentic Portuguese cuisine at the numerous cozy cafes and restaurants. Gondomar is a hidden gem that promises an unforgettable and authentic Portuguese experience.",
+		"created_at" : "2023-11-04T13:54:43.911Z",
+		"updated_at" : "2023-11-04T13:54:43.911Z"
+	},
+	{
+		"id" : 52,
+		"city_id" : 3961,
+		"city_description" : "Seixal is a charming city located in the heart of Portugal. Nestled along the shores of the stunning Tagus River, Seixal offers visitors a unique blend of natural beauty and cultural heritage. Explore the picturesque cobblestone streets lined with colorful houses and charming cafes, where you can savor delicious Portuguese cuisine. Visit the Seixal Bay and enjoy panoramic views of the river and Lisbon in the distance. History enthusiasts will delight in exploring the town's historical sites, including the charming Nossa Senhora do Monte Church. With its vibrant atmosphere and friendly locals, Seixal is a must-visit destination for any traveler seeking an authentic Portuguese experience.",
+		"created_at" : "2023-11-04T13:55:10.040Z",
+		"updated_at" : "2023-11-04T13:55:10.040Z"
+	},
+	{
+		"id" : 57,
+		"city_id" : 598,
+		"city_description" : "Porto, located in northern Portugal, is a charming and vibrant city that offers a perfect blend of history, culture, and stunning natural beauty. Rich in history, visitors can explore the UNESCO-listed historic center, Ribeira, with its narrow cobblestone streets and picturesque buildings. Porto is known for its famous port wine production, and wine enthusiasts can visit the numerous wine cellars and take part in tastings. Nature lovers can enjoy the breathtaking views of the Douro River and indulge in boat tours or scenic hikes in the nearby Douro Valley. With its warm and welcoming atmosphere, Porto is a must-visit destination for any traveler.",
+		"created_at" : "2023-11-04T15:09:43.066Z",
+		"updated_at" : "2023-11-04T15:09:43.066Z"
+	},
+	{
+		"id" : 59,
+		"city_id" : 3983,
+		"city_description" : "Guimarães, located in northern Portugal, is a vibrant city rich in history and culture. Known as the birthplace of Portugal, this picturesque destination offers visitors a charming mix of medieval architecture and modern amenities. Explore the UNESCO World Heritage-listed historic center, adorned with narrow cobblestone streets, medieval buildings, and charming squares. Don't miss the iconic Guimarães Castle, a symbol of the city's history and power. Take a stroll through the charming gardens of the Dukes of Braganza Palace, showcasing exquisite architecture and beautiful landscapes. With its warm and welcoming atmosphere, Guimarães is a must-visit for any traveler seeking an authentic Portuguese experience.",
+		"created_at" : "2023-11-04T15:27:56.854Z",
+		"updated_at" : "2023-11-04T15:27:56.854Z"
+	},
+	{
+		"id" : 63,
+		"city_id" : 5994,
+		"city_description" : "Viseu is a charming city located in the central region of Portugal. With its rich history, stunning architecture, and picturesque landscapes, it offers a perfect blend of tradition and modernity for tourists to explore and enjoy.\n\nViseu is known as the cultural capital of the region, boasting an impressive collection of museums, art galleries, and historical sites. The city's historic center is a treasure trove of well-preserved medieval and Renaissance buildings, such as the beautiful Cathedral, which dates back to the 12th century.\n\nOne of the must-visit attractions in Viseu is the Grao Vasco Museum, housing a remarkable collection of Portuguese paintings from the 16th to the 20th century. The museum provides a fascinating insight into the city's artistic heritage.\n\nApart from its cultural heritage, Viseu is surrounded by stunning natural landscapes, making it a haven for outdoor enthusiasts. The nearby Serra da Estrela Natural Park offers breathtaking views, hiking trails, and opportunities for skiing in the winter months. The vineyards of the Dão wine region are also within easy reach, where visitors can indulge in wine tasting tours.\n\nViseu is renowned for its vibrant culinary scene, offering a wide range of traditional Portuguese dishes and delicacies. Visitors can explore the city's vibrant food markets, sample local cheeses, cured meats, and pastries, and dine in cozy restaurants serving up regional specialties.\n\nWith its welcoming locals, vibrant culture, and diverse attractions, Viseu is an ideal destination for those seeking an authentic Portuguese experience. Whether you're a history buff, a nature lover, or a food enthusiast, this charming city has something to offer everyone.",
+		"created_at" : "2023-11-10T11:27:00.954Z",
+		"updated_at" : "2023-11-10T11:27:00.954Z"
+	},
+	{
+		"id" : 64,
+		"city_id" : 295,
+		"city_description" : "Lisbon is the vibrant capital city of Portugal, known for its colorful buildings, mesmerizing views, and rich history. Located on the western coast of Portugal, Lisbon offers a perfect combination of old-world charm and modern cosmopolitan living. The city is famous for its hilly streets, picturesque neighborhoods, and stunning panoramic views over the Tagus River. Visitors can explore the narrow winding streets of Alfama, the oldest district in Lisbon, and admire the traditional tiled facades of the houses. Must-see attractions in Lisbon include the iconic Belém Tower, a UNESCO World Heritage Site, the historic Rossio Square, and the São Jorge Castle, which offers breathtaking views of the city. Additionally, tourists can indulge in the city's vibrant food scene and try local delicacies such as pastéis de nata (custard tarts) and bacalhau (salted codfish). Lisbon is also known for its lively nightlife and Fado music, a traditional genre of Portuguese music. Whether you're strolling through its charming streets, exploring its cultural heritage, or enjoying its vibrant atmosphere, Lisbon is a city that will captivate any tourist.",
+		"created_at" : "2023-11-10T11:32:45.939Z",
+		"updated_at" : "2023-11-10T11:32:45.939Z"
+	},
+	{
+		"id" : 65,
+		"city_id" : 4613,
+		"city_description" : "Famalicão is a charming city located in the northern region of Portugal. It offers a unique blend of rich history, captivating culture, and picturesque landscapes, making it an ideal destination for tourists. \n\nOne of the highlights of Famalicão is its historic center, where you can explore ancient buildings and narrow cobblestone streets. The city is known for its well-preserved medieval castle, which provides breathtaking panoramic views of the surrounding area. \n\nFor art enthusiasts, Famalicão is home to several art galleries and museums showcasing contemporary and traditional Portuguese art. The city also hosts various cultural events throughout the year, including music festivals, theater performances, and exhibitions. \n\nNature lovers will be delighted by the beautiful parks and gardens in Famalicão. The Parque da Devesa is a must-visit, offering tranquil walking paths, lush greenery, and a serene lake where you can relax and enjoy a picnic. \n\nFamalicão is also known for its gastronomy. The city has a wide range of restaurants serving traditional Portuguese dishes, as well as international cuisine. Don't forget to try the local specialties, such as bacalhau com natas (codfish with cream) and arroz de cabidela (rice with hen's blood). \n\nWhether you're interested in history, art, nature, or simply enjoying the laid-back Portuguese lifestyle, Famalicão has something for everyone. Plan your trip now and discover the hidden gems of this charming city in Portugal!",
+		"created_at" : "2023-11-10T11:40:00.126Z",
+		"updated_at" : "2023-11-10T11:40:00.126Z"
+	},
+	{
+		"id" : 66,
+		"city_id" : 5428,
+		"city_description" : "Funchal is the capital city of the Portuguese island of Madeira. It is a popular destination for tourists due to its beautiful landscapes, mild climate, and vibrant culture. Funchal is known for its stunning natural scenery, with mountains, forests, and gardens surrounding the city. One of the highlights of Funchal is its colorful and lively Old Town, where visitors can wander through narrow streets, visit local shops, and enjoy traditional Madeiran cuisine at charming restaurants. The city also offers a wide range of activities for outdoor enthusiasts, such as hiking, mountain biking, and water sports. Funchal is home to several iconic landmarks, including the Sé Cathedral, which dates back to the 15th century, and the Mercado dos Lavradores, a bustling market where visitors can find fresh produce, flowers, and local handicrafts. For those interested in history and culture, the Funchal Museum and the Museum of Contemporary Art are worth a visit. Funchal is also renowned for its New Year's Eve fireworks display, which holds the Guinness World Record for the largest fireworks show in the world. Whether you're seeking relaxation, adventure, or a taste of local culture, Funchal has something to offer for every traveler.",
+		"created_at" : "2023-11-10T11:41:49.415Z",
+		"updated_at" : "2023-11-10T11:41:49.415Z"
+	},
+	{
+		"id" : 70,
+		"city_id" : 3650,
+		"city_description" : "Oeiras is a stunning coastal town in Portugal, located just 15 kilometers west of Lisbon. With its rich history and picturesque landscapes, it is a perfect destination for tourists. Oeiras offers a variety of attractions, including beautiful beaches like Santo Amaro de Oeiras and Carcavelos. These sandy shores are perfect for sunbathing, swimming, and water sports. The town is also home to several historical landmarks, such as the Oeiras Palace and the Marquês de Pombal Palace, which showcase Portugal's architectural heritage. For nature enthusiasts, the Parque dos Poetas is a must-visit, with its stunning gardens, sculptures, and peaceful walking trails. Food lovers will be delighted by the diverse culinary scene in Oeiras, offering a wide range of traditional Portuguese dishes and international cuisine. Don't forget to try the delicious pastéis de nata, a famous Portuguese pastry. Oeiras is well-connected by public transportation, making it easy to explore other nearby attractions like Cascais and Sintra. Whether you're seeking relaxation, cultural immersion, or outdoor adventure, Oeiras has something for everyone. Plan your trip now and experience the beauty of this charming Portuguese town.",
+		"created_at" : "2023-11-10T11:51:56.753Z",
+		"updated_at" : "2023-11-10T11:51:56.753Z"
+	},
+	{
+		"id" : 72,
+		"city_id" : 3775,
+		"city_description" : "Gondomar is a charming town located in northern Portugal, just a short distance from the vibrant city of Porto. With its picturesque landscapes, rich history, and warm hospitality, Gondomar offers tourists a unique and unforgettable travel experience.\n\nOne of the highlights of visiting Gondomar is exploring its historic center. Here, visitors can wander through narrow cobbled streets, admire ancient churches, and discover traditional architecture. The town's main square, Praça das Tres Rosas, is a bustling hub where locals gather, and it is a great spot to people-watch while sipping on a delicious Portuguese coffee.\n\nNature enthusiasts will be delighted by Gondomar's natural beauty. The town is surrounded by lush green mountains and is home to the breathtaking Douro River, where visitors can enjoy boat trips and admire the stunning landscapes. The nearby Serra de Pias offers fantastic hiking trails and panoramic views.\n\nCultural attractions in Gondomar include the Nasoni Route, a trail that leads visitors to breathtaking viewpoints and historical landmarks. The region is also famous for its goldsmith heritage, and tourists can visit workshops to learn about the ancient craftsmanship techniques.\n\nFood lovers will be in heaven in Gondomar, as the town is known for its delicious traditional cuisine. From fresh seafood to mouthwatering pastries, there is something to satisfy every palate. Don't miss the opportunity to try the local specialty, lampreia à Bordalesa, a unique dish made with river lamprey.\n\nGondomar is an ideal destination for those seeking an authentic Portuguese experience away from the crowds. Whether you are interested in history, nature, or gastronomy, Gondomar has it all. So pack your bags and get ready to immerse yourself in the beauty and charm of this hidden gem in Portugal.",
+		"created_at" : "2023-11-10T11:53:06.081Z",
+		"updated_at" : "2023-11-10T11:53:06.081Z"
+	},
+	{
+		"id" : 74,
+		"city_id" : 3446,
+		"city_description" : "Braga, Portugal is a captivating city that combines rich history with modern charm. Known as the 'Rome of Portugal,' it boasts magnificent churches, ancient Roman ruins, and a vibrant cultural scene. Visit the iconic Sé de Braga, a stunning cathedral dating back to the 11th century, and explore the Bom Jesus do Monte sanctuary, a baroque masterpiece offering breathtaking views. Wander through the winding streets of the historic center, lined with charming cafes, shops, and colorful buildings. Don't miss the chance to try the local cuisine, with hearty dishes like Francesinha and traditional Vinho Verde wine. With its lively festivals, Braga is also known for its lively nightlife and outdoor activities. Take a leisurely stroll in Parque da Ponte or hike in the nearby Gerês National Park. Whether you're a history buff, a food lover, or an adventure seeker, Braga offers something for everyone. Immerse yourself in its unique blend of old and new and let the city's enchantment captivate you.",
+		"created_at" : "2023-11-10T12:02:38.318Z",
+		"updated_at" : "2023-11-10T12:02:38.318Z"
+	}
+]

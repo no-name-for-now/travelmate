@@ -1,0 +1,3602 @@
+[
+	{
+		"id" : 1,
+		"city_id" : 1478,
+		"month" : "January",
+		"low" : -1,
+		"high" : 6,
+		"rainfall" : 68,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 2,
+		"city_id" : 1478,
+		"month" : "February",
+		"low" : 0,
+		"high" : 7,
+		"rainfall" : 45,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 3,
+		"city_id" : 1478,
+		"month" : "March",
+		"low" : 2,
+		"high" : 10,
+		"rainfall" : 63,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 4,
+		"city_id" : 1478,
+		"month" : "April",
+		"low" : 5,
+		"high" : 14,
+		"rainfall" : 44,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 5,
+		"city_id" : 1478,
+		"month" : "May",
+		"low" : 9,
+		"high" : 18,
+		"rainfall" : 58,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 6,
+		"city_id" : 1478,
+		"month" : "June",
+		"low" : 12,
+		"high" : 21,
+		"rainfall" : 65,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 7,
+		"city_id" : 1478,
+		"month" : "July",
+		"low" : 14,
+		"high" : 23,
+		"rainfall" : 74,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 8,
+		"city_id" : 1478,
+		"month" : "August",
+		"low" : 14,
+		"high" : 23,
+		"rainfall" : 76,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 9,
+		"city_id" : 1478,
+		"month" : "September",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 65,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 10,
+		"city_id" : 1478,
+		"month" : "October",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 69,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 11,
+		"city_id" : 1478,
+		"month" : "November",
+		"low" : 4,
+		"high" : 10,
+		"rainfall" : 77,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 12,
+		"city_id" : 1478,
+		"month" : "December",
+		"low" : 1,
+		"high" : 7,
+		"rainfall" : 83,
+		"created_at" : "2023-11-03T17:51:21.921Z",
+		"updated_at" : "2023-11-03T17:51:21.921Z"
+	},
+	{
+		"id" : 13,
+		"city_id" : 458,
+		"month" : "January",
+		"low" : 1,
+		"high" : 6,
+		"rainfall" : 74,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 14,
+		"city_id" : 458,
+		"month" : "February",
+		"low" : 1,
+		"high" : 7,
+		"rainfall" : 54,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 15,
+		"city_id" : 458,
+		"month" : "March",
+		"low" : 3,
+		"high" : 10,
+		"rainfall" : 70,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 16,
+		"city_id" : 458,
+		"month" : "April",
+		"low" : 4,
+		"high" : 13,
+		"rainfall" : 52,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 17,
+		"city_id" : 458,
+		"month" : "May",
+		"low" : 8,
+		"high" : 17,
+		"rainfall" : 65,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 18,
+		"city_id" : 458,
+		"month" : "June",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 68,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 19,
+		"city_id" : 458,
+		"month" : "July",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 78,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 20,
+		"city_id" : 458,
+		"month" : "August",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 74,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 21,
+		"city_id" : 458,
+		"month" : "September",
+		"low" : 10,
+		"high" : 19,
+		"rainfall" : 66,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 22,
+		"city_id" : 458,
+		"month" : "October",
+		"low" : 7,
+		"high" : 14,
+		"rainfall" : 78,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 23,
+		"city_id" : 458,
+		"month" : "November",
+		"low" : 3,
+		"high" : 9,
+		"rainfall" : 79,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 24,
+		"city_id" : 458,
+		"month" : "December",
+		"low" : 2,
+		"high" : 7,
+		"rainfall" : 79,
+		"created_at" : "2023-11-03T18:07:40.467Z",
+		"updated_at" : "2023-11-03T18:07:40.467Z"
+	},
+	{
+		"id" : 27,
+		"city_id" : 3775,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 167,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 28,
+		"city_id" : 3775,
+		"month" : "February",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 148,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 29,
+		"city_id" : 3775,
+		"month" : "March",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 105,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 30,
+		"city_id" : 3775,
+		"month" : "April",
+		"low" : 11,
+		"high" : 18,
+		"rainfall" : 98,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 31,
+		"city_id" : 3775,
+		"month" : "May",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 91,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 32,
+		"city_id" : 3775,
+		"month" : "June",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 33,
+		"city_id" : 3775,
+		"month" : "July",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 18,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 34,
+		"city_id" : 3775,
+		"month" : "August",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 35,
+		"city_id" : 3775,
+		"month" : "September",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 36,
+		"city_id" : 3775,
+		"month" : "October",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 115,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 37,
+		"city_id" : 3775,
+		"month" : "November",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 134,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 38,
+		"city_id" : 3775,
+		"month" : "December",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 154,
+		"created_at" : "2023-11-04T11:21:06.281Z",
+		"updated_at" : "2023-11-04T11:21:06.281Z"
+	},
+	{
+		"id" : 41,
+		"city_id" : 151,
+		"month" : "January",
+		"low" : 10,
+		"high" : 13,
+		"rainfall" : 30,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 42,
+		"city_id" : 151,
+		"month" : "February",
+		"low" : 11,
+		"high" : 13,
+		"rainfall" : 31,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 43,
+		"city_id" : 151,
+		"month" : "March",
+		"low" : 12,
+		"high" : 16,
+		"rainfall" : 35,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 44,
+		"city_id" : 151,
+		"month" : "April",
+		"low" : 13,
+		"high" : 18,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 45,
+		"city_id" : 151,
+		"month" : "May",
+		"low" : 16,
+		"high" : 22,
+		"rainfall" : 49,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 46,
+		"city_id" : 151,
+		"month" : "June",
+		"low" : 20,
+		"high" : 25,
+		"rainfall" : 39,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 47,
+		"city_id" : 151,
+		"month" : "July",
+		"low" : 22,
+		"high" : 28,
+		"rainfall" : 24,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 48,
+		"city_id" : 151,
+		"month" : "August",
+		"low" : 23,
+		"high" : 29,
+		"rainfall" : 28,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 49,
+		"city_id" : 151,
+		"month" : "September",
+		"low" : 21,
+		"high" : 26,
+		"rainfall" : 39,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 50,
+		"city_id" : 151,
+		"month" : "October",
+		"low" : 18,
+		"high" : 21,
+		"rainfall" : 50,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 51,
+		"city_id" : 151,
+		"month" : "November",
+		"low" : 14,
+		"high" : 16,
+		"rainfall" : 43,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 52,
+		"city_id" : 151,
+		"month" : "December",
+		"low" : 11,
+		"high" : 13,
+		"rainfall" : 34,
+		"created_at" : "2023-11-04T14:05:52.627Z",
+		"updated_at" : "2023-11-04T14:05:52.627Z"
+	},
+	{
+		"id" : 53,
+		"city_id" : 291,
+		"month" : "January",
+		"low" : -1,
+		"high" : 3,
+		"rainfall" : 32,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 54,
+		"city_id" : 291,
+		"month" : "February",
+		"low" : -1,
+		"high" : 5,
+		"rainfall" : 28,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 55,
+		"city_id" : 291,
+		"month" : "March",
+		"low" : 4,
+		"high" : 10,
+		"rainfall" : 30,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 56,
+		"city_id" : 291,
+		"month" : "April",
+		"low" : 7,
+		"high" : 14,
+		"rainfall" : 32,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 57,
+		"city_id" : 291,
+		"month" : "May",
+		"low" : 11,
+		"high" : 19,
+		"rainfall" : 40,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 58,
+		"city_id" : 291,
+		"month" : "June",
+		"low" : 15,
+		"high" : 22,
+		"rainfall" : 51,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 59,
+		"city_id" : 291,
+		"month" : "July",
+		"low" : 17,
+		"high" : 24,
+		"rainfall" : 53,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 60,
+		"city_id" : 291,
+		"month" : "August",
+		"low" : 17,
+		"high" : 24,
+		"rainfall" : 52,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 61,
+		"city_id" : 291,
+		"month" : "September",
+		"low" : 13,
+		"high" : 21,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 62,
+		"city_id" : 291,
+		"month" : "October",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 38,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 63,
+		"city_id" : 291,
+		"month" : "November",
+		"low" : 4,
+		"high" : 8,
+		"rainfall" : 37,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 64,
+		"city_id" : 291,
+		"month" : "December",
+		"low" : 0,
+		"high" : 4,
+		"rainfall" : 37,
+		"created_at" : "2023-11-04T14:06:17.199Z",
+		"updated_at" : "2023-11-04T14:06:17.199Z"
+	},
+	{
+		"id" : 65,
+		"city_id" : 318,
+		"month" : "January",
+		"low" : -1,
+		"high" : 3,
+		"rainfall" : 40,
+		"created_at" : "2023-11-04T14:06:42.600Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 66,
+		"city_id" : 318,
+		"month" : "February",
+		"low" : 0,
+		"high" : 5,
+		"rainfall" : 34,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 67,
+		"city_id" : 318,
+		"month" : "March",
+		"low" : 3,
+		"high" : 9,
+		"rainfall" : 40,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 68,
+		"city_id" : 318,
+		"month" : "April",
+		"low" : 6,
+		"high" : 14,
+		"rainfall" : 46,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 69,
+		"city_id" : 318,
+		"month" : "May",
+		"low" : 11,
+		"high" : 19,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 70,
+		"city_id" : 318,
+		"month" : "June",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 91,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 71,
+		"city_id" : 318,
+		"month" : "July",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 71,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 72,
+		"city_id" : 318,
+		"month" : "August",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 66,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 73,
+		"city_id" : 318,
+		"month" : "September",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 54,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 74,
+		"city_id" : 318,
+		"month" : "October",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 37,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 75,
+		"city_id" : 318,
+		"month" : "November",
+		"low" : 3,
+		"high" : 7,
+		"rainfall" : 48,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 76,
+		"city_id" : 318,
+		"month" : "December",
+		"low" : 0,
+		"high" : 4,
+		"rainfall" : 49,
+		"created_at" : "2023-11-04T14:06:42.601Z",
+		"updated_at" : "2023-11-04T14:06:42.601Z"
+	},
+	{
+		"id" : 77,
+		"city_id" : 282,
+		"month" : "January",
+		"low" : 3,
+		"high" : 12,
+		"rainfall" : 82,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 78,
+		"city_id" : 282,
+		"month" : "February",
+		"low" : 4,
+		"high" : 13,
+		"rainfall" : 75,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 79,
+		"city_id" : 282,
+		"month" : "March",
+		"low" : 6,
+		"high" : 15,
+		"rainfall" : 76,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 80,
+		"city_id" : 282,
+		"month" : "April",
+		"low" : 9,
+		"high" : 18,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 81,
+		"city_id" : 282,
+		"month" : "May",
+		"low" : 13,
+		"high" : 23,
+		"rainfall" : 53,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 82,
+		"city_id" : 282,
+		"month" : "June",
+		"low" : 17,
+		"high" : 28,
+		"rainfall" : 34,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 83,
+		"city_id" : 282,
+		"month" : "July",
+		"low" : 19,
+		"high" : 31,
+		"rainfall" : 19,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 84,
+		"city_id" : 282,
+		"month" : "August",
+		"low" : 19,
+		"high" : 31,
+		"rainfall" : 27,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 85,
+		"city_id" : 282,
+		"month" : "September",
+		"low" : 16,
+		"high" : 27,
+		"rainfall" : 46,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 86,
+		"city_id" : 282,
+		"month" : "October",
+		"low" : 12,
+		"high" : 21,
+		"rainfall" : 88,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 87,
+		"city_id" : 282,
+		"month" : "November",
+		"low" : 8,
+		"high" : 16,
+		"rainfall" : 101,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 88,
+		"city_id" : 282,
+		"month" : "December",
+		"low" : 5,
+		"high" : 12,
+		"rainfall" : 99,
+		"created_at" : "2023-11-04T14:07:09.816Z",
+		"updated_at" : "2023-11-04T14:07:09.816Z"
+	},
+	{
+		"id" : 89,
+		"city_id" : 3201,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 92,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 90,
+		"city_id" : 3201,
+		"month" : "February",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 87,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 91,
+		"city_id" : 3201,
+		"month" : "March",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 92,
+		"city_id" : 3201,
+		"month" : "April",
+		"low" : 12,
+		"high" : 18,
+		"rainfall" : 46,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 93,
+		"city_id" : 3201,
+		"month" : "May",
+		"low" : 15,
+		"high" : 22,
+		"rainfall" : 32,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 94,
+		"city_id" : 3201,
+		"month" : "June",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 95,
+		"city_id" : 3201,
+		"month" : "July",
+		"low" : 19,
+		"high" : 28,
+		"rainfall" : 4,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 96,
+		"city_id" : 3201,
+		"month" : "August",
+		"low" : 19,
+		"high" : 29,
+		"rainfall" : 5,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 97,
+		"city_id" : 3201,
+		"month" : "September",
+		"low" : 17,
+		"high" : 27,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 98,
+		"city_id" : 3201,
+		"month" : "October",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 53,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 99,
+		"city_id" : 3201,
+		"month" : "November",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 71,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 100,
+		"city_id" : 3201,
+		"month" : "December",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 89,
+		"created_at" : "2023-11-04T14:07:36.863Z",
+		"updated_at" : "2023-11-04T14:07:36.863Z"
+	},
+	{
+		"id" : 103,
+		"city_id" : 4536,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 98,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 104,
+		"city_id" : 4536,
+		"month" : "February",
+		"low" : 9,
+		"high" : 14,
+		"rainfall" : 82,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 105,
+		"city_id" : 4536,
+		"month" : "March",
+		"low" : 11,
+		"high" : 16,
+		"rainfall" : 68,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 106,
+		"city_id" : 4536,
+		"month" : "April",
+		"low" : 12,
+		"high" : 17,
+		"rainfall" : 65,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 107,
+		"city_id" : 4536,
+		"month" : "May",
+		"low" : 14,
+		"high" : 20,
+		"rainfall" : 41,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 108,
+		"city_id" : 4536,
+		"month" : "June",
+		"low" : 16,
+		"high" : 23,
+		"rainfall" : 23,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 109,
+		"city_id" : 4536,
+		"month" : "July",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 8,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 110,
+		"city_id" : 4536,
+		"month" : "August",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 7,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 111,
+		"city_id" : 4536,
+		"month" : "September",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 112,
+		"city_id" : 4536,
+		"month" : "October",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 68,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 113,
+		"city_id" : 4536,
+		"month" : "November",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 95,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 114,
+		"city_id" : 4536,
+		"month" : "December",
+		"low" : 9,
+		"high" : 14,
+		"rainfall" : 104,
+		"created_at" : "2023-11-04T14:12:16.484Z",
+		"updated_at" : "2023-11-04T14:12:16.484Z"
+	},
+	{
+		"id" : 115,
+		"city_id" : 4206,
+		"month" : "January",
+		"low" : 5,
+		"high" : 12,
+		"rainfall" : 95,
+		"created_at" : "2023-11-04T14:12:42.644Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 116,
+		"city_id" : 4206,
+		"month" : "February",
+		"low" : 6,
+		"high" : 14,
+		"rainfall" : 96,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 117,
+		"city_id" : 4206,
+		"month" : "March",
+		"low" : 8,
+		"high" : 16,
+		"rainfall" : 73,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 118,
+		"city_id" : 4206,
+		"month" : "April",
+		"low" : 10,
+		"high" : 18,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 119,
+		"city_id" : 4206,
+		"month" : "May",
+		"low" : 13,
+		"high" : 22,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 120,
+		"city_id" : 4206,
+		"month" : "June",
+		"low" : 16,
+		"high" : 26,
+		"rainfall" : 15,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 121,
+		"city_id" : 4206,
+		"month" : "July",
+		"low" : 18,
+		"high" : 29,
+		"rainfall" : 6,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 122,
+		"city_id" : 4206,
+		"month" : "August",
+		"low" : 18,
+		"high" : 30,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 123,
+		"city_id" : 4206,
+		"month" : "September",
+		"low" : 16,
+		"high" : 27,
+		"rainfall" : 22,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 124,
+		"city_id" : 4206,
+		"month" : "October",
+		"low" : 12,
+		"high" : 21,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 125,
+		"city_id" : 4206,
+		"month" : "November",
+		"low" : 9,
+		"high" : 16,
+		"rainfall" : 98,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 126,
+		"city_id" : 4206,
+		"month" : "December",
+		"low" : 6,
+		"high" : 13,
+		"rainfall" : 100,
+		"created_at" : "2023-11-04T14:12:42.645Z",
+		"updated_at" : "2023-11-04T14:12:42.645Z"
+	},
+	{
+		"id" : 127,
+		"city_id" : 4349,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 104,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 128,
+		"city_id" : 4349,
+		"month" : "February",
+		"low" : 10,
+		"high" : 16,
+		"rainfall" : 85,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 129,
+		"city_id" : 4349,
+		"month" : "March",
+		"low" : 12,
+		"high" : 18,
+		"rainfall" : 66,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 130,
+		"city_id" : 4349,
+		"month" : "April",
+		"low" : 13,
+		"high" : 19,
+		"rainfall" : 53,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 131,
+		"city_id" : 4349,
+		"month" : "May",
+		"low" : 16,
+		"high" : 22,
+		"rainfall" : 50,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 132,
+		"city_id" : 4349,
+		"month" : "June",
+		"low" : 19,
+		"high" : 26,
+		"rainfall" : 22,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 133,
+		"city_id" : 4349,
+		"month" : "July",
+		"low" : 22,
+		"high" : 29,
+		"rainfall" : 8,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 134,
+		"city_id" : 4349,
+		"month" : "August",
+		"low" : 21,
+		"high" : 29,
+		"rainfall" : 6,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 135,
+		"city_id" : 4349,
+		"month" : "September",
+		"low" : 19,
+		"high" : 26,
+		"rainfall" : 23,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 136,
+		"city_id" : 4349,
+		"month" : "October",
+		"low" : 15,
+		"high" : 21,
+		"rainfall" : 63,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 137,
+		"city_id" : 4349,
+		"month" : "November",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 85,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 138,
+		"city_id" : 4349,
+		"month" : "December",
+		"low" : 8,
+		"high" : 13,
+		"rainfall" : 116,
+		"created_at" : "2023-11-04T14:13:08.174Z",
+		"updated_at" : "2023-11-04T14:13:08.174Z"
+	},
+	{
+		"id" : 139,
+		"city_id" : 4519,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 70,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 140,
+		"city_id" : 4519,
+		"month" : "February",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 51,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 141,
+		"city_id" : 4519,
+		"month" : "March",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 39,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 142,
+		"city_id" : 4519,
+		"month" : "April",
+		"low" : 13,
+		"high" : 19,
+		"rainfall" : 38,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 143,
+		"city_id" : 4519,
+		"month" : "May",
+		"low" : 15,
+		"high" : 22,
+		"rainfall" : 29,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 144,
+		"city_id" : 4519,
+		"month" : "June",
+		"low" : 18,
+		"high" : 26,
+		"rainfall" : 16,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 145,
+		"city_id" : 4519,
+		"month" : "July",
+		"low" : 20,
+		"high" : 29,
+		"rainfall" : 9,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 146,
+		"city_id" : 4519,
+		"month" : "August",
+		"low" : 20,
+		"high" : 29,
+		"rainfall" : 8,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 147,
+		"city_id" : 4519,
+		"month" : "September",
+		"low" : 19,
+		"high" : 28,
+		"rainfall" : 16,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 148,
+		"city_id" : 4519,
+		"month" : "October",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 52,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 149,
+		"city_id" : 4519,
+		"month" : "November",
+		"low" : 12,
+		"high" : 19,
+		"rainfall" : 88,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 150,
+		"city_id" : 4519,
+		"month" : "December",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 98,
+		"created_at" : "2023-11-04T14:13:36.340Z",
+		"updated_at" : "2023-11-04T14:13:36.340Z"
+	},
+	{
+		"id" : 151,
+		"city_id" : 2566,
+		"month" : "January",
+		"low" : 3,
+		"high" : 6,
+		"rainfall" : 68,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 152,
+		"city_id" : 2566,
+		"month" : "February",
+		"low" : 3,
+		"high" : 7,
+		"rainfall" : 53,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 153,
+		"city_id" : 2566,
+		"month" : "March",
+		"low" : 5,
+		"high" : 10,
+		"rainfall" : 66,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 154,
+		"city_id" : 2566,
+		"month" : "April",
+		"low" : 7,
+		"high" : 13,
+		"rainfall" : 45,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 155,
+		"city_id" : 2566,
+		"month" : "May",
+		"low" : 11,
+		"high" : 18,
+		"rainfall" : 57,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 156,
+		"city_id" : 2566,
+		"month" : "June",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 76,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 157,
+		"city_id" : 2566,
+		"month" : "July",
+		"low" : 16,
+		"high" : 23,
+		"rainfall" : 73,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 158,
+		"city_id" : 2566,
+		"month" : "August",
+		"low" : 16,
+		"high" : 23,
+		"rainfall" : 76,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 159,
+		"city_id" : 2566,
+		"month" : "September",
+		"low" : 13,
+		"high" : 19,
+		"rainfall" : 59,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 160,
+		"city_id" : 2566,
+		"month" : "October",
+		"low" : 10,
+		"high" : 14,
+		"rainfall" : 60,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 161,
+		"city_id" : 2566,
+		"month" : "November",
+		"low" : 6,
+		"high" : 9,
+		"rainfall" : 71,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 162,
+		"city_id" : 2566,
+		"month" : "December",
+		"low" : 3,
+		"high" : 6,
+		"rainfall" : 78,
+		"created_at" : "2023-11-04T14:17:56.654Z",
+		"updated_at" : "2023-11-04T14:17:56.654Z"
+	},
+	{
+		"id" : 163,
+		"city_id" : 160,
+		"month" : "January",
+		"low" : -1,
+		"high" : 4,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 164,
+		"city_id" : 160,
+		"month" : "February",
+		"low" : 0,
+		"high" : 5,
+		"rainfall" : 33,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 165,
+		"city_id" : 160,
+		"month" : "March",
+		"low" : 3,
+		"high" : 9,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 166,
+		"city_id" : 160,
+		"month" : "April",
+		"low" : 5,
+		"high" : 13,
+		"rainfall" : 41,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 167,
+		"city_id" : 160,
+		"month" : "May",
+		"low" : 10,
+		"high" : 19,
+		"rainfall" : 53,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 168,
+		"city_id" : 160,
+		"month" : "June",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 59,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 169,
+		"city_id" : 160,
+		"month" : "July",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 60,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 170,
+		"city_id" : 160,
+		"month" : "August",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 59,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 171,
+		"city_id" : 160,
+		"month" : "September",
+		"low" : 13,
+		"high" : 20,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 172,
+		"city_id" : 160,
+		"month" : "October",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 37,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 173,
+		"city_id" : 160,
+		"month" : "November",
+		"low" : 4,
+		"high" : 8,
+		"rainfall" : 52,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 174,
+		"city_id" : 160,
+		"month" : "December",
+		"low" : 1,
+		"high" : 6,
+		"rainfall" : 48,
+		"created_at" : "2023-11-04T14:44:49.254Z",
+		"updated_at" : "2023-11-04T14:44:49.254Z"
+	},
+	{
+		"id" : 175,
+		"city_id" : 89,
+		"month" : "January",
+		"low" : 3,
+		"high" : 11,
+		"rainfall" : 13,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 176,
+		"city_id" : 89,
+		"month" : "February",
+		"low" : 4,
+		"high" : 12,
+		"rainfall" : 9,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 177,
+		"city_id" : 89,
+		"month" : "March",
+		"low" : 7,
+		"high" : 16,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 178,
+		"city_id" : 89,
+		"month" : "April",
+		"low" : 9,
+		"high" : 17,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 179,
+		"city_id" : 89,
+		"month" : "May",
+		"low" : 13,
+		"high" : 22,
+		"rainfall" : 13,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 180,
+		"city_id" : 89,
+		"month" : "June",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 7,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 181,
+		"city_id" : 89,
+		"month" : "July",
+		"low" : 21,
+		"high" : 31,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 182,
+		"city_id" : 89,
+		"month" : "August",
+		"low" : 21,
+		"high" : 30,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 183,
+		"city_id" : 89,
+		"month" : "September",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 4,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 184,
+		"city_id" : 89,
+		"month" : "October",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 185,
+		"city_id" : 89,
+		"month" : "November",
+		"low" : 7,
+		"high" : 15,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 186,
+		"city_id" : 89,
+		"month" : "December",
+		"low" : 4,
+		"high" : 12,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:45:21.856Z",
+		"updated_at" : "2023-11-04T14:45:21.856Z"
+	},
+	{
+		"id" : 187,
+		"city_id" : 688,
+		"month" : "January",
+		"low" : 6,
+		"high" : 16,
+		"rainfall" : 73,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 188,
+		"city_id" : 688,
+		"month" : "February",
+		"low" : 7,
+		"high" : 18,
+		"rainfall" : 59,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 189,
+		"city_id" : 688,
+		"month" : "March",
+		"low" : 9,
+		"high" : 20,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 190,
+		"city_id" : 688,
+		"month" : "April",
+		"low" : 11,
+		"high" : 22,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 191,
+		"city_id" : 688,
+		"month" : "May",
+		"low" : 15,
+		"high" : 25,
+		"rainfall" : 25,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 192,
+		"city_id" : 688,
+		"month" : "June",
+		"low" : 19,
+		"high" : 30,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 193,
+		"city_id" : 688,
+		"month" : "July",
+		"low" : 22,
+		"high" : 34,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 194,
+		"city_id" : 688,
+		"month" : "August",
+		"low" : 22,
+		"high" : 34,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 195,
+		"city_id" : 688,
+		"month" : "September",
+		"low" : 19,
+		"high" : 30,
+		"rainfall" : 15,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 196,
+		"city_id" : 688,
+		"month" : "October",
+		"low" : 14,
+		"high" : 24,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 197,
+		"city_id" : 688,
+		"month" : "November",
+		"low" : 9,
+		"high" : 19,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 198,
+		"city_id" : 688,
+		"month" : "December",
+		"low" : 7,
+		"high" : 16,
+		"rainfall" : 99,
+		"created_at" : "2023-11-04T14:45:55.753Z",
+		"updated_at" : "2023-11-04T14:45:55.753Z"
+	},
+	{
+		"id" : 199,
+		"city_id" : 1759,
+		"month" : "Jan",
+		"low" : 7,
+		"high" : 15,
+		"rainfall" : 146,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 200,
+		"city_id" : 1759,
+		"month" : "Feb",
+		"low" : 7,
+		"high" : 15,
+		"rainfall" : 116,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 201,
+		"city_id" : 1759,
+		"month" : "Mar",
+		"low" : 8,
+		"high" : 17,
+		"rainfall" : 97,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 202,
+		"city_id" : 1759,
+		"month" : "Apr",
+		"low" : 10,
+		"high" : 19,
+		"rainfall" : 79,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 203,
+		"city_id" : 1759,
+		"month" : "May",
+		"low" : 12,
+		"high" : 22,
+		"rainfall" : 48,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 204,
+		"city_id" : 1759,
+		"month" : "Jun",
+		"low" : 15,
+		"high" : 25,
+		"rainfall" : 17,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 205,
+		"city_id" : 1759,
+		"month" : "Jul",
+		"low" : 16,
+		"high" : 28,
+		"rainfall" : 5,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 206,
+		"city_id" : 1759,
+		"month" : "Aug",
+		"low" : 16,
+		"high" : 28,
+		"rainfall" : 7,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 207,
+		"city_id" : 1759,
+		"month" : "Sep",
+		"low" : 15,
+		"high" : 26,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 208,
+		"city_id" : 1759,
+		"month" : "Oct",
+		"low" : 12,
+		"high" : 22,
+		"rainfall" : 81,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 209,
+		"city_id" : 1759,
+		"month" : "Nov",
+		"low" : 9,
+		"high" : 18,
+		"rainfall" : 111,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 210,
+		"city_id" : 1759,
+		"month" : "Dec",
+		"low" : 8,
+		"high" : 16,
+		"rainfall" : 138,
+		"created_at" : "2023-11-04T14:54:26.213Z",
+		"updated_at" : "2023-11-04T14:54:26.213Z"
+	},
+	{
+		"id" : 211,
+		"city_id" : 1922,
+		"month" : "January",
+		"low" : 7,
+		"high" : 14,
+		"rainfall" : 95,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 212,
+		"city_id" : 1922,
+		"month" : "February",
+		"low" : 7,
+		"high" : 14,
+		"rainfall" : 77,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 213,
+		"city_id" : 1922,
+		"month" : "March",
+		"low" : 9,
+		"high" : 16,
+		"rainfall" : 52,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 214,
+		"city_id" : 1922,
+		"month" : "April",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 69,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 215,
+		"city_id" : 1922,
+		"month" : "May",
+		"low" : 13,
+		"high" : 20,
+		"rainfall" : 50,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 216,
+		"city_id" : 1922,
+		"month" : "June",
+		"low" : 15,
+		"high" : 23,
+		"rainfall" : 18,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 217,
+		"city_id" : 1922,
+		"month" : "July",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 7,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 218,
+		"city_id" : 1922,
+		"month" : "August",
+		"low" : 18,
+		"high" : 26,
+		"rainfall" : 4,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 219,
+		"city_id" : 1922,
+		"month" : "September",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 220,
+		"city_id" : 1922,
+		"month" : "October",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 61,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 221,
+		"city_id" : 1922,
+		"month" : "November",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 100,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 222,
+		"city_id" : 1922,
+		"month" : "December",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 99,
+		"created_at" : "2023-11-04T14:55:12.354Z",
+		"updated_at" : "2023-11-04T14:55:12.354Z"
+	},
+	{
+		"id" : 223,
+		"city_id" : 3172,
+		"month" : "Jan",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 85,
+		"created_at" : "2023-11-04T14:55:36.406Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 224,
+		"city_id" : 3172,
+		"month" : "Feb",
+		"low" : 10,
+		"high" : 16,
+		"rainfall" : 74,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 225,
+		"city_id" : 3172,
+		"month" : "Mar",
+		"low" : 11,
+		"high" : 18,
+		"rainfall" : 52,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 226,
+		"city_id" : 3172,
+		"month" : "Apr",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 62,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 227,
+		"city_id" : 3172,
+		"month" : "May",
+		"low" : 15,
+		"high" : 22,
+		"rainfall" : 37,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 228,
+		"city_id" : 3172,
+		"month" : "Jun",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 15,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 229,
+		"city_id" : 3172,
+		"month" : "Jul",
+		"low" : 18,
+		"high" : 28,
+		"rainfall" : 5,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 230,
+		"city_id" : 3172,
+		"month" : "Aug",
+		"low" : 18,
+		"high" : 29,
+		"rainfall" : 5,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 231,
+		"city_id" : 3172,
+		"month" : "Sep",
+		"low" : 17,
+		"high" : 27,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 232,
+		"city_id" : 3172,
+		"month" : "Oct",
+		"low" : 14,
+		"high" : 23,
+		"rainfall" : 72,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 233,
+		"city_id" : 3172,
+		"month" : "Nov",
+		"low" : 12,
+		"high" : 19,
+		"rainfall" : 105,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 234,
+		"city_id" : 3172,
+		"month" : "Dec",
+		"low" : 10,
+		"high" : 16,
+		"rainfall" : 100,
+		"created_at" : "2023-11-04T14:55:36.407Z",
+		"updated_at" : "2023-11-04T14:55:36.407Z"
+	},
+	{
+		"id" : 235,
+		"city_id" : 295,
+		"month" : "January",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 99,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 236,
+		"city_id" : 295,
+		"month" : "February",
+		"low" : 9,
+		"high" : 16,
+		"rainfall" : 68,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 237,
+		"city_id" : 295,
+		"month" : "March",
+		"low" : 10,
+		"high" : 18,
+		"rainfall" : 48,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 238,
+		"city_id" : 295,
+		"month" : "April",
+		"low" : 11,
+		"high" : 19,
+		"rainfall" : 67,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 239,
+		"city_id" : 295,
+		"month" : "May",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 240,
+		"city_id" : 295,
+		"month" : "June",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 241,
+		"city_id" : 295,
+		"month" : "July",
+		"low" : 19,
+		"high" : 28,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 242,
+		"city_id" : 295,
+		"month" : "August",
+		"low" : 19,
+		"high" : 28,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 243,
+		"city_id" : 295,
+		"month" : "September",
+		"low" : 18,
+		"high" : 26,
+		"rainfall" : 19,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 244,
+		"city_id" : 295,
+		"month" : "October",
+		"low" : 15,
+		"high" : 22,
+		"rainfall" : 57,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 245,
+		"city_id" : 295,
+		"month" : "November",
+		"low" : 12,
+		"high" : 18,
+		"rainfall" : 89,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 246,
+		"city_id" : 295,
+		"month" : "December",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 92,
+		"created_at" : "2023-11-04T14:56:06.890Z",
+		"updated_at" : "2023-11-04T14:56:06.890Z"
+	},
+	{
+		"id" : 247,
+		"city_id" : 598,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 147,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 248,
+		"city_id" : 598,
+		"month" : "February",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 107,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 249,
+		"city_id" : 598,
+		"month" : "March",
+		"low" : 10,
+		"high" : 16,
+		"rainfall" : 97,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 250,
+		"city_id" : 598,
+		"month" : "April",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 81,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 251,
+		"city_id" : 598,
+		"month" : "May",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 59,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 252,
+		"city_id" : 598,
+		"month" : "June",
+		"low" : 14,
+		"high" : 23,
+		"rainfall" : 32,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 253,
+		"city_id" : 598,
+		"month" : "July",
+		"low" : 16,
+		"high" : 25,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 254,
+		"city_id" : 598,
+		"month" : "August",
+		"low" : 16,
+		"high" : 25,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 255,
+		"city_id" : 598,
+		"month" : "September",
+		"low" : 15,
+		"high" : 24,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 256,
+		"city_id" : 598,
+		"month" : "October",
+		"low" : 13,
+		"high" : 20,
+		"rainfall" : 111,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 257,
+		"city_id" : 598,
+		"month" : "November",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 147,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 258,
+		"city_id" : 598,
+		"month" : "December",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 168,
+		"created_at" : "2023-11-04T14:56:38.986Z",
+		"updated_at" : "2023-11-04T14:56:38.986Z"
+	},
+	{
+		"id" : 261,
+		"city_id" : 5428,
+		"month" : "January",
+		"low" : 12,
+		"high" : 16,
+		"rainfall" : 68,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 262,
+		"city_id" : 5428,
+		"month" : "February",
+		"low" : 12,
+		"high" : 16,
+		"rainfall" : 40,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 263,
+		"city_id" : 5428,
+		"month" : "March",
+		"low" : 13,
+		"high" : 17,
+		"rainfall" : 39,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 264,
+		"city_id" : 5428,
+		"month" : "April",
+		"low" : 14,
+		"high" : 18,
+		"rainfall" : 31,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 265,
+		"city_id" : 5428,
+		"month" : "May",
+		"low" : 15,
+		"high" : 20,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 266,
+		"city_id" : 5428,
+		"month" : "June",
+		"low" : 17,
+		"high" : 23,
+		"rainfall" : 4,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 267,
+		"city_id" : 5428,
+		"month" : "July",
+		"low" : 18,
+		"high" : 25,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 268,
+		"city_id" : 5428,
+		"month" : "August",
+		"low" : 18,
+		"high" : 26,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 269,
+		"city_id" : 5428,
+		"month" : "September",
+		"low" : 18,
+		"high" : 25,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 270,
+		"city_id" : 5428,
+		"month" : "October",
+		"low" : 16,
+		"high" : 22,
+		"rainfall" : 42,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 271,
+		"city_id" : 5428,
+		"month" : "November",
+		"low" : 14,
+		"high" : 19,
+		"rainfall" : 79,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 272,
+		"city_id" : 5428,
+		"month" : "December",
+		"low" : 13,
+		"high" : 17,
+		"rainfall" : 85,
+		"created_at" : "2023-11-04T15:06:34.018Z",
+		"updated_at" : "2023-11-04T15:06:34.018Z"
+	},
+	{
+		"id" : 273,
+		"city_id" : 5994,
+		"month" : "January",
+		"low" : 4,
+		"high" : 11,
+		"rainfall" : 178,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 274,
+		"city_id" : 5994,
+		"month" : "February",
+		"low" : 5,
+		"high" : 13,
+		"rainfall" : 147,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 275,
+		"city_id" : 5994,
+		"month" : "March",
+		"low" : 7,
+		"high" : 16,
+		"rainfall" : 105,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 276,
+		"city_id" : 5994,
+		"month" : "April",
+		"low" : 9,
+		"high" : 18,
+		"rainfall" : 108,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 277,
+		"city_id" : 5994,
+		"month" : "May",
+		"low" : 12,
+		"high" : 22,
+		"rainfall" : 72,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 278,
+		"city_id" : 5994,
+		"month" : "June",
+		"low" : 15,
+		"high" : 26,
+		"rainfall" : 25,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 279,
+		"city_id" : 5994,
+		"month" : "July",
+		"low" : 16,
+		"high" : 29,
+		"rainfall" : 7,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 280,
+		"city_id" : 5994,
+		"month" : "August",
+		"low" : 16,
+		"high" : 29,
+		"rainfall" : 8,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 281,
+		"city_id" : 5994,
+		"month" : "September",
+		"low" : 14,
+		"high" : 26,
+		"rainfall" : 31,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 282,
+		"city_id" : 5994,
+		"month" : "October",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 107,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 283,
+		"city_id" : 5994,
+		"month" : "November",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 160,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 284,
+		"city_id" : 5994,
+		"month" : "December",
+		"low" : 5,
+		"high" : 11,
+		"rainfall" : 170,
+		"created_at" : "2023-11-04T15:06:54.508Z",
+		"updated_at" : "2023-11-04T15:06:54.508Z"
+	},
+	{
+		"id" : 285,
+		"city_id" : 5044,
+		"month" : "January",
+		"low" : 9,
+		"high" : 16,
+		"rainfall" : 84,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 286,
+		"city_id" : 5044,
+		"month" : "February",
+		"low" : 9,
+		"high" : 17,
+		"rainfall" : 61,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 287,
+		"city_id" : 5044,
+		"month" : "March",
+		"low" : 11,
+		"high" : 19,
+		"rainfall" : 55,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 288,
+		"city_id" : 5044,
+		"month" : "April",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 61,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 289,
+		"city_id" : 5044,
+		"month" : "May",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 52,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 290,
+		"city_id" : 5044,
+		"month" : "June",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 16,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 291,
+		"city_id" : 5044,
+		"month" : "July",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 292,
+		"city_id" : 5044,
+		"month" : "August",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 6,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 293,
+		"city_id" : 5044,
+		"month" : "September",
+		"low" : 17,
+		"high" : 26,
+		"rainfall" : 27,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 294,
+		"city_id" : 5044,
+		"month" : "October",
+		"low" : 15,
+		"high" : 23,
+		"rainfall" : 72,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 295,
+		"city_id" : 5044,
+		"month" : "November",
+		"low" : 12,
+		"high" : 19,
+		"rainfall" : 85,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 296,
+		"city_id" : 5044,
+		"month" : "December",
+		"low" : 10,
+		"high" : 16,
+		"rainfall" : 101,
+		"created_at" : "2023-11-04T15:07:22.656Z",
+		"updated_at" : "2023-11-04T15:07:22.656Z"
+	},
+	{
+		"id" : 297,
+		"city_id" : 3446,
+		"month" : "Jan",
+		"low" : 8,
+		"high" : 13,
+		"rainfall" : 185,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 298,
+		"city_id" : 3446,
+		"month" : "Feb",
+		"low" : 9,
+		"high" : 14,
+		"rainfall" : 144,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 299,
+		"city_id" : 3446,
+		"month" : "Mar",
+		"low" : 11,
+		"high" : 16,
+		"rainfall" : 105,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 300,
+		"city_id" : 3446,
+		"month" : "Apr",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 103,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 301,
+		"city_id" : 3446,
+		"month" : "May",
+		"low" : 13,
+		"high" : 20,
+		"rainfall" : 86,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 302,
+		"city_id" : 3446,
+		"month" : "Jun",
+		"low" : 15,
+		"high" : 23,
+		"rainfall" : 48,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 303,
+		"city_id" : 3446,
+		"month" : "Jul",
+		"low" : 16,
+		"high" : 26,
+		"rainfall" : 13,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 304,
+		"city_id" : 3446,
+		"month" : "Aug",
+		"low" : 16,
+		"high" : 27,
+		"rainfall" : 9,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 305,
+		"city_id" : 3446,
+		"month" : "Sep",
+		"low" : 15,
+		"high" : 25,
+		"rainfall" : 43,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 306,
+		"city_id" : 3446,
+		"month" : "Oct",
+		"low" : 12,
+		"high" : 20,
+		"rainfall" : 120,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 307,
+		"city_id" : 3446,
+		"month" : "Nov",
+		"low" : 10,
+		"high" : 16,
+		"rainfall" : 144,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 308,
+		"city_id" : 3446,
+		"month" : "Dec",
+		"low" : 9,
+		"high" : 13,
+		"rainfall" : 168,
+		"created_at" : "2023-11-04T15:07:50.128Z",
+		"updated_at" : "2023-11-04T15:07:50.128Z"
+	},
+	{
+		"id" : 309,
+		"city_id" : 3595,
+		"month" : "January",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 100,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 310,
+		"city_id" : 3595,
+		"month" : "February",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 80,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 311,
+		"city_id" : 3595,
+		"month" : "March",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 60,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 312,
+		"city_id" : 3595,
+		"month" : "April",
+		"low" : 11,
+		"high" : 18,
+		"rainfall" : 50,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 313,
+		"city_id" : 3595,
+		"month" : "May",
+		"low" : 13,
+		"high" : 21,
+		"rainfall" : 40,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 314,
+		"city_id" : 3595,
+		"month" : "June",
+		"low" : 15,
+		"high" : 24,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 315,
+		"city_id" : 3595,
+		"month" : "July",
+		"low" : 17,
+		"high" : 27,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 316,
+		"city_id" : 3595,
+		"month" : "August",
+		"low" : 18,
+		"high" : 28,
+		"rainfall" : 10,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 317,
+		"city_id" : 3595,
+		"month" : "September",
+		"low" : 16,
+		"high" : 26,
+		"rainfall" : 20,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 318,
+		"city_id" : 3595,
+		"month" : "October",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 60,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 319,
+		"city_id" : 3595,
+		"month" : "November",
+		"low" : 12,
+		"high" : 18,
+		"rainfall" : 90,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 320,
+		"city_id" : 3595,
+		"month" : "December",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 100,
+		"created_at" : "2023-11-04T15:16:24.611Z",
+		"updated_at" : "2023-11-04T15:16:24.611Z"
+	},
+	{
+		"id" : 321,
+		"city_id" : 3541,
+		"month" : "January",
+		"low" : 8,
+		"high" : 14,
+		"rainfall" : 97,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 322,
+		"city_id" : 3541,
+		"month" : "February",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 82,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 323,
+		"city_id" : 3541,
+		"month" : "March",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 56,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 324,
+		"city_id" : 3541,
+		"month" : "April",
+		"low" : 10,
+		"high" : 18,
+		"rainfall" : 62,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 325,
+		"city_id" : 3541,
+		"month" : "May",
+		"low" : 13,
+		"high" : 21,
+		"rainfall" : 45,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 326,
+		"city_id" : 3541,
+		"month" : "June",
+		"low" : 15,
+		"high" : 24,
+		"rainfall" : 21,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 327,
+		"city_id" : 3541,
+		"month" : "July",
+		"low" : 17,
+		"high" : 27,
+		"rainfall" : 6,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 328,
+		"city_id" : 3541,
+		"month" : "August",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 7,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 329,
+		"city_id" : 3541,
+		"month" : "September",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 17,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 330,
+		"city_id" : 3541,
+		"month" : "October",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 98,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 331,
+		"city_id" : 3541,
+		"month" : "November",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 113,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 332,
+		"city_id" : 3541,
+		"month" : "December",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 127,
+		"created_at" : "2023-11-04T15:16:55.727Z",
+		"updated_at" : "2023-11-04T15:16:55.727Z"
+	},
+	{
+		"id" : 334,
+		"city_id" : 3961,
+		"month" : "January",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 79,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 335,
+		"city_id" : 3961,
+		"month" : "February",
+		"low" : 9,
+		"high" : 16,
+		"rainfall" : 66,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 336,
+		"city_id" : 3961,
+		"month" : "March",
+		"low" : 11,
+		"high" : 17,
+		"rainfall" : 46,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 337,
+		"city_id" : 3961,
+		"month" : "April",
+		"low" : 12,
+		"high" : 19,
+		"rainfall" : 68,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 338,
+		"city_id" : 3961,
+		"month" : "May",
+		"low" : 15,
+		"high" : 22,
+		"rainfall" : 47,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 339,
+		"city_id" : 3961,
+		"month" : "June",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 11,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 340,
+		"city_id" : 3961,
+		"month" : "July",
+		"low" : 19,
+		"high" : 28,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 341,
+		"city_id" : 3961,
+		"month" : "August",
+		"low" : 19,
+		"high" : 29,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 342,
+		"city_id" : 3961,
+		"month" : "September",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 26,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 343,
+		"city_id" : 3961,
+		"month" : "October",
+		"low" : 15,
+		"high" : 23,
+		"rainfall" : 76,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 344,
+		"city_id" : 3961,
+		"month" : "November",
+		"low" : 12,
+		"high" : 19,
+		"rainfall" : 96,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 345,
+		"city_id" : 3961,
+		"month" : "December",
+		"low" : 9,
+		"high" : 16,
+		"rainfall" : 105,
+		"created_at" : "2023-11-04T15:18:17.622Z",
+		"updated_at" : "2023-11-04T15:18:17.622Z"
+	},
+	{
+		"id" : 346,
+		"city_id" : 12060,
+		"month" : "January",
+		"low" : 9,
+		"high" : 15,
+		"rainfall" : 84,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 347,
+		"city_id" : 12060,
+		"month" : "February",
+		"low" : 10,
+		"high" : 15,
+		"rainfall" : 66,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 348,
+		"city_id" : 12060,
+		"month" : "March",
+		"low" : 12,
+		"high" : 18,
+		"rainfall" : 51,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 349,
+		"city_id" : 12060,
+		"month" : "April",
+		"low" : 12,
+		"high" : 18,
+		"rainfall" : 74,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 350,
+		"city_id" : 12060,
+		"month" : "May",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 60,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 351,
+		"city_id" : 12060,
+		"month" : "June",
+		"low" : 16,
+		"high" : 24,
+		"rainfall" : 14,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 352,
+		"city_id" : 12060,
+		"month" : "July",
+		"low" : 18,
+		"high" : 26,
+		"rainfall" : 4,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 353,
+		"city_id" : 12060,
+		"month" : "August",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 6,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 354,
+		"city_id" : 12060,
+		"month" : "September",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 31,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 355,
+		"city_id" : 12060,
+		"month" : "October",
+		"low" : 14,
+		"high" : 21,
+		"rainfall" : 65,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 356,
+		"city_id" : 12060,
+		"month" : "November",
+		"low" : 12,
+		"high" : 17,
+		"rainfall" : 82,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 357,
+		"city_id" : 12060,
+		"month" : "December",
+		"low" : 10,
+		"high" : 15,
+		"rainfall" : 108,
+		"created_at" : "2023-11-04T15:18:56.966Z",
+		"updated_at" : "2023-11-04T15:18:56.966Z"
+	},
+	{
+		"id" : 360,
+		"city_id" : 3650,
+		"month" : "January",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 99,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 361,
+		"city_id" : 3650,
+		"month" : "February",
+		"low" : 8,
+		"high" : 16,
+		"rainfall" : 72,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 362,
+		"city_id" : 3650,
+		"month" : "March",
+		"low" : 10,
+		"high" : 18,
+		"rainfall" : 57,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 363,
+		"city_id" : 3650,
+		"month" : "April",
+		"low" : 11,
+		"high" : 19,
+		"rainfall" : 58,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 364,
+		"city_id" : 3650,
+		"month" : "May",
+		"low" : 14,
+		"high" : 22,
+		"rainfall" : 39,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 365,
+		"city_id" : 3650,
+		"month" : "June",
+		"low" : 17,
+		"high" : 25,
+		"rainfall" : 12,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 366,
+		"city_id" : 3650,
+		"month" : "July",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 2,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 367,
+		"city_id" : 3650,
+		"month" : "August",
+		"low" : 18,
+		"high" : 27,
+		"rainfall" : 3,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 368,
+		"city_id" : 3650,
+		"month" : "September",
+		"low" : 16,
+		"high" : 25,
+		"rainfall" : 19,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 369,
+		"city_id" : 3650,
+		"month" : "October",
+		"low" : 13,
+		"high" : 21,
+		"rainfall" : 57,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 370,
+		"city_id" : 3650,
+		"month" : "November",
+		"low" : 10,
+		"high" : 17,
+		"rainfall" : 72,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	},
+	{
+		"id" : 371,
+		"city_id" : 3650,
+		"month" : "December",
+		"low" : 8,
+		"high" : 15,
+		"rainfall" : 154,
+		"created_at" : "2023-11-04T15:20:24.815Z",
+		"updated_at" : "2023-11-04T15:20:24.815Z"
+	}
+]
