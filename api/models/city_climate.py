@@ -45,7 +45,7 @@ class CityClimateORM(AbstractBaseModel):
         self.rainfall = api_model.rainfall
 
     @classmethod
-    def from_oai(cls, oai_model) -> "CityClimateORM":
+    def from_oai(cls, oai_model):
         """Create a CityClimateORM object from OpenAI data."""
         city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
         city_id = city.id if city else None

@@ -8,6 +8,8 @@ import openai
 from django.conf import settings
 
 from api.clients.contracts.city_climate import CityClimateOpenAIContract
+from api.clients.contracts.city_description import CityDescriptionOpenAIContract
+from api.clients.contracts.itinerary import ItineraryOpenAIContract
 
 
 class OpenAI:
@@ -70,12 +72,23 @@ class OpenAI:
             {"role": "system", "content": "You are a travel assistant."},
             {
                 "role": "user",
-                "content": init
-                + 'Respond in the following format: {"city": ,"description":}}',
+                "content": init,
             },
         ]
 
-        return self.chat_completion_create(messages)
+        functions = [
+            {
+                "name": "get_answer_for_user_query",
+                "description": "Get user answer in series of steps",
+                "parameters": CityDescriptionOpenAIContract.model_json_schema(),
+            }
+        ]
+
+        function_call = {"name": "get_answer_for_user_query"}
+
+        return self.chat_completion_create(
+            messages, **{"functions": functions, "function_call": function_call}
+        )
 
     def get_itinerary(self, **kwargs) -> Dict[Any, Any]:
         """Get an itenerary from OpenAI."""
@@ -91,19 +104,23 @@ class OpenAI:
             {"role": "system", "content": "You are a travel assistant."},
             {
                 "role": "user",
-                "content": init
-                + """
-            Respond in the following format: {Day : n,
-                                                        {Overnight City: ,
-                                                        Travel Method : ,
-                                                        Travel Time : ,
-                                                        Morning Activity : ,
-                                                        Afternoon Activity : ,
-                                                        Evening Activity : }}""",
+                "content": init,
             },
         ]
 
-        return self.chat_completion_create(messages)
+        functions = [
+            {
+                "name": "get_answer_for_user_query",
+                "description": "Get user answer in series of steps",
+                "parameters": ItineraryOpenAIContract.model_json_schema(),
+            }
+        ]
+
+        function_call = {"name": "get_answer_for_user_query"}
+
+        return self.chat_completion_create(
+            messages, **{"functions": functions, "function_call": function_call}
+        )
 
     def get_city_climate(self, **kwargs) -> Dict[Any, Any]:
         """Get a city's climate from OpenAI."""

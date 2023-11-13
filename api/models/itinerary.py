@@ -54,6 +54,38 @@ class ItineraryORM(AbstractBaseModel):
         self.afternoon_activity = api_model.afternoon_activity
         self.evening_activity = api_model.evening_activity
 
+    @classmethod
+    def from_oai(cls, oai_model):
+        """
+        Return an ItineraryORM instance from an OpenAI response.
+        """
+        unique_search_history = UniqueSearchHistoryORM.objects.filter(
+            city=oai_model.get("city", None),
+            country=oai_model.get("country", None),
+            num_days=oai_model.get("num_days", None),
+        ).first()
+
+        if not unique_search_history:
+            # create a new unique search history
+            unique_search_history = UniqueSearchHistoryORM(
+                city=oai_model.get("city", None),
+                country=oai_model.get("country", None),
+                num_days=oai_model.get("num_days", None),
+            ).save()
+
+        unique_search_history_id = unique_search_history.id
+
+        return cls(
+            unique_search_history_id=unique_search_history_id,
+            day=oai_model.get("day"),
+            city=oai_model.get("city"),
+            travel_method=oai_model.get("travel_method"),
+            travel_time=oai_model.get("travel_time"),
+            morning_activity=oai_model.get("morning_activity"),
+            afternoon_activity=oai_model.get("afternoon_activity"),
+            evening_activity=oai_model.get("evening_activity"),
+        )
+
 
 # Itinerary contracts
 class ItineraryContract(BaseModel):

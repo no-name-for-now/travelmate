@@ -1,3 +1,5 @@
+from typing import List
+
 from django.db.models.query import QuerySet
 from fastapi import Depends
 from starlette.responses import JSONResponse
@@ -12,14 +14,14 @@ from api.utils.itinerary import get_top_n_itinerary
 
 
 def itinerary_get__oai(
-    itinerary: ItineraryORM = Depends(get_itinerary__oai),
+    itinerary: List = Depends(get_itinerary__oai),
 ) -> APIItineraryList | JSONResponse:
     """
     Get itinerary from OpenAI.
     """
     return (
         APIItineraryList.from_qs(itinerary)
-        if itinerary.__class__ is QuerySet
+        if isinstance(itinerary, list)
         else itinerary
     )
 
