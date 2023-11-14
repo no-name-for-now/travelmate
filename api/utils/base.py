@@ -71,10 +71,12 @@ def oai_obj_to_qs(model_class: Type[models.Model], oai_obj: Any) -> models.Model
         if isinstance(oai_obj, dict):
             obj = model_class.from_oai(oai_model=oai_obj)
             obj.save()
-        else:
+        elif isinstance(oai_obj, list):
             obj = model_class.objects.bulk_create(
                 [model_class.from_oai(oai_model=o) for o in oai_obj]
             )
+        else:
+            raise Exception("oai_obj must be a dict or list")
 
         return obj
     except Exception as e:
