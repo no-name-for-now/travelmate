@@ -27,6 +27,8 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
         """
         Return a UniqueSearchHistory instance from an APIUniqueSearchHistory instance.
         """
+        if isinstance(model, dict):
+            model = UniqueSearchHistoryContract(**model)
         return cls(
             country=model.country,
             city=model.city,
