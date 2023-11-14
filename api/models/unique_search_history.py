@@ -1,4 +1,5 @@
 from typing import List
+from typing import Union
 
 from django.db import models
 from pydantic import BaseModel
@@ -23,7 +24,7 @@ class UniqueSearchHistoryORM(AbstractBaseModel):
     num_days = models.IntegerField()
 
     @classmethod
-    def from_api(cls, model: "UniqueSearchHistoryContract"):
+    def from_api(cls, model: Union["UniqueSearchHistoryContract", dict]):
         """
         Return a UniqueSearchHistory instance from an APIUniqueSearchHistory instance.
         """

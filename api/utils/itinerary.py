@@ -6,6 +6,7 @@ from fastapi.responses import JSONResponse
 from api.models.itinerary import ItineraryORM
 from api.models.unique_search_history import UniqueSearchHistoryORM
 from api.utils.base import get_object__oai
+from api.utils.base import oai_obj_to_qs
 from api.utils.http import Error
 from api.utils.validations import validate_itinerary
 
@@ -22,15 +23,57 @@ def get_itinerary__oai(
 
     try:
         if ok:
-            qs = get_object__oai(
-                class_function="get_itinerary",
+            unique_search_history = UniqueSearchHistoryORM.objects.filter(
                 city=_city,
                 country=_country,
                 num_days=_days,
-            )
-            if not qs:
-                return Error(404, "itinerary not found", __name__)
-            return qs
+            ).first()
+
+            if unique_search_history:
+                return get_itinerary__db(city, country, days)
+            else:
+                # create a new unique search history
+                unique_search_history = UniqueSearchHistoryORM.from_api(
+                    {
+                        "city": _city,
+                        "country": _country,
+                        "num_days": _days,
+                    }
+                )
+                unique_search_history.save()
+
+                unique_search_history_id = unique_search_history.id
+
+                res = get_object__oai(
+                    class_function="get_itinerary",
+                    city=_city,
+                    country=_country,
+                    num_days=_days,
+                )
+
+                activities = list()
+                for activity in res["activities"]:
+                    activities.append(
+                        {
+                            "unique_search_history_id": unique_search_history_id,
+                            "day": activity["day"],
+                            "city": activity["city"],
+                            "travel_method": activity["travel_method"],
+                            "travel_time": activity["travel_time"],
+                            "morning_activity": activity["morning_activity"],
+                            "afternoon_activity": activity["afternoon_activity"],
+                            "evening_activity": activity["evening_activity"],
+                        }
+                    )
+
+                if not activities:
+                    return Error(404, "itinerary not found", __name__)
+                else:
+                    obj = oai_obj_to_qs(ItineraryORM, activities)
+                    if not obj:
+                        return Error(404, "itinerary not found", __name__)
+                    else:
+                        return obj
         else:
             return Error(422, "invalid number of days, city or country", __name__)
     except Exception as e:
