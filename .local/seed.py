@@ -16,7 +16,8 @@ db_config = {
 json_file_path = os.path.relpath("data/")
 table_names = [
     "city_climate",
-    "city_descriptor" "itineraries",
+    "city_descriptor",
+    "itineraries",
     "search_history",
     "unique_search_history",
     "user_saved_itinerary",
