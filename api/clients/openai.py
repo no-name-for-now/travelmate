@@ -64,8 +64,8 @@ class OpenAI:
         country = kwargs.get("country")
         city = kwargs.get("city")
 
-        init = "Create a 100 word description of {0}, {1} for a tourist".format(
-            country, city
+        init = "Create a 100 word description of the city {0} in country {1}, for a tourist".format(
+            city, country
         )
 
         messages = [

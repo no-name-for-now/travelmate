@@ -2,5 +2,5 @@ from pydantic import BaseModel
 
 
 class CityDescriptionOpenAIContract(BaseModel):
-    city: str
-    description: str
+    city_name: str
+    city_description: str

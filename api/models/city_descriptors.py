@@ -44,19 +44,16 @@ class CityDescriptorsORM(AbstractBaseModel):
         """
         Update the CityDescriptors Django model from an OpenAI model.
         """
-        city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
+        city = WorldCitiesORM.objects.filter(
+            city=oai_model.get("city_name", None)
+        ).first()
         city_id = city.id if city else None
-        city_description = oai_model.get("description", None)
+        city_description = oai_model.get("city_description", None)
 
         if not city_id:
             raise Exception("City not found")
         if not city_description:
             raise Exception("City description not found")
-
-        from tripagenda import logger
-
-        logger.info(f"oai_model: {oai_model}")
-        logger.info(f"city: {city}")
 
         return cls(city_id=city_id, city_description=city_description)
 
