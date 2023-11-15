@@ -15,6 +15,9 @@ install:
 docker-up:
 	@docker compose up -d
 
+db-seed:
+	python .local/seed.py
+
 docker-down:
 	@docker compose down
 
