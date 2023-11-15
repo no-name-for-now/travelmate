@@ -48,10 +48,18 @@ else:
 
 # Application configs
 APP_NAME = "tripagenda"
-APP_VERSION = "0.1.0"
+APP_VERSION = "0.2.0"
 API_PREFIX = "/api"
 API_INTERNAL_PREFIX = "/internal"
 API_VERSION = "v1"
+API_BASIC_AUTH_USERNAME = os.environ.get("API_BASIC_AUTH_USERNAME", "stanleyjobson")
+API_BASIC_AUTH_PASSWORD = os.environ.get("API_BASIC_AUTH_PASSWORD", "swordfish")
+API_INTERNAL_BASIC_AUTH_USERNAME = os.environ.get(
+    "API_INTERNAL_BASIC_AUTH_USERNAME", "stanleyjobson"
+)
+API_INTERNAL_BASIC_AUTH_PASSWORD = os.environ.get(
+    "API_INTERNAL_BASIC_AUTH_PASSWORD", "swordfish"
+)
 
 # OpenAI configs
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
