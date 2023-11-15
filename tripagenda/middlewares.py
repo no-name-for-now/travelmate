@@ -27,9 +27,6 @@ class BasicAuthMiddleware(BaseHTTPMiddleware):
     async def dispatch(
         self, request: Request, call_next: RequestResponseEndpoint
     ) -> Response:
-        from tripagenda import logger
-
-        logger.info(f"request.url.path: {request.url.path}")
         if request.url.path.startswith(settings.API_INTERNAL_PREFIX):
             if not request.headers.get("Authorization"):
                 return Error(
