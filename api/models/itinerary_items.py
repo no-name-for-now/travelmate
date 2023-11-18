@@ -16,6 +16,19 @@ class ItineraryItemsORM(AbstractBaseModel):
     tag = models.CharField(max_length=25)
     duration_minutes = models.IntegerField()
 
+    @classmethod
+    def from_oai(cls, oai_model):
+        """Create a CityClimateORM object from OpenAI data."""
+        city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
+        city_id = city.id if city else None
+
+        return cls(
+            city_id=city_id,
+            item=oai_model.get("item"),
+            tag=oai_model.get("tag"),
+            duration_minutes=oai_model.get("duration_minutes"),
+        )
+
 
 # CityClimate contracts
 class ItineraryItemsContract(BaseModel):
