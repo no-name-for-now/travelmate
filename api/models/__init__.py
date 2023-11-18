@@ -12,6 +12,7 @@ from api.models.itinerary import APIItinerary
 from api.models.itinerary import APIItineraryList
 from api.models.itinerary import ItineraryContract
 from api.models.itinerary import ItineraryORM
+from api.models.itinerary_items import ItineraryItemsORM
 from api.models.search_history import APISearchHistory
 from api.models.search_history import APISearchHistoryList
 from api.models.search_history import SearchHistoryContract
@@ -49,6 +50,7 @@ __all__ = [
     "CityDescriptorsContract",
     "CityDescriptorsORM",
     "ItineraryContract",
+    "ItineraryItemsORM",
     "ItineraryORM",
     "SearchHistoryContract",
     "SearchHistoryORM",

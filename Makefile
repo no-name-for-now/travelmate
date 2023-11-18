@@ -39,3 +39,9 @@ down: docker-down
 
 test-xmlrunner:
 	@./manage.py test --no-input --keepdb
+
+migrate:
+	@./manage.py migrate
+
+run-local:
+	python -m gunicorn tripagenda.asgi:app -k uvicorn.workers.UvicornWorker --reload
