@@ -4,6 +4,7 @@ from api.models.city_climate import APICityClimate
 from api.models.city_climate import APICityClimateList
 from api.models.city_climate import CityClimateContract
 from api.models.city_climate import CityClimateORM
+from api.models.city_cost_of_living import CityCostOfLivingContract
 from api.models.city_descriptors import APICityDescriptors
 from api.models.city_descriptors import APICityDescriptorsList
 from api.models.city_descriptors import CityDescriptorsContract
@@ -59,4 +60,5 @@ __all__ = [
     "UserSavedItineraryContract",
     "UserSavedItineraryORM",
     "UserSearchContract",
+    "CityCostOfLivingContract",
 ]
