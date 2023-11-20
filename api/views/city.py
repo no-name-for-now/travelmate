@@ -10,7 +10,6 @@ from api.models.city_descriptors import APICityDescriptorsList
 from api.models.city_descriptors import CityDescriptorsContract
 from api.models.city_descriptors import CityDescriptorsORM
 from api.models.itinerary_items import APIItineraryItemsList
-from api.models.itinerary_items import ItineraryItemsORM
 from api.models.world_cities import APIWorldCitiesActiveList
 from api.models.world_cities import WorldCitiesORM
 from api.utils.city import get_cities_active__db

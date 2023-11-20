@@ -8,6 +8,7 @@ import openai
 from django.conf import settings
 
 from api.clients.contracts.city_climate import CityClimateOpenAIContract
+from api.clients.contracts.city_description import CityDescriptionOpenAIContract
 from api.clients.contracts.city_item import CityItemOpenAIContract
 from api.clients.contracts.itinerary import ItineraryOpenAIContract
 
