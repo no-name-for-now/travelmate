@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from fastapi import status
 
 from api.models.itinerary import APIItineraryList
+from api.models.itinerary_items import APIItineraryItemsList
 from api.models.top_searched import APITopSearchedList
 from api.utils.http import responses
 from api.views import itinerary as views
@@ -36,3 +37,11 @@ router.get(
     name="itinerary-get-top-n",
     status_code=status.HTTP_200_OK,
 )(views.itinerary_get_top_n)
+
+router.get(
+    "/items/oai",
+    summary="Get itinerary items from OpenAI.",
+    response_model=APIItineraryItemsList,
+    name="city-items-get-oai",
+    status_code=status.HTTP_200_OK,
+)(views.itinerary_item_get__oai)

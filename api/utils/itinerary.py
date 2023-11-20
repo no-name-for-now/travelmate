@@ -1,13 +1,17 @@
+from typing import List
+
 from django.db.models import Count
 from fastapi import Path
 from fastapi import Query
 from fastapi.responses import JSONResponse
 
 from api.models.itinerary import ItineraryORM
+from api.models.itinerary_items import ItineraryItemsORM
 from api.models.unique_search_history import UniqueSearchHistoryORM
 from api.utils.base import get_object__oai
 from api.utils.base import oai_obj_to_qs
 from api.utils.http import Error
+from api.utils.validations import validate_get_city
 from api.utils.validations import validate_itinerary
 
 
@@ -121,5 +125,34 @@ def get_top_n_itinerary(
         if not qs:
             return Error(404, "itinerary not found", __name__)
         return qs
+    except Exception as e:
+        return Error(500, e.__str__(), __name__)
+
+
+def get_itinerary_items__oai(
+    city: str = Query(..., description="The name of the city."),
+    country: str = Query(..., description="The name of the country."),
+) -> List | JSONResponse:
+    """Retrieve a city's climate by city and country."""
+    ok, _city, _country = validate_get_city({"city": city, "country": country})
+
+    try:
+        if ok:
+            res = get_object__oai(
+                class_function="get_city_items",
+                city=_city,
+                country=_country,
+            )
+            res = res["itinerary"]
+            for i in res:
+                i["city"] = city
+
+            obj = oai_obj_to_qs(ItineraryItemsORM, res)
+            if not obj:
+                return Error(404, "city entry not found", __name__)
+            else:
+                return obj
+        else:
+            return Error(422, "invalid city or country", __name__)
     except Exception as e:
         return Error(500, e.__str__(), __name__)
