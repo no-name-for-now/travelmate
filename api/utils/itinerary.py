@@ -133,13 +133,13 @@ def get_itinerary_items__oai(
     city: str = Query(..., description="The name of the city."),
     country: str = Query(..., description="The name of the country."),
 ) -> List | JSONResponse:
-    """Retrieve a city's climate by city and country."""
+    """Retrieve itinerary items for city and country."""
     ok, _city, _country = validate_get_city({"city": city, "country": country})
 
     try:
         if ok:
             res = get_object__oai(
-                class_function="get_city_items",
+                class_function="get_itinerary_items",
                 city=_city,
                 country=_country,
             )

@@ -154,7 +154,7 @@ class OpenAI:
             messages, **{"functions": functions, "function_call": function_call}
         )
 
-    def get_city_items(self, **kwargs) -> Dict[Any, Any]:
+    def get_itinerary_items(self, **kwargs) -> Dict[Any, Any]:
         """Get a city's climate from OpenAI."""
         country = kwargs.get("country")
         city = kwargs.get("city")
