@@ -9,7 +9,6 @@ from api.models.city_climate import CityClimateORM
 from api.models.city_descriptors import APICityDescriptorsList
 from api.models.city_descriptors import CityDescriptorsContract
 from api.models.city_descriptors import CityDescriptorsORM
-from api.models.itinerary_items import APIItineraryItemsList
 from api.models.world_cities import APIWorldCitiesActiveList
 from api.models.world_cities import WorldCitiesORM
 from api.utils.city import get_cities_active__db
@@ -17,20 +16,6 @@ from api.utils.city import get_city_climate__db
 from api.utils.city import get_city_climate__oai
 from api.utils.city import get_city_description__db
 from api.utils.city import get_city_description__oai
-from api.utils.city import get_city_item__oai
-
-
-def city_item_get__oai(
-    itinerary_items: List = Depends(get_city_item__oai),
-) -> APIItineraryItemsList | JSONResponse:
-    """
-    Get city climate.
-    """
-    return (
-        APIItineraryItemsList.from_qs(itinerary_items)
-        if isinstance(itinerary_items, list)
-        else itinerary_items
-    )
 
 
 def city_description_get__oai(
