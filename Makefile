@@ -16,7 +16,7 @@ docker-up:
 	@docker compose up -d
 
 db-seed:
-	python .local/seed.py
+	python .local/scripts/seed.py
 
 docker-down:
 	@docker compose down
@@ -39,6 +39,9 @@ down: docker-down
 
 test-xmlrunner:
 	@./manage.py test --no-input --keepdb
+
+migrate:
+	@./manage.py migrate
 
 run-local:
 	@python -m gunicorn -c .configs/gunicorn.py tripagenda.asgi:app

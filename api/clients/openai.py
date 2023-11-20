@@ -9,6 +9,7 @@ from django.conf import settings
 
 from api.clients.contracts.city_climate import CityClimateOpenAIContract
 from api.clients.contracts.city_description import CityDescriptionOpenAIContract
+from api.clients.contracts.city_item import CityItemOpenAIContract
 from api.clients.contracts.itinerary import ItineraryOpenAIContract
 
 
@@ -144,6 +145,38 @@ class OpenAI:
                 "name": "get_answer_for_user_query",
                 "description": "Get user answer in series of steps",
                 "parameters": CityClimateOpenAIContract.model_json_schema(),
+            }
+        ]
+
+        function_call = {"name": "get_answer_for_user_query"}
+
+        return self.chat_completion_create(
+            messages, **{"functions": functions, "function_call": function_call}
+        )
+
+    def get_itinerary_items(self, **kwargs) -> Dict[Any, Any]:
+        """Get a city's climate from OpenAI."""
+        country = kwargs.get("country")
+        city = kwargs.get("city")
+
+        init = """Please give met the top 20 things to do, with a tag like adventure, culinary, historical,
+                        art, cultural, night life etc and the recommended time to spend at the
+                        activity for the city: {1}, {0}""".format(
+            country, city
+        )
+
+        messages = [
+            {"role": "system", "content": "You are a Travel Guide."},
+            {
+                "role": "user",
+                "content": init,
+            },
+        ]
+
+        functions = [
+            {
+                "name": "get_answer_for_user_query",
+                "parameters": CityItemOpenAIContract.model_json_schema(),
             }
         ]
 

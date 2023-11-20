@@ -37,6 +37,7 @@ app = FastAPI(
     version=settings.APP_VERSION,
     redirect_slashes=True,
 )
+
 app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
 

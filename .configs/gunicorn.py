@@ -12,10 +12,8 @@ if os.path.isfile(env_file):
     # Use a local secret file, if provided
     env.read_env(env_file)
 
-if os.environ.get("ENVIRONMENT", "local") == "production":
-    bind = "0.0.0.0:8000"
-
 if os.environ.get("ENVIRONMENT", "local") == "local":
+    bind = "0.0.0.0:8000"
     reload = True
 
 backlog = 2048

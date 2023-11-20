@@ -48,7 +48,7 @@ else:
 
 # Application configs
 APP_NAME = "tripagenda"
-APP_VERSION = "0.1.0"
+APP_VERSION = "0.2.0"
 API_PREFIX = "/api"
 API_INTERNAL_PREFIX = "/internal"
 API_VERSION = "v1"

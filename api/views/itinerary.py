@@ -6,11 +6,26 @@ from starlette.responses import JSONResponse
 
 from api.models.itinerary import APIItineraryList
 from api.models.itinerary import ItineraryORM
+from api.models.itinerary_items import APIItineraryItemsList
 from api.models.top_searched import APITopSearchedList
 from api.models.unique_search_history import UniqueSearchHistoryORM
 from api.utils.itinerary import get_itinerary__db
 from api.utils.itinerary import get_itinerary__oai
+from api.utils.itinerary import get_itinerary_items__oai
 from api.utils.itinerary import get_top_n_itinerary
+
+
+def itinerary_item_get__oai(
+    itinerary_items: List = Depends(get_itinerary_items__oai),
+) -> APIItineraryItemsList | JSONResponse:
+    """
+    Get city climate.
+    """
+    return (
+        APIItineraryItemsList.from_qs(itinerary_items)
+        if isinstance(itinerary_items, list)
+        else itinerary_items
+    )
 
 
 def itinerary_get__oai(

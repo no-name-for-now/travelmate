@@ -1,0 +1,6 @@
+curl -X GET \
+     "https://resolute-tracer-402011.ey.r.appspot.com/api/v1/itinerary?city=Porto&country=Portugal&days=7"
+
+curl -X GET \
+     -H "Accept: application/json" \
+     "https://resolute-tracer-402011.ey.r.appspot.com/internal/healthcheck"
