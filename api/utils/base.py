@@ -69,9 +69,7 @@ def oai_obj_to_qs(model_class: Type[models.Model], oai_obj: Any) -> models.Model
     """
     # try:
     if isinstance(oai_obj, dict):
-        logger.info(oai_obj)
         obj = model_class.from_oai(oai_model=oai_obj)
-        logger.info(obj)
         obj.save()
     elif isinstance(oai_obj, list):
         obj = model_class.objects.bulk_create(

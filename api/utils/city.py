@@ -11,7 +11,6 @@ from api.utils.base import get_object__oai
 from api.utils.base import oai_obj_to_qs
 from api.utils.http import Error
 from api.utils.validations import validate_get_city
-from tripagenda import logger
 
 
 def get_city_description__oai(
@@ -69,7 +68,6 @@ def get_city_item__oai(
 ) -> List | JSONResponse:
     """Retrieve a city's climate by city and country."""
     ok, _city, _country = validate_get_city({"city": city, "country": country})
-    logger.info(_city)
 
     try:
         if ok:
