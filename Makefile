@@ -44,4 +44,4 @@ migrate:
 	@./manage.py migrate
 
 run-local:
-	python -m gunicorn tripagenda.asgi:app -k uvicorn.workers.UvicornWorker --reload
+	@python -m gunicorn -c .configs/gunicorn.py tripagenda.asgi:app

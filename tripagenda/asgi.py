@@ -38,8 +38,6 @@ app = FastAPI(
     redirect_slashes=True,
 )
 
-app.config["DEBUG"] = True
-
 app.state.limiter = limiter
 app.add_middleware(SlowAPIMiddleware)
 

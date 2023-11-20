@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 from api.models.base import AbstractBaseModel
 from api.models.world_cities import WorldCitiesORM
+from tripagenda import logger
 
 
 class ItineraryItemsORM(AbstractBaseModel):
@@ -19,8 +20,13 @@ class ItineraryItemsORM(AbstractBaseModel):
     @classmethod
     def from_oai(cls, oai_model):
         """Create a CityClimateORM object from OpenAI data."""
+        logger.info("we are here")
+        logger.info(oai_model)
         city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
+        logger.info(city)
         city_id = city.id if city else None
+        logger.info(city_id)
+        logger.info("entering here")
 
         return cls(
             city_id=city_id,

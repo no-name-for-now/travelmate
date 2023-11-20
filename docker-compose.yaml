@@ -68,7 +68,7 @@ services:
 
   api:
     <<: *api-common
-    command: python3 -m gunicorn tripagenda.asgi:app -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8000
+    command: python3 -m gunicorn -c .configs/gunicorn.py tripagenda.asgi:app
     ports:
       - '8000:8000'
     healthcheck:

@@ -62,13 +62,13 @@ def get_city_description__db(
     except Exception as e:
         return Error(500, e.__str__(), __name__)
 
-
 def get_city_item__oai(
     city: str = Query(..., description="The name of the city."),
     country: str = Query(..., description="The name of the country."),
 ) -> List | JSONResponse:
     """Retrieve a city's climate by city and country."""
     ok, _city, _country = validate_get_city({"city": city, "country": country})
+    logger.info(_city)
 
     try:
         if ok:
@@ -80,6 +80,11 @@ def get_city_item__oai(
             logger.info(res)
             res = res["itinerary"]
             logger.info(res)
+            for i in res: 
+                i["city"] = city
+                print(i)
+
+
 
             obj = oai_obj_to_qs(ItineraryItemsORM, res)
             logger.info("trying to load data, should break")
@@ -90,6 +95,7 @@ def get_city_item__oai(
         else:
             return Error(422, "invalid city or country", __name__)
     except Exception as e:
+        logger.error(e)
         return Error(500, e.__str__(), __name__)
 
 
