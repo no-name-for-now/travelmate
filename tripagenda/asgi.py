@@ -21,10 +21,9 @@ from api.routers.city import cities_router
 from api.routers.itinerary import router as itinerary_router
 from api.routers.search import router as search_router
 from tripagenda.routers import router as internal_router
-from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.middleware import SlowAPIMiddleware
-from slowapi.errors import RateLimitExceeded
 
 limiter = Limiter(
     key_func=get_remote_address,
