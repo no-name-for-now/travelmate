@@ -7,6 +7,17 @@ from bs4 import BeautifulSoup as soup
 from unidecode import unidecode
 
 
+categories = [
+    "restaurants",
+    "markets",
+    "transportation",
+    "utilities",
+    "leisure",
+    "clothing",
+    "rent",
+]
+
+
 def _get_soup_page(city: str) -> soup:
     """Get the soup page object from numbeo.com for a given city."""
     req_url = f"https://www.numbeo.com/cost-of-living/in/{unidecode(city)}?displayCurrency=EUR"
@@ -67,60 +78,54 @@ def get_costs(cost_rows_html: list) -> list:
         title = title.replace(",", "")
 
         cost = cost.strip(" €")
-        try:
-            cost = float(cost)
-        except ValueError:
-            cost = None
         title = str(title)
 
-        costs.append(
-            {
-                "sub_category": title,
-                "cost": cost,
-                "currency": "EUR",
-            }
-        )
+        try:
+            cost = float(cost)
+            costs.append(
+                {
+                    "sub_category": title,
+                    "cost": cost,
+                    "currency": "EUR",
+                }
+            )
 
+        except ValueError:
+            continue
     return costs
 
 
-def process_country_city(country: str, city: str) -> dict:
+def process_country_city(country: str, city: str) -> list[dict[str, Any]]:
     """This function processes the country and city and returns
     the cost of living by category, as scraped from Numbeo."""
     all_rows_html, err = get_soup_page(
-        city.title().replace(" ", "-"),
-        f"{city.title().replace(' ', '-')}-{country.title().replace(' ', '-')}",
+        city=city.title().replace(" ", "-"),
+        alt=f"{city.title().replace(' ', '-')}-{country.title().replace(' ', '-')}",
     )
     if err:
-        return err
+        raise Exception(err)
 
-    # select rows for each category
-    restaurant_cost_rows_html = all_rows_html[2:10]
-    market_cost_rows_html = all_rows_html[11:30]
-    transportation_cost_rows_html = all_rows_html[31:39]
-    utilities_cost_rows_html = all_rows_html[40:43]
-    leisure_cost_rows_html = all_rows_html[44:47]
-    # TODO: check what's in 45-46
-    clothing_cost_rows_html = all_rows_html[51:55]
-    rent_cost_rows_html = all_rows_html[56:60]
+    restaurants_cost_rows_html = all_rows_html[2:10]  # noqa: F841
+    markets_cost_rows_html = all_rows_html[11:30]  # noqa: F841
+    transportation_cost_rows_html = all_rows_html[31:39]  # noqa: F841
+    utilities_cost_rows_html = all_rows_html[40:43]  # noqa: F841
+    leisure_cost_rows_html = all_rows_html[44:47]  # noqa: F841
+    clothing_cost_rows_html = all_rows_html[51:55]  # noqa: F841
+    rent_cost_rows_html = all_rows_html[56:60]  # noqa: F841
 
-    # get lists of costs for each category
-    restaurant_data = get_costs(restaurant_cost_rows_html)
-    market_data = get_costs(market_cost_rows_html)
-    transportation_data = get_costs(transportation_cost_rows_html)
-    utilities_data = get_costs(utilities_cost_rows_html)
-    leisure_data = get_costs(leisure_cost_rows_html)
-    clothing_data = get_costs(clothing_cost_rows_html)
-    rent_data = get_costs(rent_cost_rows_html)
-
-    category_data = {
-        "restaurant": restaurant_data,
-        "market": market_data,
-        "transportation": transportation_data,
-        "utilities": utilities_data,
-        "leisure": leisure_data,
-        "clothing": clothing_data,
-        "rent": rent_data,
-    }
+    # get list of costs for each category
+    category_data = []
+    for category in categories:
+        cost_data = get_costs(eval(f"{category}_cost_rows_html"))
+        for cost_row in cost_data:
+            category_data.append(
+                {
+                    "city": city,
+                    "category": category,
+                    "sub_category": cost_row["sub_category"],
+                    "cost": cost_row["cost"],
+                    "currency": cost_row["currency"],
+                }
+            )
 
     return category_data
