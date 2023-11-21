@@ -5,6 +5,7 @@ from starlette.responses import JSONResponse
 
 from api.clients.numbeo import process_country_city
 from api.models.city_climate import CityClimateORM
+from api.models.city_cost_of_living import CityCostOfLivingORM
 from api.models.city_descriptors import CityDescriptorsORM
 from api.models.world_cities import WorldCitiesORM
 from api.utils.base import get_object__oai
@@ -139,28 +140,19 @@ def get_cities_active__db() -> WorldCitiesORM:
 def get_cities_cost_of_living__numbeo() -> List | JSONResponse:
     """Retrieve all active cities' cost of living."""
     try:
-        cities = get_cities_active__db()
+        country_cities = get_cities_active__db()
+        data: List[dict] = []
+        for country_city in country_cities:
+            try:
+                tmp = process_country_city(country_city.country, country_city.city)
 
-        # for c in cities call process_country_city(country, city)
-        # return list of cities with cost of living
-        obj = list()
-        for city in cities:
-            country = city.country
-            city = city.city
-            costs = process_country_city(country, city)
+                if tmp is None or len(tmp) == 0:
+                    continue
+                data.extend(tmp)
+            except Exception:
+                continue
 
-            if costs:
-                for cost in costs:
-                    obj.append(
-                        {
-                            "city": city,
-                            "category": cost["category"],
-                            "sub_category": cost["sub_category"],
-                            "cost": cost["cost"],
-                            "currency": cost["currency"],
-                        }
-                    )
-
+        obj = oai_obj_to_qs(CityCostOfLivingORM, data)
         if not obj:
             return Error(404, "no active cities found", __name__)
         else:
