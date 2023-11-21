@@ -6,12 +6,14 @@ from starlette.responses import JSONResponse
 
 from api.models.city_climate import APICityClimateList
 from api.models.city_climate import CityClimateORM
+from api.models.city_cost_of_living import APICityCostOfLivingList
 from api.models.city_descriptors import APICityDescriptorsList
 from api.models.city_descriptors import CityDescriptorsContract
 from api.models.city_descriptors import CityDescriptorsORM
 from api.models.world_cities import APIWorldCitiesActiveList
 from api.models.world_cities import WorldCitiesORM
 from api.utils.city import get_cities_active__db
+from api.utils.city import get_cities_cost_of_living__numbeo
 from api.utils.city import get_city_climate__db
 from api.utils.city import get_city_climate__oai
 from api.utils.city import get_city_description__db
@@ -80,4 +82,17 @@ def cities_active_get(
         APIWorldCitiesActiveList.from_qs(cities)
         if cities.__class__ is QuerySet
         else cities
+    )
+
+
+def cities_cost_of_living_get(
+    cost_of_living: List = Depends(get_cities_cost_of_living__numbeo),
+) -> APICityCostOfLivingList | JSONResponse:
+    """
+    Get cities cost of living.
+    """
+    return (
+        APICityCostOfLivingList.from_qs(cost_of_living)
+        if isinstance(cost_of_living, list)
+        else cost_of_living
     )

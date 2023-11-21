@@ -3,6 +3,7 @@ from typing import List
 from fastapi import Query
 from starlette.responses import JSONResponse
 
+from api.clients.numbeo import process_country_city
 from api.models.city_climate import CityClimateORM
 from api.models.city_descriptors import CityDescriptorsORM
 from api.models.world_cities import WorldCitiesORM
@@ -131,5 +132,38 @@ def get_cities_active__db() -> WorldCitiesORM:
             return Error(404, "no active cities found", __name__)
         else:
             return qs
+    except Exception as e:
+        return Error(500, e.__str__(), __name__)
+
+
+def get_cities_cost_of_living__numbeo() -> List | JSONResponse:
+    """Retrieve all active cities' cost of living."""
+    try:
+        cities = get_cities_active__db()
+
+        # for c in cities call process_country_city(country, city)
+        # return list of cities with cost of living
+        obj = list()
+        for city in cities:
+            country = city.country
+            city = city.city
+            costs = process_country_city(country, city)
+
+            if costs:
+                for cost in costs:
+                    obj.append(
+                        {
+                            "city": city,
+                            "category": cost["category"],
+                            "sub_category": cost["sub_category"],
+                            "cost": cost["cost"],
+                            "currency": cost["currency"],
+                        }
+                    )
+
+        if not obj:
+            return Error(404, "no active cities found", __name__)
+        else:
+            return obj
     except Exception as e:
         return Error(500, e.__str__(), __name__)

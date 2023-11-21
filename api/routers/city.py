@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from fastapi import status
 
 from api.models.city_climate import APICityClimateList
+from api.models.city_cost_of_living import APICityCostOfLivingList
 from api.models.city_descriptors import CityDescriptorsContract
 from api.models.world_cities import APIWorldCitiesActiveList
 from api.views import city as views
@@ -61,3 +62,11 @@ cities_router.get(
     name="cities-active-get",
     status_code=status.HTTP_200_OK,
 )(views.cities_active_get)
+
+cities_router.get(
+    "/cost_of_living",
+    summary="Get cities cost of living.",
+    response_model=APICityCostOfLivingList,
+    name="cities-cost-of-living-get",
+    status_code=status.HTTP_200_OK,
+)(views.cities_cost_of_living_get)
