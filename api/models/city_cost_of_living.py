@@ -48,6 +48,22 @@ class CityCostOfLivingORM(AbstractBaseModel):
         self.cost = api_model.cost
         self.currency = api_model.currency
 
+    @classmethod
+    def from_oai(cls, oai_model: "CityCostOfLivingContract"):
+        """
+        Return a CityCostOfLiving instance from an APICityCostOfLiving instance.
+        """
+        city = WorldCitiesORM.objects.filter(city=oai_model.get("city", None)).first()
+        city_id = city.id if city else None
+
+        return cls(
+            city_id=city_id,
+            category=oai_model["category"],
+            sub_category=oai_model["sub_category"],
+            cost=oai_model["cost"],
+            currency=oai_model["currency"],
+        )
+
 
 class CityCostOfLivingContract(BaseModel):
     """City Cost of Living contract."""
@@ -76,6 +92,7 @@ class CityCostOfLivingContract(BaseModel):
         Convert a Django CityCostOfLiving model instance to an APICityCostOfLiving instance.
         """
         return cls(
+            id=instance.id,
             city_id=instance.city_id,
             category=instance.category,
             sub_category=instance.sub_category,
