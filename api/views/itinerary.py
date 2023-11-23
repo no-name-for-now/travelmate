@@ -36,7 +36,7 @@ def itinerary_get__oai(
     """
     return (
         APIItineraryList.from_qs(itinerary)
-        if isinstance(itinerary, list)
+        if (isinstance(itinerary, list) or itinerary.__class__ is QuerySet)
         else itinerary
     )
 
