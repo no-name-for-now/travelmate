@@ -18,6 +18,7 @@ from api.models.search_history import APISearchHistory
 from api.models.search_history import APISearchHistoryList
 from api.models.search_history import SearchHistoryContract
 from api.models.search_history import SearchHistoryORM
+from api.models.unique_saved_itinerary import UniqueSavedItineraryORM
 from api.models.unique_search_history import APIUniqueSearchHistory
 from api.models.unique_search_history import APIUniqueSearchHistoryList
 from api.models.unique_search_history import UniqueSearchHistoryContract
@@ -56,6 +57,8 @@ __all__ = [
     "ItineraryORM",
     "SearchHistoryContract",
     "SearchHistoryORM",
+    "UniqueSavedItineraryContract",
+    "UniqueSavedItineraryORM",
     "UniqueSearchHistoryContract",
     "UniqueSearchHistoryORM",
     "UserSavedItineraryContract",
