@@ -2,6 +2,7 @@
 
 Ref: https://cloud.google.com/python/django/appengine
 
+1. Run `gcloud auth application-default login`
 1. In a terminal, run `./cloud-sql-proxy resolute-tracer-402011:europe-west1:travelmate-backend-gpt` (make sure cloud-sql-proxy is installed)
 1. Have the following in your `.env` file (replacing USERNAME and PASSWORD with the right values):
     ```.env
