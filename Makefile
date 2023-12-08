@@ -41,6 +41,7 @@ test-xmlrunner:
 	@./manage.py test --no-input --keepdb
 
 migrate:
+	@./manage.py makemigrations
 	@./manage.py migrate
 
 run-local:
