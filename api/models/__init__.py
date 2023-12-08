@@ -9,6 +9,8 @@ from api.models.city_descriptors import APICityDescriptors
 from api.models.city_descriptors import APICityDescriptorsList
 from api.models.city_descriptors import CityDescriptorsContract
 from api.models.city_descriptors import CityDescriptorsORM
+from api.models.gyg_city_map import GygCityMapContract
+from api.models.gyg_city_map import GygCityMapORM
 from api.models.itinerary import APIItinerary
 from api.models.itinerary import APIItineraryList
 from api.models.itinerary import ItineraryContract
@@ -52,6 +54,8 @@ __all__ = [
     "CityCostOfLivingContract",
     "CityDescriptorsContract",
     "CityDescriptorsORM",
+    "GygCityMapContract",
+    "GygCityMapORM",
     "ItineraryContract",
     "ItineraryItemsORM",
     "ItineraryORM",
