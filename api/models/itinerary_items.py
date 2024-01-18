@@ -17,7 +17,7 @@ class ItineraryItemsORM(AbstractBaseModel):
     duration_minutes = models.IntegerField()
     lat = models.FloatField(null=True)
     long = models.FloatField(null=True)
-    description = models.CharField(max_length=250, null=True)
+    description = models.CharField(max_length=500, null=True)
 
     @classmethod
     def from_oai(cls, oai_model):
