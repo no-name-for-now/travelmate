@@ -11,7 +11,7 @@ class CityDescriptorsORM(AbstractBaseModel):
     """City Descriptors model."""
 
     city = models.ForeignKey(WorldCitiesORM, on_delete=models.CASCADE)
-    city_description = models.CharField(max_length=2000)
+    city_description = models.CharField(max_length=2500)
 
     class Meta:
         constraints = [
